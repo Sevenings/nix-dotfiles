@@ -8,3 +8,6 @@ pull:
 	git pull
 
 update: pull home rebuild
+
+clear_garbage:
+	nix-collect-garbage
