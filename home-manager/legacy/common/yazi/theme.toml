@@ -1,0 +1,18 @@
+[flavor]
+dark = "tokyo-night"
+
+
+
+
+
+
+
+[icon]
+prepend_dirs = [
+	{ name = "Documentos", text = "" },
+	{ name = "Imagens", text = "" },
+	{ name = "Musicas", text = "" },
+	{ name = "Playground", text = "󱊈" },
+	{ name = "Projetos", text = "" },
+]
+

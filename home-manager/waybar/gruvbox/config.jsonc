@@ -1,0 +1,247 @@
+{
+    // Bar Layout
+    // ----------------------
+
+    "layer": "top", 
+    "position": "top", 
+    "height": 30, 
+    "spacing": 4, 
+    "margin-top": 5,
+    "margin-right": 8,
+    "margin-left": 8,
+
+
+    // Modules Layout
+    // ----------------------
+
+    "modules-left": [
+        "custom/rofi",
+        "clock",
+        "custom/horario_ponto",
+    ],
+
+    "modules-center": [
+        "hyprland/workspaces",
+    ], 
+
+    "modules-right": [
+        "pulseaudio",
+        "network",
+        "bluetooth",
+        "backlight",
+        "battery",
+        "tray",
+        "custom/power_profile"
+    ],
+
+
+
+    // Modules Configuration
+    // -------------------------------
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "󰍹",
+            "urgent": "",
+            "focused": "",
+            "default": "",
+        }
+    },
+
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+
+    "mpd": {
+        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "unknown-tag": "N/A",
+        "interval": 2,
+        "consume-icons": {
+            "on": " "
+        },
+        "random-icons": {
+            "off": "<span color=\"#f53c3c\"></span> ",
+            "on": " "
+        },
+        "repeat-icons": {
+            "on": " "
+        },
+        "single-icons": {
+            "on": "1 "
+        },
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)"
+    },
+
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+
+    "clock": {
+        //"locale": "fr_FR.UTF-8",
+        "locale": "pt_BR.UTF-8",
+        "tooltip": false,
+        "tooltip-format": "<tt><big>{calendar}</big></tt>",
+        //"format": " {:%d-%m-%Y    %H:%M}",
+        //"format": "{:%d-%m-%Y %H:%M}",
+        "format": "<span color='#202020' bgcolor='#8ec07c' >  </span> {:L%d %B %Y  <span color='#202020' bgcolor='#8ec07c' >  </span> %R}",
+        //"on-click": "openCalendar.sh",
+    },
+
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+
+    "memory": {
+        "format": "{}% "
+    },
+
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", ""]
+    },
+
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "<span color='#202020' bgcolor='#f6c657' >  </span> {essid} ({signalStrength}%)",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "<span color='#202020' bgcolor='#f6c657'> {ifname} </span> {ipaddr}/{cidr}",
+        "on-click-right": "kitty --class=floatingTerminal -e nmtui"
+    },
+
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "<span color='#202020' bgcolor='#83a598'> {icon}</span> {volume}%",
+        "format-bluetooth": "<span color='#202020' bgcolor='#83a598'> {icon}  </span> {volume}%",
+        "format-bluetooth-muted": "<span color='#202020' bgcolor='#ea6962'>  </span>",
+        "format-muted": "<span color='#202020' bgcolor='#ea6962'>  </span>",
+        "format-source": "<span color='#202020' bgcolor='#83a598'>  </span> {volume}%",
+        "format-source-muted": "<span color='#202020' bgcolor='#ea6962'>  </span>",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [" ", " ", " "]
+        },
+        "on-click": "kitty -e pulsemixer"
+    },
+
+    "custom/power_profile": {
+        "format": "<span color='#202020' bgcolor='#ea6962'> ⏻ </span>",
+        "tooltip": true,
+        "tooltip-format": "Power Profile",
+        "on-click": "$(globals.sh logoutMenu)"
+    },
+
+    "custom/toggle_wallpaper_theme": {
+        "format": "󰸉",
+        "tooltip-format": "Alterar wallpaper",
+        "on-click": "startWallpaper.sh toggle",
+    },
+
+    
+    "custom/rofi": {
+        "format": "",
+        "on-click": "rofi -show drun -disable-history -show-icons",
+        //"on-click-right": "~/.config/custom_scripts/power.sh",
+        "escape" : true,
+        "tooltip" : false
+    },
+
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 14,
+        "icon-theme": "Numix-Circle",
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "ignore-list": [
+           "Alacritty"
+        ],
+        "app_ids-mapping": {
+          "firefoxdeveloperedition": "firefox-developer-edition"
+        },
+        "rewrite": {
+            "Firefox Web Browser": "Firefox",
+            "Foot Server": "Terminal"
+        }
+    },
+
+    "bluetooth": {
+        "format": "Service Off ",
+        "format-disabled": "",
+        "format-off": "<span color='#202020' bgcolor='#42A5F5'> 󰂲 </span> Off",
+        "format-on": "<span color='#202020' bgcolor='#42A5F5'> 󰂯 </span> On",
+        "format-connected": "<span color='#202020' bgcolor='#42A5F5'> 󰂱 </span> {device_alias}",
+        "tooltip-format-off": "Bluetooth Module Off",
+        "tooltip-format-on": "No devices connected",
+        "tooltip-format-connected": "Status: {status}\nBattery: {device_battery_percentage}\nAddr: {device_address}",
+        "on-click": "bluetoothManager.sh",
+    },
+
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 20
+        },
+        "format": "<span color='#202020' bgcolor='#8ec07c'> {icon} </span> {capacity}%",
+        "format-charging": "<span color='#202020' bgcolor='#8ec07c'>  </span> {capacity}%",
+        "format-plugged": "<span color='#202020' bgcolor='#8ec07c'>  </span> {capacity}%",
+        "format-alt": "<span color='#202020' bgcolor='#8ec07c'> {icon} </span> {time}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "<span color='#202020' bgcolor='#fff4d2'> {icon} </span> {percent}%",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+
+    "custom/horario_ponto": {
+        "format": "[{}]",
+        "tooltip": true,
+        "tooltip-format": "Horário do ponto",
+        "exec": "horario_ponto",
+        "exec-if": "se_expediente.sh",
+    },
+}
+

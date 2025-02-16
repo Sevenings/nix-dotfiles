@@ -1,0 +1,2 @@
+compile:
+	home-manager switch

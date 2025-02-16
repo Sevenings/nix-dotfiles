@@ -1,0 +1,245 @@
+
+/* ================================ */
+/*            Color Pallete         */
+/* ================================ */
+
+
+@define-color black-color #202020;
+@define-color white-color #fff4d2;
+@define-color blue-color #42A5F5;
+@define-color green-color #8ec07c;
+@define-color cyan-color #83a598;
+@define-color yellow-color #f6c657;
+@define-color red-color #ea6962;
+@define-color pink-color #d3869b;
+
+@define-color bg-color @black-color;
+@define-color fg-color @white-color;
+
+@define-color rofi-color @blue-color;
+@define-color calendar-color @green-color;
+@define-color workspace-unselected-color @white-color;
+@define-color workspace-selected-color @green-color;
+@define-color workspace-hover-color @pink-color;
+@define-color workspace-urgent-color @red-color;
+@define-color pulseaudio-color @cyan-color;
+@define-color pulseaudio-muted-color @red-color;
+@define-color network-color @yellow-color;
+@define-color power-color @red-color;
+@define-color tray-color @white-color;
+@define-color bluetooth-color @blue-color;
+@define-color battery-color @green-color;
+@define-color backlight-color @white-color;
+@define-color ponto-color @blue-color;
+
+
+
+
+/* ================================ */
+/*            Common CSS            */
+/* ================================ */
+* {
+  /* `otf-font-awesome` is required to be installed for icons */
+  padding: 0;
+  margin: 0;
+  min-height: 0;
+  text-shadow: none;
+  transition: none;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+}
+
+tooltip {
+    background: #1e1e2e;
+    opacity: 0.8;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #11111b;
+}
+
+tooltip label{
+    color: #cdd6f4;
+}
+
+window#waybar {
+  color: @fg-color;
+  background: none;
+}
+
+window#waybar.hidden {
+  opacity: 1;
+}
+
+
+#network,
+#custom-toggle_wallpaper_theme,
+#custom-power_profile,
+#custom-horario_ponto,
+#custom-rofi,
+#workspaces button,
+#workspaces button:hover,
+#workspaces button.visible,
+#workspaces button.visible:hover,
+#workspaces button.active,
+#workspaces button.active:hover,
+#workspaces button.urgent,
+#window,
+#tray,
+#disk,
+#cpu,
+#temperature,
+#temperature.critical,
+#backlight,
+#bluetooth,
+#custom-memory,
+#pulseaudio,
+#pulseaudio.muted,
+#battery,
+#battery.critical,
+#battery.warning,
+#clock {
+    font-family: JetBrainsMono Nerd Font Propo;
+    font-size: 16px;
+    font-weight: 800;
+    padding: 0px 2px;
+    background: @bg-color;
+    color: @fg-color;
+    border: 2px solid @bg-color;
+    border-radius: 3px;
+}
+
+/* ================================ */
+/*         rofi module              */
+/* ================================ */
+
+#custom-rofi {
+    color: @white-color;
+	background: @rofi-color;
+    padding: 0px 6px;
+    /*border-bottom: 2px solid @rofi-color;*/
+}
+
+/* ================================ */
+/*       workspaces module          */
+/* ================================ */
+#workspaces {
+    margin: 0;
+    padding: 0;
+
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#workspaces button {
+    color: @workspace-unselected-color;
+    padding: 0 2px;
+    min-width: 25px;
+
+    margin: 0px 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+
+    animation: gradient_f 20s ease-in infinite;
+    transition: all 0.16s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
+#workspaces button:hover {
+    color: @workspace-hover-color;
+    border-bottom: 2px solid @workspace-hover-color;
+
+}
+
+#workspaces button.active {
+    color: @workspace-selected-color;
+    border-bottom: 2px solid @workspace-selected-color;
+
+    margin: 0px 4px;
+}
+
+#workspaces button.active:hover {
+    color: @workspace-hover-color;
+    border-bottom: 2px solid @workspace-hover-color;
+}
+
+#workspaces button.urgent {
+    color: @bg-color;
+    background: @workspace-urgent-color;
+}
+
+/* ================================ */
+/*            tray                 */
+/* ================================ */
+
+#tray {
+    padding: 0 6px 0 6px;
+    color: @tray-color;
+    border-bottom: 2px solid @tray-color;
+}
+
+/* ================================ */
+/*         pulseaudio               */
+/* ================================ */
+#pulseaudio {
+    color: @pulseaudio-color;
+    border-bottom: 2px solid @pulseaudio-color;
+}
+
+#pulseaudio.muted {
+    color: @pulseaudio-color;
+    border-bottom: 2px solid @pulseaudio-muted-color;
+    padding-left: 2px;
+}
+
+/* ================================ */
+/*            clock                 */
+/* ================================ */
+#clock {
+    color: @calendar-color;
+    border-bottom: 2px solid @calendar-color;
+}
+
+/* ================================ */
+/*            network               */
+/* ================================ */
+#network {
+    color: @network-color;
+    border-bottom: 2px solid @network-color;
+}
+
+/* ================================ */
+/*         Power Profile            */
+/* ================================ */
+#custom-power_profile {
+    color: @power-color;
+    border-bottom: 2px solid @power-color;
+}
+
+#custom-toggle_wallpaper_theme {
+    color: @fg-color;
+    border-bottom: 2px solid @fg-color;
+    padding: 0px 8px;
+}
+
+#bluetooth {
+    color: @bluetooth-color;
+    border-bottom: 2px solid @bluetooth-color;
+}
+
+#battery {
+    color: @battery-color;
+    border-bottom: 2px solid @battery-color;
+}
+
+#backlight {
+    color: @backlight-color;
+    border-bottom: 2px solid @backlight-color;
+}
+
+#custom-horario_ponto {
+    color: @ponto-color;
+    border-bottom: 2px solid @ponto-color;
+
+    font-size: 12px;
+}
