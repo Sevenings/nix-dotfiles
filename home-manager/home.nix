@@ -10,9 +10,9 @@
     ./kitty.nix
     ./gtk.nix
     ./waybar.nix
-	./legacy/legacy.nix
-	./scripts/scripts.nix
-	./python/environment.nix
+    ./legacy/legacy.nix
+    ./scripts/scripts.nix
+    ./python/environment.nix
   ];
 
 
