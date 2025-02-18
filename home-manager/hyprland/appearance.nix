@@ -7,7 +7,7 @@
             gaps_in = 5;
             gaps_out = 5;
             border_size = 3;
-            "col.active_border" = "rgb(00D7EB) rgb(0092FF) 45deg";
+            "col.active_border" = "rgb(2784b3)";
             "col.inactive_border" = "rgba(595959aa)";
 
             layout = "dwindle";
@@ -40,6 +40,7 @@
                 "myBezier, 0.05, 0.9, 0.1, 1.05"
                 "Abezier, 0.99, 0.39, 0.04, 0.59"
                 "linear, 0, 0, 1, 1"
+                "easeOutBack, .25,-0.01,.28,1.16"
             ];
 
             animation = [
@@ -49,6 +50,7 @@
                 "borderangle, 1, 8, default"
                 "fade, 1, 3, default"
                 "workspaces, 1, 4, default"
+                "specialWorkspace, 1, 3, easeOutBack, slidevert"
             ];
         };
 

@@ -13,6 +13,9 @@
     ./legacy/legacy.nix
     ./scripts/scripts.nix
     ./python/environment.nix
+    ./git.nix
+    ./mimetypes.nix
+    # ./colorschemes.nix
   ];
 
 
