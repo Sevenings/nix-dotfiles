@@ -222,8 +222,8 @@
             "critical": 20
         },
         "format": "<span color='#202020' bgcolor='#8ec07c'> {icon} </span> {capacity}%",
-        "format-charging": "<span color='#202020' bgcolor='#8ec07c'>  </span> {capacity}%",
-        "format-plugged": "<span color='#202020' bgcolor='#8ec07c'>  </span> {capacity}%",
+        "format-charging": "<span color='#202020' bgcolor='#8ec07c'> 󱊥 </span> {capacity}%",
+        "format-plugged": "<span color='#202020' bgcolor='#8ec07c'>  </span> {capacity}%",
         "format-alt": "<span color='#202020' bgcolor='#8ec07c'> {icon} </span> {time}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
