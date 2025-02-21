@@ -1,5 +1,5 @@
-sys:
+run:
 	nixos-rebuild switch --use-remote-sudo --flake ~/.dotfiles#fatima
 
-home:
-	home-manager switch
+compile:
+	make run
