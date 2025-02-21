@@ -62,9 +62,7 @@
 
   # Fonts
   # fonts.fontDir.enable = true;
-  fonts.packages = with pkgs; [
-    nerdfonts.FiraCode
-  ];
+  fonts.packages = [] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts)
 
   # Nix Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
