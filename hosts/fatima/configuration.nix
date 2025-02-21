@@ -63,8 +63,7 @@
   # Fonts
   # fonts.fontDir.enable = true;
   fonts.packages = with pkgs; [
-    nerdfonts
-    # (nerdfonts.override { fonts = [ "FiraCode" ]; })
+    nerdfonts.FiraCode
   ];
 
   # Nix Flakes
