@@ -152,6 +152,14 @@ footer  = { fg = "#232a2e", bg = "#d3c6aa" }
 # : }}}
 
 
+# : Spotter {{{
+
+[spot]
+border = { fg = "#a7c080" }
+title  = { fg = "#a7c080" }
+
+# : }}}
+
 # : Notify {{{
 
 [notify]
