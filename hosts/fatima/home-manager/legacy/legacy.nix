@@ -10,7 +10,6 @@
     ".config/calcurse".source = ./common/calcurse;
     ".config/nvim".source = ./common/nvim;
     ".config/ranger".source = ./common/ranger;
-    ".config/yazi".source = ./common/yazi;
     ".config/zathura".source = ./common/zathura;
     ".config/zsh".source = ./common/zsh;
 
