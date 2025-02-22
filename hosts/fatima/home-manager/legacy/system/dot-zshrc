@@ -64,6 +64,7 @@ alias sudo="sudo -E -s"
 alias todo="nvim ~/todo.txt"
 alias rebuild="nixos-rebuild switch --use-remote-sudo --upgrade"
 alias confone="bluetoothctl connect 68:59:32:F7:D3:89"
+alias lg="lazygit"
 
 export EDITOR='nvim'
 export VISUAL='nvim'
