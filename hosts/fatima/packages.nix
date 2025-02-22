@@ -7,7 +7,6 @@
       cargo
       nodePackages.live-server
       postman
-      ly
       wiki-tui
       direnv
       obsidian

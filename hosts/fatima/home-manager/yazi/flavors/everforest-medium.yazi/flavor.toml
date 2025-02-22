@@ -39,22 +39,31 @@ syntect_theme = ""
 # : }}}
 
 
+
+# : Mode {{{
+
+[mode]
+
+# Mode
+
+normal_main = { bg = "#7fbbb3", bold = true }
+
+# Select mode
+select_main = { bg = "#e67e80", bold = true }
+
+# Unset mode
+unset_main  = { bg = "#e67e80", bold = true }
+
+# : }}}
+
+
 # : Status {{{
 
 [status]
-separator_open  = ""
-separator_close = ""
+overall         = {}
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
 separator_style = { fg = "#343f44", bg = "#343f44" }
-
-# Mode
-mode_normal = { bg = "#7fbbb3", bold = true }
-mode_select = { bg = "#e67e80", bold = true }
-mode_unset  = { bg = "#e67e80", bold = true }
-
-# Progress
-progress_label  = { bold = true }
-progress_normal = { fg = "#7fbbb3", bg = "#232a2e" }
-progress_error  = { fg = "#e67e80", bg = "#232a2e" }
 
 # Permissions
 permissions_t = { fg = "#a7c080" }
@@ -62,6 +71,11 @@ permissions_r = { fg = "#dbbc7f" }
 permissions_w = { fg = "#e67e80" }
 permissions_x = { fg = "#7fbbb3" }
 permissions_s = { fg = "#2d353b" }
+
+# Progress
+progress_label  = { bold = true }
+progress_normal = { fg = "#7fbbb3", bg = "#232a2e" }
+progress_error  = { fg = "#e67e80", bg = "#232a2e" }
 
 # : }}}
 
