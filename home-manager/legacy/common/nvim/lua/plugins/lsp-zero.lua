@@ -20,6 +20,7 @@ return {
                     'ts_ls',
                     'cssls',
                     'html',
+                    'nil_ls',
                 },
                 handlers = {
                     function(server_name)
