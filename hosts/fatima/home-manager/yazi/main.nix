@@ -7,7 +7,7 @@
     initLua = ./init.lua;
 
     flavors = {
-      everforest = ./flavors/everforest-medium.yazi;
+      everforest-medium = ./flavors/everforest-medium.yazi;
     };
 
     plugins = {
