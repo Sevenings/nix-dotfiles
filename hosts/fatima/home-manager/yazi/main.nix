@@ -1,18 +1,30 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
+  programs.yazi.enable = true;
+
   programs.yazi = {
-    enable = true;
     initLua = ./init.lua;
+
     flavors = {
       everforest = ./flavors/everforest-medium.yazi;
     };
+
+    plugins = {
+      full-border = ./plugins/full-border.yazi;
+      lazygit = ./plugins/lazygit.yazi;
+      load-template = ./plugins/load-template.yazi;
+      new-project = ./plugins/new-project.yazi;
+      smart-enter = ./plugins/smart-enter.yazi;
+      smart-filter = ./plugins/smart-filter.yazi;
+      sudo = ./plugins/sudo.yazi;
+    };
   };
 
-  imports = [ 
+  imports = [
     ./yazi.nix
-    ./theme.nix
     ./keymap.nix
-    ./plugins.nix
-  ]
+    ./theme.nix
+  ];
+
 }
