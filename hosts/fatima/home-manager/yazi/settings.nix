@@ -29,7 +29,7 @@
   
     opener = {
       edit = [
-        { run = ''${EDITOR:=nvim} "$@"''; desc = "Edit"; block = true; for = "unix"; }
+        { run = ''nvim "$@"''; desc = "Edit"; block = true; for = "unix"; }
         { run = ''code "%*"''; orphan = true; desc = "code"; for = "windows"; }
         { run = ''code -w "%*"''; block = true; desc = "code (block)"; for = "windows"; }
       ];
