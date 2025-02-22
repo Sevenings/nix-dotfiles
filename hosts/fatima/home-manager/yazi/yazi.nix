@@ -1,7 +1,7 @@
 { ... }:
 
 {
-  programs.yazi.settings.yazi = {
+  programs.yazi.settings = {
 
     manager = {
       ratio          = [ 1 3 4 ];
