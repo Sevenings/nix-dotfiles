@@ -1,7 +1,10 @@
 { ... }:
 
 {
-  programs.yazi.enable = true;
+  programs.yazi = {
+    enable = true;
+    enableZshIntegration = true;
+  };
 
   programs.yazi = {
     initLua = ./init.lua;
@@ -21,6 +24,7 @@
     };
 
     shellWrapperName = "yy";
+    
   };
 
   imports = [
