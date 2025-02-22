@@ -24,7 +24,7 @@
   };
 
   imports = [
-    ./yazi.nix
+    ./settings.nix
     ./keymap.nix
     ./theme.nix
   ];
