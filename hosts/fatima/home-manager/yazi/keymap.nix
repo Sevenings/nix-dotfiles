@@ -1,7 +1,7 @@
 { ... }:
 
 {
-  programs.yazi.settings.theme = {
+  programs.yazi.settings.keymap = {
 
     manager = {
       
