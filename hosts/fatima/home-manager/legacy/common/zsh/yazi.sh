@@ -6,3 +6,7 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
+
+function yy() {
+    y
+}
