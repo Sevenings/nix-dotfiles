@@ -23,8 +23,6 @@
       sudo = ./plugins/sudo.yazi;
     };
 
-    shellWrapperName = "yy";
-    
   };
 
   imports = [
