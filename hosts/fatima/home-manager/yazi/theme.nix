@@ -1,0 +1,22 @@
+{ ... }:
+
+{
+  programs.yazi.settings.theme = {
+
+    flavor = {
+      dark = "everforest-medium";
+    };
+
+
+    icon = {
+      prepend_dirs = [
+        { name = "Documentos"; text = ""; }
+        { name = "Imagens"; text = ""; }
+        { name = "Musicas"; text = ""; }
+        { name = "Playground"; text = "󱊈"; }
+        { name = "Projetos"; text = ""; }
+      ];
+    };
+
+  };
+}

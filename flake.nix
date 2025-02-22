@@ -22,7 +22,7 @@
         {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.users.okabe = import ./home-manager/home.nix;
+          home-manager.users.okabe = import ./hosts/fatima/home-manager/home.nix;
         }
       ];
     };
