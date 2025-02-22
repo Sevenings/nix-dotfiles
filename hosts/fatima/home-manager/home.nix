@@ -16,7 +16,7 @@
     ./git.nix
     ./mimetypes.nix
     # ./colorschemes.nix
-    ./yazi/main.nix
+    ./yazi/yazi.nix
   ];
 
 
