@@ -4,7 +4,7 @@
   programs.yazi.settings.yazi = {
 
     manager = {
-      ratio          = [ 1, 3, 4 ];
+      ratio          = [ 1 3 4 ];
       sort_by        = "natural";
       sort_sensitive = false;
       sort_reverse   = false;
@@ -24,7 +24,7 @@
       image_quality   = 75;
       sixel_fraction  = 15;
       ueberzug_scale  = 1;
-      ueberzug_offset = [ 0, 0, 0, 0 ];
+      ueberzug_offset = [ 0 0 0 0 ];
     };
   
     opener = {
