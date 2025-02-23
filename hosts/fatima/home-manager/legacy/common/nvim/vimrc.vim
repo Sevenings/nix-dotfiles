@@ -30,6 +30,8 @@ set foldlevel=99
 " Para algum plugin aí, acho que o vimtex
 set nosplitright
 
+set noshowmode
+
 
 " =========
 " FUNCTIONS
