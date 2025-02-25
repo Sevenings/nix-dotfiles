@@ -73,7 +73,7 @@
         { mime = "application/json"; use = [ "edit" "reveal" ]; }
         { mime = "*/javascript"; use = [ "edit" "reveal" ]; }
 
-        { mime = "*"; use = [ "open" "reveal" ]; }
+        { mime = "*"; use = [ "edit" "open" "reveal" ]; }
       ];
     };
 
