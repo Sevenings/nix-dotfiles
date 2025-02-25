@@ -27,6 +27,25 @@
       ueberzug_offset = [ 0 0 0 0 ];
     };
   
+    open = {
+      rules = [
+        # { name = "*/"; use = [ "edit" "open" "reveal" ]; }
+
+        { mime = "text/*"; use = [ "edit" "open" "reveal" ]; }
+        { mime = "image/*"; use = [ "open" "edit_image" "reveal" ]; }
+        { mime = "{audio,video}/*"; use = [ "play" "reveal" ]; }
+        { mime = "inode/x-empty"; use = [ "edit" "reveal" ]; }
+
+        { mime = "application/*zip"; use = [ "extract" "reveal" ]; }
+        { mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}"; use = [ "extract" "reveal" ]; }
+
+        { mime = "application/json"; use = [ "edit" "reveal" ]; }
+        { mime = "*/javascript"; use = [ "edit" "reveal" ]; }
+
+        { mime = "*"; use = [ "open" "edit" "reveal" ]; }
+      ];
+    };
+
     opener = {
       edit = [
         { run = ''nvim "$@"''; desc = "Edit"; block = true; for = "unix"; }
@@ -55,25 +74,6 @@
       ];
       edit_image = [
         { run = ''gimp "$@"''; orphan = true; desc = "Edit"; for = "linux"; }
-      ];
-    };
-
-    open = {
-      rules = [
-        { name = "*/"; use = [ "edit" "open" "reveal" ]; }
-
-        { mime = "text/*"; use = [ "edit" "open" "reveal" ]; }
-        { mime = "image/*"; use = [ "open" "edit_image" "reveal" ]; }
-        { mime = "{audio,video}/*"; use = [ "play" "reveal" ]; }
-        { mime = "inode/x-empty"; use = [ "edit" "reveal" ]; }
-
-        { mime = "application/*zip"; use = [ "extract" "reveal" ]; }
-        { mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}"; use = [ "extract" "reveal" ]; }
-
-        { mime = "application/json"; use = [ "edit" "reveal" ]; }
-        { mime = "*/javascript"; use = [ "edit" "reveal" ]; }
-
-        { mime = "*"; use = [ "edit" "open" "reveal" ]; }
       ];
     };
 
