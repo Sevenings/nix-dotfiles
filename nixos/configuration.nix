@@ -61,7 +61,14 @@
 
   # Fonts
   # fonts.fontDir.enable = true;
-  fonts.packages = [] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
+  # fonts.packages = [] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
+  # Before 25.05 (24.05 or earlier)
+  fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "FiraCode" "DroidSansMono" ]; })
+    fira-code
+    droid-sans-mono
+  ];
+
 
   # Nix Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
