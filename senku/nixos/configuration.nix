@@ -15,7 +15,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "stonebox"; # Define your hostname.
+  networking.hostName = "StoneBox"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
@@ -49,8 +49,12 @@
     services.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-    users.users.okabe = {
+    users.users.senku = {
       isNormalUser = true;
+      home = "/home/senku";
+      createHome = true;
+      description = "Dr. Stone. My Desktop user";
+      useDefaultShell = true;
       extraGroups = [ "wheel" "docker" ]; # Enable ‘sudo’ for the user.
       packages = with pkgs; [
         tree
