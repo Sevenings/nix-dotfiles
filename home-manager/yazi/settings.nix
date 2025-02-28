@@ -125,7 +125,7 @@
       cd_offset = [ 0 2 50 3 ];
 
       # create
-      create_title = [ "Create:" "Create Folder:" ];
+      create_title = "Create:";
       create_origin = "top-center";
       create_offset = [ 0 2 50 3 ];
 
