@@ -1,5 +1,5 @@
 nixos:
-	nixos-rebuild --flake .#okabe
+	nixos-rebuild switch --flake .#okabe
 
 home:
-	home-manager --flake .#okabe@fatima
+	home-manager switch --flake .#okabe@fatima
