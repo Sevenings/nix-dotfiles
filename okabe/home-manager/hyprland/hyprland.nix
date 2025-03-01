@@ -23,7 +23,7 @@
         # Monitor configuration
         monitor = [
 			# Monitor principal
-            "eDP-1, highres, 0x0@180, 1"	
+            "eDP-1, highres, 0x0, 1"	
 
 			# Monitor do estágio
             "desc:Dell Inc. DELL D2216H 70GJH69U1SII, highres, 0x-1080, 1"	

@@ -23,7 +23,7 @@
         # Monitor configuration
         monitor = [
 			# Monitor principal
-            "DP-2, highres, 0x0, 1"	
+            "DP-2, highres, 0x0@180, 1"	
 
 			# Meu segundo monitor
             "HDMI-A-1, highres, 0x1920, 1"	
