@@ -12,12 +12,16 @@
     # Home manager
     home-manager.url = "github:nix-community/home-manager/release-24.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    # Flakes extra
+		yazi.url = "github:sxyazi/yazi"; 
   };
 
   outputs = {
     self,
     nixpkgs,
     home-manager,
+    yazi,
     ...
   } @ inputs: let
     inherit (self) outputs;
@@ -58,6 +62,11 @@
         modules = [
           # > Our main nixos configuration file <
           ./okabe/nixos/configuration.nix
+
+          # Instalando o yazi no sistema inteiro
+          ({ pkgs, ... }: {
+            environment.systemPackages = [ yazi.packages.${pkgs.system}.default ];
+          })
         ];
       };
 
