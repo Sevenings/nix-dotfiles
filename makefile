@@ -8,4 +8,4 @@ senku-nixos:
 	nixos-rebuild switch --flake .#senku --use-remote-sudo
 
 senku-home:
-	home-manager switch --flake .#senku@StoneBox
+	home-manager switch --flake .#senku@stonebox
