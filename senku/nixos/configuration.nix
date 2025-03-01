@@ -10,6 +10,24 @@
       ./hardware-configuration.nix
       ./packages.nix
     ];
+  # NVIDEA CONFIG
+  nixpkgs.config.allowUnfree = true;
+
+  # Enable OpenGL
+  hardware.graphics.enable = true;
+
+  # Load nvidia drivers for Xorg and Wayland
+  services.xserver.videoDrivers = [ "nvidia" ];
+
+  hardware.nvidia = {
+    modesetting.enable = true;
+    powerManagement.enable = false;
+    powerManagement.finegrained = false;
+    open = false;
+    nvidiaSettings = true;
+    
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  };
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -23,41 +41,26 @@
   # Set your time zone.
   time.timeZone = "America/Sao_Paulo";
 
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Select internationalisation properties.
   i18n.defaultLocale = "pt_BR.UTF-8";
-  # console = {
-  #   font = "Lat2-Terminus16";
-  #   keyMap = "us"; useXkbConfig = true; # use xkb.options in tty.
-  # };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
   # Enable sound.
-  # hardware.pulseaudio.enable = true;
-  # OR
   services.pipewire = {
     enable = true;
     pulse.enable = true;
   };
 
-  # Enable touchpad support (enabled default in most desktopManager).
-    services.libinput.enable = true;
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
-    users.users.okabe = {
-      isNormalUser = true;
-      extraGroups = [ "wheel" "docker" ]; # Enable ‘sudo’ for the user.
-      packages = with pkgs; [
-        tree
-      ];
-    };
+  users.users.senku = {
+    isNormalUser = true;
+    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    packages = with pkgs; [
+      tree
+    ];
+  };
 
-  nixpkgs.config.allowUnfree = true;
 
   # Fonts
   # fonts.fontDir.enable = true;
@@ -98,40 +101,11 @@
         style = "adwaita-dark";
     };
 
-  networking.extraHosts = ''
-    172.17.120.54 tce-automacao
-    192.168.0.186 beebopi
-  '';
-
   # Sddm
   services.displayManager.sddm.wayland.enable = true;
 
-
-
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
-
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
-  # Copy the NixOS configuration file and link it from the resulting system
-  # (/run/current-system/configuration.nix). This is useful in case you
-  # accidentally delete configuration.nix.
-  # system.copySystemConfiguration = true;
 
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.

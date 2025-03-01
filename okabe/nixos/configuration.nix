@@ -23,10 +23,6 @@
   # Set your time zone.
   time.timeZone = "America/Sao_Paulo";
 
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
   # Select internationalisation properties.
   i18n.defaultLocale = "pt_BR.UTF-8";
   # console = {
