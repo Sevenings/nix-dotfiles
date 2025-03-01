@@ -8,7 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./pkgs.nix
+      ./packages.nix
     ];
   # NVIDEA CONFIG
   nixpkgs.config.allowUnfree = true;
