@@ -41,6 +41,16 @@
   # Set your time zone.
   time.timeZone = "America/Sao_Paulo";
 
+  i18n.defaultLocale = "pt_BR.UTF-8";
+
+  # Enable CUPS to print documents.
+  services.printing.enable = true;
+
+  # Enable sound.
+  services.pipewire = {
+    enable = true;
+    pulse.enable = true;
+  };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.senku = {
@@ -50,6 +60,52 @@
       tree
     ];
   };
+
+
+  # Fonts
+  # fonts.fontDir.enable = true;
+  # fonts.packages = [] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
+  # Before 25.05 (24.05 or earlier)
+  fonts.packages = with pkgs; [
+    (nerdfonts.override { fonts = [ "FiraCode" ]; })
+    fira-code
+  ];
+
+
+  # Nix Flakes
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  # Hyprland Configuration
+    programs.hyprland = {
+      enable = true;
+      withUWSM = true;
+      xwayland.enable = true;
+    };
+
+  # Shell Configuration
+    programs.zsh = {
+      enable = true;
+
+      ohMyZsh = {
+        enable = true;
+        plugins = [ "git" ];
+        theme = "robbyrussell";
+      };
+
+    };
+    users.defaultUserShell = pkgs.zsh;
+
+    qt = {
+        enable = true;
+        platformTheme = "gnome";
+        style = "adwaita-dark";
+    };
+
+  # Sddm
+  services.displayManager.sddm.wayland.enable = true;
+
+  # Enable the OpenSSH daemon.
+  services.openssh.enable = true;
 
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.
