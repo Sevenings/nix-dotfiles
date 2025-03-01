@@ -23,13 +23,11 @@
         # Monitor configuration
         monitor = [
 			# Monitor principal
-            "DP-2, highres, 0x0@180, 1"	
+            "DP-2, highres, 0x0@180, 1"
 
 			# Meu segundo monitor
-            "HDMI-A-1, highres, 0x1920, 1"	
+            "HDMI-A-1, highres, 1920x0, 1"	
 
-			# Outros monitores: espelhados por padrão
-            ", highres, 0x1080, 1, mirror, eDP-1"  
         ];
 
         # Programs Variables
