@@ -14,7 +14,6 @@
             # "~/.config/hypr/nuclear-solution.sh"
             "JUPYTERLAB_DIR=$HOME/.local/share/jupyter/lab"
             # "eww --config $HOME/.config/eww/dashboard open powermenu"
-            "hypridle"
             #exec-once = hyprpm reload hyprbars
         ];
 

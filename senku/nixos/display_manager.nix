@@ -7,6 +7,6 @@
       enable = true;
       wayland.enable = true;
     };
-    defaultSession = "Hyprland";
+    defaultSession = "hyprland-uwsm";
   };
 }
