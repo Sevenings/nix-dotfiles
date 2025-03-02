@@ -1,0 +1,16 @@
+/**
+ *
+ * Author : Sevening_
+ * Github : @Sevenings
+ * 
+ * Colors
+ **/
+
+* {
+    background:     #000000FF;
+    background-alt: #FFFFFFFF;
+    foreground:     #777777FF;
+    selected:       #FFFFFFFF;
+    active:         #DDDDDDFF;
+    urgent:         #FF7800FF;
+}
