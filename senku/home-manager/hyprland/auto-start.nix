@@ -6,7 +6,7 @@
         # Execute your favorite apps at launch
         "exec-once" = [
             "swaync"
-            "waybar -c $HOME'/.config/waybar/gruvbox/config.jsonc' -s $HOME'/.config/waybar/gruvbox/style.css'"
+            # "waybar -c $HOME'/.config/waybar/gruvbox/config.jsonc' -s $HOME'/.config/waybar/gruvbox/style.css'"
             "/usr/lib/polkit-gnome-authentication-agent-1"
             # "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
             "hyprpaper"
