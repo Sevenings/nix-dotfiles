@@ -1,7 +1,4 @@
 {
-    // Bar Layout
-    // ----------------------
-
     "layer": "top", 
     "position": "top", 
     "height": 30, 
@@ -11,17 +8,14 @@
     "margin-left": 8,
 
 
-    // Modules Layout
-    // ----------------------
-
     "modules-left": [
         "custom/rofi",
         "clock",
-        "custom/horario_ponto",
+        "custom/horario_ponto"
     ],
 
     "modules-center": [
-        "hyprland/workspaces",
+        "hyprland/workspaces"
     ], 
 
     "modules-right": [
@@ -35,9 +29,6 @@
     ],
 
 
-
-    // Modules Configuration
-    // -------------------------------
 
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -56,7 +47,7 @@
             "9": "󰍹",
             "urgent": "",
             "focused": "",
-            "default": "",
+            "default": ""
         }
     },
 
@@ -98,19 +89,16 @@
     },
 
     "tray": {
-        // "icon-size": 21,
         "spacing": 10
     },
 
     "clock": {
-        //"locale": "fr_FR.UTF-8",
+        "locale": "fr_FR.UTF-8",
         "locale": "pt_BR.UTF-8",
         "tooltip": false,
         "tooltip-format": "<tt><big>{calendar}</big></tt>",
-        //"format": " {:%d-%m-%Y    %H:%M}",
-        //"format": "{:%d-%m-%Y %H:%M}",
         "format": "<span color='#202020' bgcolor='#8ec07c' >  </span> {:L%d %B %Y  <span color='#202020' bgcolor='#8ec07c' >  </span> %R}",
-        //"on-click": "openCalendar.sh",
+        "on-click": "openCalendar.sh"
     },
 
     "cpu": {
@@ -123,16 +111,12 @@
     },
 
     "temperature": {
-        // "thermal-zone": 2,
-        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 80,
-        // "format-critical": "{temperatureC}°C {icon}",
         "format": "{temperatureC}°C {icon}",
         "format-icons": ["", "", ""]
     },
 
     "network": {
-        // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "<span color='#202020' bgcolor='#f6c657' >  </span> {essid} ({signalStrength}%)",
         "format-ethernet": "{ipaddr}/{cidr} ",
         "tooltip-format": "{ifname} via {gwaddr} ",
@@ -143,7 +127,6 @@
     },
 
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
         "format": "<span color='#202020' bgcolor='#83a598'> {icon}</span> {volume}%",
         "format-bluetooth": "<span color='#202020' bgcolor='#83a598'> {icon}  </span> {volume}%",
         "format-bluetooth-muted": "<span color='#202020' bgcolor='#ea6962'>  </span>",
@@ -172,14 +155,13 @@
     "custom/toggle_wallpaper_theme": {
         "format": "󰸉",
         "tooltip-format": "Alterar wallpaper",
-        "on-click": "startWallpaper.sh toggle",
+        "on-click": "startWallpaper.sh toggle"
     },
 
     
     "custom/rofi": {
         "format": "",
         "on-click": "rofi -show drun -disable-history -show-icons",
-        //"on-click-right": "~/.config/custom_scripts/power.sh",
         "escape" : true,
         "tooltip" : false
     },
@@ -212,12 +194,11 @@
         "tooltip-format-off": "Bluetooth Module Off",
         "tooltip-format-on": "No devices connected",
         "tooltip-format-connected": "Status: {status}\nBattery: {device_battery_percentage}\nAddr: {device_address}",
-        "on-click": "bluetoothManager.sh",
+        "on-click": "bluetoothManager.sh"
     },
 
     "battery": {
         "states": {
-            // "good": 95,
             "warning": 30,
             "critical": 20
         },
@@ -225,13 +206,10 @@
         "format-charging": "<span color='#202020' bgcolor='#8ec07c'> 󰂉 </span> {capacity}%",
         "format-plugged": "<span color='#202020' bgcolor='#8ec07c'>  </span> {capacity}%",
         "format-alt": "<span color='#202020' bgcolor='#8ec07c'> {icon} </span> {time}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
         "format-icons": ["", "", "", "", ""]
     },
 
     "backlight": {
-        // "device": "acpi_video1",
         "format": "<span color='#202020' bgcolor='#fff4d2'> {icon} </span> {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
@@ -241,7 +219,7 @@
         "tooltip": true,
         "tooltip-format": "Horário do ponto",
         "exec": "horario_ponto",
-        "exec-if": "se_expediente.sh",
-    },
+        "exec-if": "se_expediente.sh"
+    }
 }
 
