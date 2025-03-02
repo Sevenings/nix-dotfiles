@@ -14,6 +14,9 @@
       ./programs.nix
     ];
 
+  # Nix Flakes
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -25,7 +28,6 @@
 
   # Set your time zone.
   time.timeZone = "America/Sao_Paulo";
-
   i18n.defaultLocale = "pt_BR.UTF-8";
 
   # Enable CUPS to print documents.
@@ -42,6 +44,7 @@
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
   };
+  users.defaultUserShell = pkgs.zsh;
 
 
   # Fonts
@@ -52,20 +55,12 @@
     nerd-fonts
   ];
 
-
-  # Nix Flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  users.defaultUserShell = pkgs.zsh;
-
   qt = {
       enable = true;
       platformTheme = "gnome";
       style = "adwaita-dark";
   };
 
-  # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
 
   # This option defines the first version of NixOS you have installed on this particular machine,
   # and is used to maintain compatibility with application data (e.g. databases) created on older NixOS versions.

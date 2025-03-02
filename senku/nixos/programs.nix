@@ -3,11 +3,7 @@
 {
   programs = {
 
-    git = {
-      enable = true;
-      userName = "Sevenings";
-      userEmail = "lvlassis.2@gmail.com";
-    };
+    git.enable = true;
 
     lazygit = {
       enable = true;
