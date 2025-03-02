@@ -8,35 +8,20 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./display_manager.nix
+      ./nvidia.nix
       ./packages.nix
+      ./programs.nix
     ];
-  # NVIDEA CONFIG
-  nixpkgs.config.allowUnfree = true;
-
-  # Enable OpenGL
-  hardware.graphics.enable = true;
-
-  # Load nvidia drivers for Xorg and Wayland
-  services.xserver.videoDrivers = [ "nvidia" ];
-
-  hardware.nvidia = {
-    modesetting.enable = true;
-    powerManagement.enable = false;
-    powerManagement.finegrained = false;
-    open = false;
-    nvidiaSettings = true;
-    
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
-  };
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "stonebox"; # Define your hostname.
-  # Pick only one of the below networking options.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking = {
+    hostName = "stonebox"; # Define your hostname.
+    networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  };
 
   # Set your time zone.
   time.timeZone = "America/Sao_Paulo";
@@ -56,9 +41,6 @@
   users.users.senku = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-    packages = with pkgs; [
-      tree
-    ];
   };
 
 
@@ -67,42 +49,20 @@
   # fonts.packages = [] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
   # Before 25.05 (24.05 or earlier)
   fonts.packages = with pkgs; [
-    (nerdfonts.override { fonts = [ "FiraCode" ]; })
-    fira-code
+    nerd-fonts
   ];
 
 
   # Nix Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # Hyprland Configuration
-    programs.hyprland = {
+  users.defaultUserShell = pkgs.zsh;
+
+  qt = {
       enable = true;
-      withUWSM = true;
-      xwayland.enable = true;
-    };
-
-  # Shell Configuration
-    programs.zsh = {
-      enable = true;
-
-      ohMyZsh = {
-        enable = true;
-        plugins = [ "git" ];
-        theme = "robbyrussell";
-      };
-
-    };
-    users.defaultUserShell = pkgs.zsh;
-
-    qt = {
-        enable = true;
-        platformTheme = "gnome";
-        style = "adwaita-dark";
-    };
-
-  # Sddm
-  services.displayManager.sddm.wayland.enable = true;
+      platformTheme = "gnome";
+      style = "adwaita-dark";
+  };
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
