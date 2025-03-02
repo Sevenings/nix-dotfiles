@@ -31,8 +31,6 @@
       xwayland.enable = true;
     };
 
-    waybar.enable = true;
-
     firefox = {
       enable = true;
       languagePacks = [ "br" "en-US" "fr" ];
