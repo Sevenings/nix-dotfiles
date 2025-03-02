@@ -13,8 +13,7 @@
   programs.waybar = {
     enable = true;
     settings = builtins.fromJSON (builtins.readFile ./waybar/gruvbox/config.jsonc);
-    style = builtins.fromJSON (builtins.readFile ./waybar/gruvbox/style.css);
+    style = ./waybar/gruvbox/style.css;
   };
-
 
 }
