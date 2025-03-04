@@ -11,11 +11,11 @@
     "modules-left": [
         "custom/rofi",
         "clock",
-        "custom/horario_ponto",
+        "custom/horario_ponto"
     ],
 
     "modules-center": [
-        "hyprland/workspaces",
+        "hyprland/workspaces"
     ], 
 
     "modules-right": [
@@ -46,7 +46,7 @@
             "9": "󰍹",
             "urgent": "",
             "focused": "",
-            "default": "",
+            "default": ""
         }
     },
 
@@ -97,7 +97,7 @@
         "tooltip": false,
         "tooltip-format": "<tt><big>{calendar}</big></tt>",
         "format": "<span color='#202020' bgcolor='#8ec07c' >  </span> {:L%d %B %Y  <span color='#202020' bgcolor='#8ec07c' >  </span> %R}",
-        "on-click": "openCalendar.sh",
+        "on-click": "openCalendar.sh"
     },
 
     "cpu": {
@@ -154,7 +154,7 @@
     "custom/toggle_wallpaper_theme": {
         "format": "󰸉",
         "tooltip-format": "Alterar wallpaper",
-        "on-click": "startWallpaper.sh toggle",
+        "on-click": "startWallpaper.sh toggle"
     },
 
     
@@ -193,7 +193,7 @@
         "tooltip-format-off": "Bluetooth Module Off",
         "tooltip-format-on": "No devices connected",
         "tooltip-format-connected": "Status: {status}\nBattery: {device_battery_percentage}\nAddr: {device_address}",
-        "on-click": "bluetoothManager.sh",
+        "on-click": "bluetoothManager.sh"
     },
 
     "battery": {
@@ -218,7 +218,7 @@
         "tooltip": true,
         "tooltip-format": "Horário do ponto",
         "exec": "horario_ponto",
-        "exec-if": "se_expediente.sh",
-    },
+        "exec-if": "se_expediente.sh"
+    }
 }
 
