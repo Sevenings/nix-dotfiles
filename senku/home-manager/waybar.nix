@@ -12,8 +12,8 @@
   # };
   programs.waybar = {
     enable = true;
-    settings = builtins.fromJSON (builtins.readFile ./waybar/gruvbox/config.json);
-    style = ./waybar/gruvbox/style.css;
+    # settings = builtins.fromJSON (builtins.readFile ./waybar/gruvbox/config.json);
+    # style = ./waybar/gruvbox/style.css;
   };
 
 }

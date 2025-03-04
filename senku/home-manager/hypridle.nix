@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-    services.hypridle.enable = true;
+    services.hypridle.enable = false;
 
     services.hypridle.settings = {
 
