@@ -5,5 +5,8 @@
     enable = true;
     userName = "Lucas V.";
     userEmail = "lvlassis.2@gmail.com";
+    extraConfig = {
+      init.defaultBranch = "main";
+    };
   };
 }
