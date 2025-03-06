@@ -12,24 +12,18 @@
       direnv
       obsidian
       mpv
-      obs-studio
       mosquitto
       libreoffice-qt6-fresh
       mqttui
-      lazygit
       neovim 
       wget
       yazi
-      zsh
-      git
       gh
       kitty
-      hyprland
       stow
       waybar
       hypridle
       hyprpaper
-      firefox
       gcc
       unzip
       zip
