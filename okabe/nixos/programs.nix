@@ -31,7 +31,7 @@
       xwayland.enable = true;
     };
 
-    waybar.enable = true;
+    # waybar.enable = true;
 
     firefox = {
       enable = true;
