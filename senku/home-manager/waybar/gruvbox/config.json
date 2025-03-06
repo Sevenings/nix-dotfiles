@@ -1,7 +1,7 @@
 {
     "layer": "top", 
     "position": "top", 
-    "height": 29, 
+    "height": 30, 
     "spacing": 4, 
     "margin-top": 5,
     "margin-right": 8,
@@ -27,6 +27,7 @@
         "tray",
         "custom/power_profile"
     ],
+
 
 
     "hyprland/workspaces": {
