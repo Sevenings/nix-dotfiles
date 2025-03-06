@@ -21,7 +21,6 @@
       gh
       kitty
       stow
-      waybar
       hypridle
       hyprpaper
       gcc
