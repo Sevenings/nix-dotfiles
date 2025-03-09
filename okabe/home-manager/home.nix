@@ -17,6 +17,7 @@
     ./mimetypes.nix
     # ./colorschemes.nix
     ./yazi/yazi.nix
+    ./zathura.nix
   ];
 
 

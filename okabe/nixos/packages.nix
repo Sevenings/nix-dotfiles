@@ -48,7 +48,6 @@
       xdragon
       gnumake
       kanshi
-      zathura
       ranger  # Just because of rifle
     ];
 }
