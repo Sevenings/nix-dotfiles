@@ -1,9 +1,10 @@
-{ config, lib, pkgs, ... }:
+{ pkgs, system, inputs, ... }:
 
 {
   # List packages installed in system profile. To search, run:
   # $ nix search wget
     environment.systemPackages = with pkgs; [
+      inputs.zen-browser.packages."${system}".default
       undollar
       cargo
       nodePackages.live-server

@@ -13,6 +13,9 @@
     home-manager.url = "github:nix-community/home-manager/release-24.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    # Zen-Browser
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
+
     # Flakes extra
 		yazi.url = "github:sxyazi/yazi"; 
   };
@@ -22,27 +25,18 @@
     nixpkgs,
     home-manager,
     yazi,
+    zen-browser,
     ...
   } @ inputs: let
     inherit (self) outputs;
-    # Supported systems for your flake packages, shell, etc.
-    systems = [
-      "aarch64-linux"
-      "i686-linux"
-      "x86_64-linux"
-      "aarch64-darwin"
-      "x86_64-darwin"
-    ];
-    # This is a function that generates an attribute by calling a function you
-    # pass to it, with each system as an argument
-    forAllSystems = nixpkgs.lib.genAttrs systems;
+    system = "x86_64-linux";
   in {
     # Your custom packages
     # Accessible through 'nix build', 'nix shell', etc
-    packages = forAllSystems (system: import ./misc/pkgs nixpkgs.legacyPackages.${system});
+    packages = import ./misc/pkgs nixpkgs.legacyPackages.${system};
     # Formatter for your nix files, available through 'nix fmt'
     # Other options beside 'alejandra' include 'nixpkgs-fmt'
-    formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
+    formatter = nixpkgs.legacyPackages.${system}.alejandra;
 
     # Your custom packages and modifications, exported as overlays
     overlays = import ./misc/overlays {inherit inputs;};
@@ -58,15 +52,10 @@
     nixosConfigurations = {
 
       okabe = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
+        specialArgs = { inherit inputs outputs; system = system; };
         modules = [
           # > Our main nixos configuration file <
           ./okabe/nixos/configuration.nix
-
-          # Instalando o yazi no sistema inteiro
-          ({ pkgs, ... }: {
-            environment.systemPackages = [ yazi.packages.${pkgs.system}.default ];
-          })
         ];
       };
 
