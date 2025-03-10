@@ -50,7 +50,7 @@
                 "border, 1, 10, default"
                 "borderangle, 1, 8, default"
                 "fade, 1, 3, default"
-                "workspaces, 1, 2, rush, slidevert"
+                "workspaces, 1, 2.6, rush, slidevert"
                 "specialWorkspace, 1, 3, easeOutBack, slidevert"
             ];
         };
