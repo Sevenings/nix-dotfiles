@@ -19,6 +19,7 @@
       neovim 
       wget
       gh
+      git
       kitty
       stow
       hypridle
