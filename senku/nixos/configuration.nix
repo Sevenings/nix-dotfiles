@@ -83,7 +83,7 @@
       style = "adwaita-dark";
   };
 
-  console.keyMap = "br-abnt2"
+  console.keyMap = "br-abnt2";
 
 
   # This option defines the first version of NixOS you have installed on this particular machine,

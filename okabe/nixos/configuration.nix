@@ -12,9 +12,14 @@
       ./programs.nix
     ];
 
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  # Boot configurations
+  boot.loader = {
+    systemd-boot = {
+      enable = true;
+      configurationLimit = 5;
+    };
+    efi.canTouchEfiVariables = true;
+  };
 
   networking.hostName = "fatima"; # Define your hostname.
   # Pick only one of the below networking options.
@@ -26,10 +31,6 @@
 
   # Select internationalisation properties.
   i18n.defaultLocale = "pt_BR.UTF-8";
-  # console = {
-  #   font = "Lat2-Terminus16";
-  #   keyMap = "us"; useXkbConfig = true; # use xkb.options in tty.
-  # };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -48,7 +49,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
     users.users.okabe = {
       isNormalUser = true;
-      extraGroups = [ "wheel" "docker" ]; # Enable ‘sudo’ for the user.
+      extraGroups = [ "networkmanager" "wheel" "docker" ]; # Enable ‘sudo’ for the user.
       packages = with pkgs; [
         tree
       ];
