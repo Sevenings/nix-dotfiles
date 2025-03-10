@@ -1,9 +1,10 @@
-{ ... }:
+{ nixpkgs-unstable, ... }:
 
 {
   programs.yazi = {
     enable = true;
     enableZshIntegration = true;
+    package = nixpkgs-unstable.yazi;
   };
 
   programs.yazi = {
