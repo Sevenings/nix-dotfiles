@@ -23,15 +23,12 @@
       plugins = [];
     };
 
+    waybar.enable = true;
+
     hyprland = {
       enable = true;
       withUWSM = true;
       xwayland.enable = true;
-    };
-
-    firefox = {
-      enable = true;
-      languagePacks = [ "br" "en-US" "fr" ];
     };
 
   };

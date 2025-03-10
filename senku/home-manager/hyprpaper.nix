@@ -5,17 +5,17 @@
 
     services.hyprpaper.settings = {
         
-        "$imagePath" = "~/Imagens/wallpapers/ghibli-totoro.png";
-        # "$secondMonitorPath" = "~/Imagens/wallpapers/sky.png";
+        "$imagePath" = "/home/senku/Imagens/Wallpapers/658733.jpg";
+        "$secondMonitorPath" = "/home/senku/Imagens/Wallpapers/1176951.jpg";
 
         preload = [
             "$imagePath"
-            # "$secondMonitorPath"
+            "$secondMonitorPath"
         ];
 
         wallpaper = [
-            "eDP-1, $imagePath"
-            "HDMI-A-1, $imagePath"
+            "DP-1, $imagePath"
+            "HDMI-A-1, $secondMonitorPath"
         ];
 
         ipc = "off";

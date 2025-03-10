@@ -61,7 +61,7 @@
       };
 
       senku = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
+        specialArgs = {inherit inputs outputs system;};
         modules = [
           # > Our main nixos configuration file <
           ./senku/nixos/configuration.nix

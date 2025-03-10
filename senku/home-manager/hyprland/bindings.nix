@@ -13,7 +13,7 @@
       "$mainMod SHIFT, Return, exec, $openMiniTerminal"
       "$mainMod, T, exec, $openTerminal"
       "$mainMod SHIFT, T, exec, $openMiniTerminal"
-      "$mainMod, W, exec, firefox"
+      "$mainMod, W, exec, zen"
       "$mainMod, Q, killactive, "
       "$mainMod, 0, exec, $logoutMenu "
       "$mainMod, Escape, exec, $logoutMenu"
