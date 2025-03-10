@@ -4,7 +4,7 @@
 
   # Installed Plugins
   wayland.windowManager.hyprland.plugins = [
-	# pkgs.hyprlandPlugins.hyprbars
+	  pkgs.hyprlandPlugins.hyprbars
 	  # pkgs.hyprlandPlugins.hyprgrass
   ];
 
