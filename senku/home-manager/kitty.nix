@@ -1,10 +1,12 @@
 { config, pkgs, ... }:
 
 {
-  home.file = {
-    ".config/kitty".source = ./kitty;
+  programs.kitty = {
+    enable = true;
+    themeFile = "Monokai";
+    font = {
+      name = "Source Code Pro";
+      size = 13.0;
+    };
   };
-
-  programs.kitty.enable = true;
-  programs.kitty.themeFile = "Monokai";
 }
