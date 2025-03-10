@@ -41,6 +41,7 @@
                 "Abezier, 0.99, 0.39, 0.04, 0.59"
                 "linear, 0, 0, 1, 1"
                 "easeOutBack, .25,-0.01,.28,1.16"
+                "rush, 0,.97,.26,.98"
             ];
 
             animation = [
@@ -49,7 +50,7 @@
                 "border, 1, 10, default"
                 "borderangle, 1, 8, default"
                 "fade, 1, 3, default"
-                "workspaces, 1, 2, myBezier, slidevert"
+                "workspaces, 1, 2, rush, slidevert"
                 "specialWorkspace, 1, 3, easeOutBack, slidevert"
             ];
         };
