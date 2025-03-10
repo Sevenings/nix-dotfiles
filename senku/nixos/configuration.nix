@@ -20,9 +20,14 @@
   # Nixpkgs
   nixpkgs.config.allowBroken = true;
 
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+  # Boot configurations
+  boot.loader = {
+    systemd-boot = {
+      enable = true;
+      configurationLimit = 5;
+    };
+    efi.canTouchEfiVariables = true;
+  };
 
   networking = {
     hostName = "stonebox"; # Define your hostname.
@@ -31,7 +36,20 @@
 
   # Set your time zone.
   time.timeZone = "America/Sao_Paulo";
-  i18n.defaultLocale = "pt_BR.UTF-8";
+  i18n = {
+    defaultLocale = "pt_BR.UTF-8";
+    extraLocaleSettings = {
+      LC_ADDRESS = "pt_BR.UTF-8";
+      LC_IDENTIFICATION = "pt_BR.UTF-8";
+      LC_MEASUREMENT = "pt_BR.UTF-8";
+      LC_MONETARY = "pt_BR.UTF-8";
+      LC_NAME = "pt_BR.UTF-8";
+      LC_NUMERIC = "pt_BR.UTF-8";
+      LC_PAPER = "pt_BR.UTF-8";
+      LC_TELEPHONE = "pt_BR.UTF-8";
+      LC_TIME = "pt_BR.UTF-8";
+    };
+  };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
@@ -45,7 +63,8 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.senku = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "networkmanager" "wheel" ]; # Enable ‘sudo’ for the user.
+    description = "Ishigami Senku";
   };
   users.defaultUserShell = pkgs.zsh;
 
@@ -63,6 +82,8 @@
       platformTheme = "gnome";
       style = "adwaita-dark";
   };
+
+  console.keyMap = "br-abnt2"
 
 
   # This option defines the first version of NixOS you have installed on this particular machine,

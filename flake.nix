@@ -23,6 +23,7 @@
   outputs = {
     self,
     nixpkgs,
+    nixpkgs-unstable,
     home-manager,
     yazi,
     zen-browser,
@@ -75,7 +76,7 @@
       
       "okabe@fatima" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        extraSpecialArgs = {inherit inputs outputs;};
+        extraSpecialArgs = {inherit inputs outputs nixpkgs-unstable;};
         modules = [
           # > Our main home-manager configuration file <
           ./okabe/home-manager/home.nix
@@ -84,7 +85,7 @@
 
       "senku@stonebox" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        extraSpecialArgs = {inherit inputs outputs;};
+        extraSpecialArgs = {inherit inputs outputs nixpkgs-unstable;};
         modules = [
           # > Our main home-manager configuration file <
           ./senku/home-manager/home.nix
