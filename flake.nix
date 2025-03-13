@@ -52,7 +52,7 @@
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
 
-      okabe = nixpkgs.lib.nixosSystem {
+      fatima = nixpkgs.lib.nixosSystem {
         specialArgs = { inherit inputs outputs; system = system; };
         modules = [
           # > Our main nixos configuration file <
@@ -60,7 +60,7 @@
         ];
       };
 
-      senku = nixpkgs.lib.nixosSystem {
+      stonebox = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs system;};
         modules = [
           # > Our main nixos configuration file <
