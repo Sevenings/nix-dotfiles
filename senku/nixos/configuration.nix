@@ -14,50 +14,8 @@
       ./programs.nix
     ];
 
-  # Nix Flakes
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
-  # Nixpkgs
-  nixpkgs.config.allowBroken = true;
-
-  # Boot configurations
-  boot.loader = {
-    systemd-boot = {
-      enable = true;
-      configurationLimit = 5;
-    };
-    efi.canTouchEfiVariables = true;
-  };
-
   networking = {
     hostName = "stonebox"; # Define your hostname.
-    networkmanager.enable = true;  # Easiest to use and most distros use this by default.
-  };
-
-  # Set your time zone.
-  time.timeZone = "America/Sao_Paulo";
-  i18n = {
-    defaultLocale = "pt_BR.UTF-8";
-    extraLocaleSettings = {
-      LC_ADDRESS = "pt_BR.UTF-8";
-      LC_IDENTIFICATION = "pt_BR.UTF-8";
-      LC_MEASUREMENT = "pt_BR.UTF-8";
-      LC_MONETARY = "pt_BR.UTF-8";
-      LC_NAME = "pt_BR.UTF-8";
-      LC_NUMERIC = "pt_BR.UTF-8";
-      LC_PAPER = "pt_BR.UTF-8";
-      LC_TELEPHONE = "pt_BR.UTF-8";
-      LC_TIME = "pt_BR.UTF-8";
-    };
-  };
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
-  # Enable sound.
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -68,22 +26,6 @@
   };
   users.defaultUserShell = pkgs.zsh;
 
-
-  # Fonts
-  # fonts.fontDir.enable = true;
-  # fonts.packages = [] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
-  # Before 25.05 (24.05 or earlier)
-  fonts.packages = with pkgs; [
-    nerdfonts
-  ];
-
-  qt = {
-      enable = true;
-      platformTheme = "gnome";
-      style = "adwaita-dark";
-  };
-
-  console.keyMap = "br-abnt2";
 
 
   # This option defines the first version of NixOS you have installed on this particular machine,

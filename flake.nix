@@ -58,6 +58,7 @@
         specialArgs = { inherit inputs outputs system; };
         modules = [
           # > Our main nixos configuration file <
+          ./common/nixos/configuration.nix
           ./okabe/nixos/configuration.nix
         ];
       };
@@ -66,6 +67,7 @@
         specialArgs = { inherit inputs outputs system; };
         modules = [
           # > Our main nixos configuration file <
+          ./common/nixos/configuration.nix
           ./senku/nixos/configuration.nix
         ];
       };
@@ -81,6 +83,7 @@
         extraSpecialArgs = {inherit inputs outputs nixpkgs-unstable;};
         modules = [
           # > Our main home-manager configuration file <
+          ./common/home-manager/home.nix
           ./okabe/home-manager/home.nix
         ];
       };
@@ -90,6 +93,7 @@
         extraSpecialArgs = {inherit inputs outputs nixpkgs-unstable;};
         modules = [
           # > Our main home-manager configuration file <
+          ./common/home-manager/home.nix
           ./senku/home-manager/home.nix
         ];
       };
