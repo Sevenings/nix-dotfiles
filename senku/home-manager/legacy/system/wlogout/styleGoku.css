@@ -35,25 +35,25 @@ button:focus {
 }
 
 #lock {
-	background-image: image(url("/usr/share/wlogout/icons/lock.png"), url("/usr/local/share/wlogout/icons/lock.png"));
+	background-image: image(url("~/.config/wlogout/resources/lock.png"), url("~/.config/wlogout/resources/lock.png"));
 }
 
 #logout {
-	background-image: image(url("/usr/share/wlogout/icons/logout.png"), url("/usr/local/share/wlogout/icons/logout.png"));
+	background-image: image(url("~/.config/wlogout/resources/logout.png"), url("~/.config/wlogout/resources/logout.png"));
 }
 
 #suspend {
-	background-image: image(url("/usr/share/wlogout/icons/suspend.png"), url("/usr/local/share/wlogout/icons/suspend.png"));
+	background-image: image(url("~/.config/wlogout/resources/suspend.png"), url("~/.config/wlogout/resources/suspend.png"));
 }
 
 #hibernate {
-	background-image: image(url("/usr/share/wlogout/icons/hibernate.png"), url("/usr/local/share/wlogout/icons/hibernate.png"));
+	background-image: image(url("~/.config/wlogout/resources/hibernate.png"), url("~/.config/wlogout/resources/hibernate.png"));
 }
 
 #shutdown {
-	background-image: image(url("/usr/share/wlogout/icons/shutdown.png"), url("/usr/local/share/wlogout/icons/shutdown.png"));
+	background-image: image(url("~/.config/wlogout/resources/shutdown.png"), url("~/.config/wlogout/resources/shutdown.png"));
 }
 
 #reboot {
-	background-image: image(url("/usr/share/wlogout/icons/reboot.png"), url("/usr/local/share/wlogout/icons/reboot.png"));
+	background-image: image(url("~/.config/wlogout/resources/reboot.png"), url("~/.config/wlogout/resources/reboot.png"));
 }

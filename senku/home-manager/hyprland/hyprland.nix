@@ -12,6 +12,8 @@
     ./env_vars.nix
     ./plugins.nix
     ./window_rules.nix
+    ./input.nix
+    ./workspaces.nix
   ];
 
 
@@ -49,24 +51,6 @@
     "$spotify_workspace"="9";
 
 
-    # Keyboard and Mouse
-    input = {
-      kb_layout = "br, us";
-      kb_options = "caps:escape";
-
-      repeat_rate = 35;
-      repeat_delay = 340;
-
-      follow_mouse = 1;
-      touchpad = {
-        natural_scroll = true;
-        disable_while_typing = true;
-      };
-
-      sensitivity = 1.0; # -1.0 - 1.0, 0 means no modification.
-      accel_profile = "flat";
-    };
-  
     # Layout
     dwindle = {
       pseudotile = true; # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
