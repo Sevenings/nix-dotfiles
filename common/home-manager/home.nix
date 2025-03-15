@@ -7,15 +7,17 @@
     # ./hyprpaper.nix
     # ./hypridle.nix
     # ./swaylock.nix
-    # ./environment_variables.nix
+    ./environment_variables.nix
+    ./fastfetch.nix
+    ./git.nix
+    ./gtk.nix
     ./kitty.nix
-    # ./gtk.nix
+    ./mimetypes.nix
+    ./nvim.nix
     # ./waybar/waybar.nix
     # ./legacy/legacy.nix
     # ./scripts/scripts.nix
     # ./python/environment.nix
-    # ./git.nix
-    # ./mimetypes.nix
     # ./colorschemes.nix
     # ./yazi/yazi.nix
   ];
