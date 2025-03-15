@@ -8,7 +8,7 @@
     # ./hypridle.nix
     # ./swaylock.nix
     # ./environment_variables.nix
-    # ./kitty.nix
+    ./kitty.nix
     # ./gtk.nix
     # ./waybar/waybar.nix
     # ./legacy/legacy.nix

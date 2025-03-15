@@ -1,9 +1,10 @@
 { config, pkgs, ... }:
 
 {
-  home.file = {
-    ".config/kitty".source = ./kitty;
+  programs.kitty = {
+    themeFile = "Argonaut";
+    font = {
+      size = 13.0;
+    };
   };
-
-  programs.kitty.enable = true;
 }
