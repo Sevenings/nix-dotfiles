@@ -55,7 +55,7 @@
     nixosConfigurations = {
 
       fatima = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs outputs; system = system; };
+        specialArgs = { inherit inputs outputs system; };
         modules = [
           # > Our main nixos configuration file <
           ./okabe/nixos/configuration.nix
@@ -63,7 +63,7 @@
       };
 
       stonebox = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs system;};
+        specialArgs = { inherit inputs outputs system; };
         modules = [
           # > Our main nixos configuration file <
           ./senku/nixos/configuration.nix
