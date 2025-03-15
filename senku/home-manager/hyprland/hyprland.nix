@@ -4,12 +4,8 @@
 
   imports = [
     ./appearance.nix
-    ./auto-start.nix
-    ./bindings.nix
     ./env_vars.nix
     ./plugins.nix
-    ./window_rules.nix
-    ./input.nix
     ./workspaces.nix
   ];
 

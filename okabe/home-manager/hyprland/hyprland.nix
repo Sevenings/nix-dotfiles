@@ -7,11 +7,8 @@
 
     imports = [
         ./appearance.nix
-        ./auto-start.nix
-        ./bindings.nix
-        ./env_vars.nix
+        ./input.nix
         ./plugins.nix
-        ./window_rules.nix
     ];
 
     wayland.windowManager.hyprland.settings = {
