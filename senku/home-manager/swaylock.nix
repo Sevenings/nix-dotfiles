@@ -7,7 +7,7 @@
 
     programs.swaylock.settings = {
         
-        image = "/home/okabe/Imagens/wallpapers/steins-gate-rainbow.png";
+        image = "/home/senku/Imagens/Wallpapers/1330715.png";
         # clock = true;
         indicator = true;
         indicator-radius = 150;
@@ -20,7 +20,7 @@
         # effect-blur = "10x3";
         text-color = "f4ffe8";
         screenshots = true;
-        indicator-image = "/home/okabe/Imagens/wallpapers/swaylock/omnitrix.png";
+        # indicator-image = "/home/okabe/Imagens/wallpapers/swaylock/omnitrix.png";
         inside-wrong-color = "EE000088";
 
     };
