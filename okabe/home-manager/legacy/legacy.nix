@@ -11,7 +11,6 @@
     ".config/ranger".source = ./common/ranger;
     ".config/zsh".source = ./common/zsh;
 
-    ".config/neofetch".source = ./system/neofetch;
     ".config/rofi".source = ./system/rofi;
     ".config/swaync".source = ./system/swaync;
     ".config/wlogout".source = ./system/wlogout;
