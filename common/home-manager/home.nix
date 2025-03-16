@@ -14,6 +14,7 @@
     ./kitty.nix
     ./mimetypes.nix
     ./nvim.nix
+    ./wlogout/wlogout.nix
     ./yazi/yazi.nix
     # ./waybar/waybar.nix
     # ./legacy/legacy.nix

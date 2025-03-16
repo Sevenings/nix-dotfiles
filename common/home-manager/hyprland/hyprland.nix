@@ -21,7 +21,7 @@
   wayland.windowManager.hyprland.settings = {
 
     # Some Applications var utils
-    "$logoutMenu" = "wlogout --css $HOME/.config/wlogout/styleGoku.css --layout $HOME/.config/wlogout/layout  --buttons-per-row 4";
+    "$logoutMenu" = "wlogout --buttons-per-row 4";
 
 
     # Programs Variables

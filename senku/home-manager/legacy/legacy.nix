@@ -14,7 +14,6 @@
 
     ".config/rofi".source = ./system/rofi;
     ".config/swaync".source = ./system/swaync;
-    ".config/wlogout".source = ./system/wlogout;
     ".zshrc".source = ./system/dot-zshrc;
   };
 
