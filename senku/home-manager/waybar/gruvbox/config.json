@@ -21,9 +21,6 @@
     "modules-right": [
         "pulseaudio",
         "network",
-        "bluetooth",
-        "backlight",
-        "battery",
         "tray",
         "custom/power_profile"
     ],
