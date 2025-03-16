@@ -2,6 +2,6 @@
 
 {
   home.file = {
-    ".config/nvim".source = ./common/nvim;
+    ".config/nvim".source = ./nvim;
   };
 }
