@@ -14,12 +14,12 @@
     ./kitty.nix
     ./mimetypes.nix
     ./nvim.nix
+    ./yazi/yazi.nix
     # ./waybar/waybar.nix
     # ./legacy/legacy.nix
     # ./scripts/scripts.nix
     # ./python/environment.nix
     # ./colorschemes.nix
-    # ./yazi/yazi.nix
   ];
 
   manual.html.enable = true;
