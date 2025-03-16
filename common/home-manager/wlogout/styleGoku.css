@@ -2,58 +2,55 @@
 	font-size: 16pt;
 	background-image: none;
 }
+
 window {
 	background-color: rgba(0, 0, 0, 0.6);
 }
+
 button {
 	color: #FFFFFF;
 	background-color: rgba(66, 67, 101, 1);
-	border: solid #597986;
-    border-width: 5px;
+	border: 5px solid #597986;
 	border-radius: 100%;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: 20%;
 
-	outline-style: none;
-	box-shadow: none;
+	outline: none;
+	box-shadow: 0px 0px 20px 5px rgb(10, 10, 10);
 	text-shadow: none;
 	animation: gradient_f 20s ease-in infinite;
 	margin: 128px 5px;
-    box-shadow: 0px 0px 20 5 rgb(10, 10, 10);
 }
 
 button:focus {
-    border: solid #F89A66;
-    border-width: 5px;
+    border: 5px solid #F89A66;
 	border-radius: 100%;
-
 	background-color: #BB5A51;
 	background-size: 30%;
-
-    box-shadow: 0px 0px 20 10 rgb(10, 10, 10);
+    box-shadow: 0px 0px 20px 10px rgb(10, 10, 10);
 }
 
 #lock {
-	background-image: image(url("~/.dotfiles/common/home-manager/wlogout/resources/lock.png"), url("~/.dotfiles/common/home-manager/wlogout/resources/lock.png"));
+	background-image: url("/home/senku/.dotfiles/common/home-manager/wlogout/resources/lock.png");
 }
 
 #logout {
-	background-image: image(url("~/.dotfiles/common/home-manager/wlogout/resources/logout.png"), url("~/.dotfiles/common/home-manager/wlogout/resources/logout.png"));
+	background-image: url("/home/senku/.dotfiles/common/home-manager/wlogout/resources/logout.png");
 }
 
 #suspend {
-	background-image: image(url("~/.dotfiles/common/home-manager/wlogout/resources/suspend.png"), url("~/.dotfiles/common/home-manager/wlogout/resources/suspend.png"));
+	background-image: url("/home/senku/.dotfiles/common/home-manager/wlogout/resources/suspend.png");
 }
 
 #hibernate {
-	background-image: image(url("~/.dotfiles/common/home-manager/wlogout/resources/hibernate.png"), url("~/.dotfiles/common/home-manager/wlogout/resources/hibernate.png"));
+	background-image: url("/home/senku/.dotfiles/common/home-manager/wlogout/resources/hibernate.png");
 }
 
 #shutdown {
-	background-image: image(url("~/.dotfiles/common/home-manager/wlogout/resources/shutdown.png"), url("~/.dotfiles/common/home-manager/wlogout/resources/shutdown.png"));
+	background-image: url("/home/senku/.dotfiles/common/home-manager/wlogout/resources/shutdown.png");
 }
 
 #reboot {
-	background-image: image(url("~/.dotfiles/common/home-manager/wlogout/resources/reboot.png"), url("~/.dotfiles/common/home-manager/wlogout/resources/reboot.png"));
+	background-image: url("/home/senku/.dotfiles/common/home-manager/wlogout/resources/reboot.png");
 }
