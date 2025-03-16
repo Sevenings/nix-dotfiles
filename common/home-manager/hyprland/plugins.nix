@@ -4,7 +4,7 @@
 
   # Installed Plugins
   wayland.windowManager.hyprland.plugins = [
-	  inputs.split-monitor-workspaces.packages.${pkgs.system}.split-monitor-workspaces
+	  # inputs.split-monitor-workspaces.packages.${pkgs.system}.split-monitor-workspaces
   ];
 
   # Plugins Settings
