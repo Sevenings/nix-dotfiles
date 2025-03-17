@@ -50,7 +50,7 @@
       ranger  # Just because of rifle
 
       # Latex
-      texliveMinimal
+      texliveBasic
       texlivePackages.latexmk
     ];
 }
