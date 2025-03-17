@@ -5,6 +5,7 @@
     [ # Include the results of the hardware scan.
       ./packages.nix
       ./programs.nix
+      ./python_packages.nix
     ];
 
   # Nix Flakes
