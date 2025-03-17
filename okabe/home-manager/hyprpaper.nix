@@ -5,7 +5,7 @@
 
     services.hyprpaper.settings = {
         
-        "$imagePath" = "~/Imagens/wallpapers/steins-gate-kurisu.png";
+        "$imagePath" = "~/Imagens/wallpapers/steins-gate-kurisu-lab.jpg";
         "$secondMonitorPath" = "~/Imagens/wallpapers/steins-gate-girl.png";
 
         preload = [
