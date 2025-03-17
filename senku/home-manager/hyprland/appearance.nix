@@ -5,8 +5,8 @@
   wayland.windowManager.hyprland.settings = {
 
     general = {
-      "col.active_border" = "rgba(59595999)";
-      "col.inactive_border" = "rgb(221f22)";
+      # "col.active_border" = "rgba(59595999)";
+      # "col.inactive_border" = "rgb(221f22)";
     };
 
     animation = [

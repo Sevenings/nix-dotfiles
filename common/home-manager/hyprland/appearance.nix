@@ -9,6 +9,9 @@
       gaps_out = 5;
       border_size = 3;
 
+      "col.active_border" = "rgb(f92672)";
+      "col.inactive_border" = "rgba(595959aa)";
+
       layout = "dwindle";
 
       allow_tearing = false;

@@ -1,11 +1,10 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   wayland.windowManager.hyprland.settings = {
 
     general = {
-      "col.active_border" = "rgb(83c092)";
-      "col.inactive_border" = "rgba(595959aa)";
+      "col.active_border" = lib.mkForce "rgb(ad3434)";
     };
 
     animation = [
