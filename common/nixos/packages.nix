@@ -48,5 +48,9 @@
       gnumake
       kanshi
       ranger  # Just because of rifle
+
+      # Latex
+      texliveMinimal
+      texlivePackages.latexmk
     ];
 }
