@@ -2,7 +2,7 @@
 
 {
   programs.kitty = {
-    themeFile = "Argonaut";
+    themeFile = "Monokai";
     font = {
       size = 13.0;
     };
