@@ -4,6 +4,11 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
     environment.systemPackages = with pkgs; [
+      # Latex
+      texliveMinimal
+      texlivePackages.latexmk
+
+      # All
       pandoc_3_5
       inputs.zen-browser.packages."${system}".default
       undollar
