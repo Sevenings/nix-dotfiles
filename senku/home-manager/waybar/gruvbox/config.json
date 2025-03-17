@@ -21,9 +21,6 @@
     "modules-right": [
         "pulseaudio",
         "network",
-        "bluetooth",
-        "backlight",
-        "battery",
         "tray",
         "custom/power_profile"
     ],
@@ -118,9 +115,9 @@
 
     "network": {
         "format-wifi": "<span color='#202020' bgcolor='#f6c657' >  </span> {essid} ({signalStrength}%)",
-        "format-ethernet": "{ipaddr}/{cidr} ",
-        "tooltip-format": "{ifname} via {gwaddr} ",
-        "format-linked": "{ifname} (No IP) ",
+        "format-ethernet": "{ipaddr}/{cidr} 󰈀",
+        "tooltip-format": "{ifname} via {gwaddr} 󰈀",
+        "format-linked": "{ifname} (No IP) 󰑩",
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "<span color='#202020' bgcolor='#f6c657'> {ifname} </span> {ipaddr}/{cidr}",
         "on-click-right": "kitty --class=floatingTerminal -e nmtui"

@@ -8,11 +8,9 @@
     # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # symlink to the Nix store copy.
     ".config/calcurse".source = ./common/calcurse;
-    ".config/nvim".source = ./common/nvim;
     ".config/ranger".source = ./common/ranger;
     ".config/zsh".source = ./common/zsh;
 
-    ".config/neofetch".source = ./system/neofetch;
     ".config/rofi".source = ./system/rofi;
     ".config/swaync".source = ./system/swaync;
     ".config/wlogout".source = ./system/wlogout;

@@ -13,11 +13,18 @@
     home-manager.url = "github:nix-community/home-manager/release-24.11";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    # Hyprland Plugins
+    hyprland.url = "github:hyprwm/Hyprland";
+    split-monitor-workspaces = {
+      url = "github:Duckonaut/split-monitor-workspaces";
+      inputs.hyprland.follows = "hyprland"; # <- make sure this line is present for the plugin to work as intended
+    };
+
+    # Yazi
+		yazi.url = "github:sxyazi/yazi"; 
+
     # Zen-Browser
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
-
-    # Flakes extra
-		yazi.url = "github:sxyazi/yazi"; 
   };
 
   outputs = {
@@ -25,6 +32,7 @@
     nixpkgs,
     nixpkgs-unstable,
     home-manager,
+    split-monitor-workspaces,
     yazi,
     zen-browser,
     ...
@@ -35,12 +43,7 @@
     # Your custom packages
     # Accessible through 'nix build', 'nix shell', etc
     packages = import ./misc/pkgs nixpkgs.legacyPackages.${system};
-    # Formatter for your nix files, available through 'nix fmt'
-    # Other options beside 'alejandra' include 'nixpkgs-fmt'
-    formatter = nixpkgs.legacyPackages.${system}.alejandra;
 
-    # Your custom packages and modifications, exported as overlays
-    overlays = import ./misc/overlays {inherit inputs;};
     # Reusable nixos modules you might want to export
     # These are usually stuff you would upstream into nixpkgs
     nixosModules = import ./misc/modules/nixos;
@@ -53,17 +56,19 @@
     nixosConfigurations = {
 
       fatima = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs outputs; system = system; };
+        specialArgs = { inherit inputs outputs system; };
         modules = [
           # > Our main nixos configuration file <
+          ./common/nixos/configuration.nix
           ./okabe/nixos/configuration.nix
         ];
       };
 
       stonebox = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs system;};
+        specialArgs = { inherit inputs outputs system; };
         modules = [
           # > Our main nixos configuration file <
+          ./common/nixos/configuration.nix
           ./senku/nixos/configuration.nix
         ];
       };
@@ -79,6 +84,7 @@
         extraSpecialArgs = {inherit inputs outputs nixpkgs-unstable;};
         modules = [
           # > Our main home-manager configuration file <
+          ./common/home-manager/home.nix
           ./okabe/home-manager/home.nix
         ];
       };
@@ -88,6 +94,7 @@
         extraSpecialArgs = {inherit inputs outputs nixpkgs-unstable;};
         modules = [
           # > Our main home-manager configuration file <
+          ./common/home-manager/home.nix
           ./senku/home-manager/home.nix
         ];
       };

@@ -3,8 +3,6 @@
 {
   programs = {
 
-    git.enable = true;
-
     lazygit = {
       enable = true;
       settings = {};
@@ -30,7 +28,6 @@
       withUWSM = true;
       xwayland.enable = true;
     };
-
 
   };
 }
