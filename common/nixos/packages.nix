@@ -2,6 +2,7 @@
 
 {
     environment.systemPackages = with pkgs; [
+      zathura
       pandoc_3_5
       inputs.zen-browser.packages."${system}".default
       undollar
