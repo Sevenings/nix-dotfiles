@@ -6,6 +6,7 @@
       ./packages.nix
       ./programs.nix
       ./python_packages.nix
+      ./display_manager.nix
     ];
 
   # Nix Flakes
