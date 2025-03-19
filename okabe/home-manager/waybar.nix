@@ -12,7 +12,6 @@
 
   programs.waybar = {
     enable = true;
-    systemd.enable = true;
     settings = {
       mainBar = builtins.fromJSON ( builtins.readFile ./waybar/gruvbox/config.json );
     };
