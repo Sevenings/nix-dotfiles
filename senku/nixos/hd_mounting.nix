@@ -13,7 +13,7 @@
   # Monta a partição em /media/hd
   fileSystems."/media/hd" = {
     device = "/dev/disk/by-uuid/5E4676054675DDE9";
-    fsType = "nfts-3g"; # Altere se for outro tipo (ex: btrfs, xfs etc.)
+    fsType = "ntfs-3g"; # Altere se for outro tipo (ex: btrfs, xfs etc.)
     options = [
       "uid=1000"            # UID do seu usuário
       "gid=100"             # GID do seu grupo principal
