@@ -1,6 +1,6 @@
 # Faz o mount do HD no meu SSD, e bind mount de algumas pastas relevantes
 
-{ ... }:
+{ pkgs, ... }:
 
 {
   # Instala o driver ntfs-3g, necessário para fazer o bind com esse HD que usa a formatação ntfs
