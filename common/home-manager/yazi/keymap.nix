@@ -156,7 +156,7 @@
         { on = [ "g" "T" ];        run = "cd ~/.local/share/Trash";                desc = "Go to Trash Can"; }
         { on = [ "g" "p" ];        run = "cd ~/Projetos";                          desc = "Go to Projetos"; }
         { on = [ "g" "P" ];        run = "cd ~/Playground";                        desc = "Go to Playground"; }
-        { on = [ "g" "s" ];        run = "cd ~/.myScripts";                        desc = "Go to myScripts"; }
+        { on = [ "g" "s" ];        run = "cd ~/Imagens/Screenshots";               desc = "Go to Screenshots"; }
         { on = [ "g" "/" ];        run = "cd /";                                   desc = "Go to Root"; }
         { on = [ "g" "i" ];        run = "cd ~/Imagens";                           desc = "Go to Imagens"; }
         { on = [ "g" "m" ];        run = "cd ~/Musicas";                           desc = "Go to Musicas"; }
