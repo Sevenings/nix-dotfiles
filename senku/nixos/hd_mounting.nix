@@ -6,8 +6,9 @@
   # Instala o driver ntfs-3g, necessário para fazer o bind com esse HD que usa a formatação ntfs
   boot.supportedFilesystems = [ "ntfs" ];
 
-
-  
+  environment.systemPackages = with pkgs; [
+    ntfs3g
+  ];
 
   # Monta a partição em /media/hd
   fileSystems."/media/hd" = {
