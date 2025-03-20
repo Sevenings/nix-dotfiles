@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./hd_mounting.nix
       ./nvidia.nix
       ./packages.nix
       ./programs.nix
