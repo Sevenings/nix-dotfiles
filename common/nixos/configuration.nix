@@ -7,6 +7,7 @@
       ./programs.nix
       ./python_packages.nix
       ./display_manager.nix
+      ./docker.nix
     ];
 
   # Nix Flakes

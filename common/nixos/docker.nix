@@ -7,7 +7,4 @@
     docker-compose
   ];
   
-  users.users.senku = {
-    extraGroups = [ "docker" ];
-  };
 }

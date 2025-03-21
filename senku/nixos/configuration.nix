@@ -22,7 +22,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.senku = {
     isNormalUser = true;
-    extraGroups = [ "networkmanager" "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "networkmanager" "wheel" "docker" ]; # Enable ‘sudo’ for the user.
     description = "Ishigami Senku";
   };
   users.defaultUserShell = pkgs.zsh;

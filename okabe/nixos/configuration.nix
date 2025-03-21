@@ -28,7 +28,7 @@
 
 
 
-    users.defaultUserShell = pkgs.zsh;
+  users.defaultUserShell = pkgs.zsh;
 
   # Sddm
   services.displayManager.sddm.wayland.enable = true;
