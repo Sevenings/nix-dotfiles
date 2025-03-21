@@ -30,11 +30,6 @@
 
     users.defaultUserShell = pkgs.zsh;
 
-  networking.extraHosts = ''
-    172.17.120.54 tce-automacao
-    192.168.0.186 beebopi
-  '';
-
   # Sddm
   services.displayManager.sddm.wayland.enable = true;
 
