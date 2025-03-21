@@ -3,7 +3,6 @@
 {
     environment.systemPackages = with pkgs; [
       tree-sitter
-      zathura
       pandoc_3_5
       inputs.zen-browser.packages."${system}".default
       undollar

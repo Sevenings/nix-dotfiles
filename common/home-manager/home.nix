@@ -16,6 +16,7 @@
     ./nvim.nix
     ./wlogout/wlogout.nix
     ./yazi/yazi.nix
+    ./zathura.nix
     # ./waybar/waybar.nix
     # ./legacy/legacy.nix
     # ./scripts/scripts.nix

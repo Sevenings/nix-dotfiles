@@ -45,7 +45,12 @@
     };
   };
 
-    networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+  networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
+
+  networking.extraHosts = ''
+    172.17.120.54 tce-automacao
+    192.168.0.186 beebopi
+  '';
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
