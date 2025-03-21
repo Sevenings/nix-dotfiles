@@ -9,7 +9,6 @@
     # symlink to the Nix store copy.
     ".config/calcurse".source = ./common/calcurse;
     ".config/ranger".source = ./common/ranger;
-    ".config/zathura".source = ./common/zathura;
     ".config/zsh".source = ./common/zsh;
 
     ".config/rofi".source = ./system/rofi;

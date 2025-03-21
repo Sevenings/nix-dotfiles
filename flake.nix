@@ -56,7 +56,7 @@
     nixosConfigurations = {
 
       fatima = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs outputs system; };
+        specialArgs = { inherit inputs outputs system; nixpkgs-unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;};
         modules = [
           # > Our main nixos configuration file <
           ./common/nixos/configuration.nix
@@ -65,7 +65,7 @@
       };
 
       stonebox = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs outputs system; };
+        specialArgs = { inherit inputs outputs system; nixpkgs-unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;};
         modules = [
           # > Our main nixos configuration file <
           ./common/nixos/configuration.nix
@@ -81,7 +81,7 @@
       
       "okabe@fatima" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        extraSpecialArgs = {inherit inputs outputs nixpkgs-unstable;};
+        extraSpecialArgs = {inherit inputs outputs; nixpkgs-unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;};
         modules = [
           # > Our main home-manager configuration file <
           ./common/home-manager/home.nix
@@ -91,7 +91,7 @@
 
       "senku@stonebox" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        extraSpecialArgs = {inherit inputs outputs nixpkgs-unstable;};
+        extraSpecialArgs = {inherit inputs outputs; nixpkgs-unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;};
         modules = [
           # > Our main home-manager configuration file <
           ./common/home-manager/home.nix
