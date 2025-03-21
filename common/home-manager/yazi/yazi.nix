@@ -9,11 +9,6 @@
 
     initLua = ./init.lua;
 
-    flavors = {
-      everforest-medium = ./flavors/everforest-medium.yazi;
-      monokai-vibrant = ./flavors/monokai-vibrant.yazi;
-    };
-
     # plugins = {
     #   full-border = ./plugins/full-border.yazi;
     #   lazygit = ./plugins/lazygit.yazi;
