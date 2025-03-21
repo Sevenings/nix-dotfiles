@@ -4,7 +4,7 @@
   programs.yazi.theme = {
 
     flavor = {
-      dark = "everforest-medium";
+      # dark = "everforest-medium";
     };
 
 
