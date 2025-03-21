@@ -3,15 +3,15 @@
 {
   programs.yazi = {
     enable = true;
-    enableZshIntegration = true;
     package = inputs.yazi.packages.${pkgs.system}.default;
-  };
+    enableZshIntegration = true;
+		shellWrapperName = "y";
 
-  programs.yazi = {
     initLua = ./init.lua;
 
     flavors = {
       everforest-medium = ./flavors/everforest-medium.yazi;
+      monokai-vibrant = ./flavors/monokai-vibrant.yazi;
     };
 
     # plugins = {

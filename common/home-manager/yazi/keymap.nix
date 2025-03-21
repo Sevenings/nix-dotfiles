@@ -47,7 +47,7 @@
         { on = [ "<Right>" ]; run = "enter";    desc = "Enter the child directory"; }
 
         { on = [ "g" "g" ]; run = "arrow top";  desc = "Move cursor to the top"; }
-        { on = [ "G" ];      run = "arrow up";  desc = "Move cursor to the bottom"; }
+        { on = [ "G" ];     run = "arrow bot";  desc = "Move cursor to the bottom"; }
 
         # Selection
         # { on = [ "<Space>" ]; run = [ "select --state=none"; "arrow 1" ], desc = "Toggle the current selection state"; }
