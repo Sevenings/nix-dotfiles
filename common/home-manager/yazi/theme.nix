@@ -10,7 +10,7 @@
   programs.yazi.theme = {
 
     flavor = {
-      dark = "ayu-dark";
+      dark = "monokai-vibrant";
     };
 
 
