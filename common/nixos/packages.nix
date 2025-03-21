@@ -2,6 +2,8 @@
 
 {
     environment.systemPackages = with pkgs; [
+      exiftool
+      killall
       tree-sitter
       pandoc_3_5
       inputs.zen-browser.packages."${system}".default
