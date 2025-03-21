@@ -1,10 +1,10 @@
-{ nixpkgs-unstable, ... }:
+{ inputs, pkgs, ... }:
 
 {
   programs.yazi = {
     enable = true;
     enableZshIntegration = true;
-    package = nixpkgs-unstable.yazi;
+    package = inputs.yazi.packages.${pkgs.system}.default;
   };
 
   programs.yazi = {
