@@ -12,7 +12,6 @@
       ./nvidia.nix
       ./packages.nix
       ./programs.nix
-      ./docker.nix
     ];
 
   networking = {
