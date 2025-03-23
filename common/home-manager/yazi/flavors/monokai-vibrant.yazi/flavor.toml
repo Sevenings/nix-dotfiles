@@ -27,7 +27,7 @@ find_keyword  = { bg = "white", fg = "#FF3F4F", bold = true, italic = false, und
 
 # Border
 border_symbol = "│"
-border_style  = { bg = "#292B30", fg = "#333341" }
+border_style  = { fg = "#333341" }
 
 [which]
 cols = 2
