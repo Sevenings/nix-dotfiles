@@ -8,7 +8,7 @@
       ./python_packages.nix
       ./display_manager.nix
       ./docker.nix
-      ./printing.nix
+      # ./printing.nix
     ];
 
   # Nix Flakes
