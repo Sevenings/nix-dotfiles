@@ -5,8 +5,9 @@ let
 in {
   home.packages = with pkgs; [
     (stdenv.mkDerivation {
-      name = "bluetoothManager";
-      src = "${HOME}/.dotfiles/common/home-manager/scripts/bluetoothManager.sh";
+      pname = "bluetoothManager";
+      version = "1.0";
+      src = ./bluetoothManager.sh;
       phases = [ "installPhase" ];
       installPhase = ''
         mkdir -p $out/bin
