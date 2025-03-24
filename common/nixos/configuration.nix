@@ -8,6 +8,7 @@
       ./python_packages.nix
       ./display_manager.nix
       ./docker.nix
+      ./printing.nix
     ];
 
   # Nix Flakes
@@ -52,9 +53,6 @@
     172.17.120.54 tce-automacao
     192.168.0.186 beebopi
   '';
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
 
   # Enable sound.
   services.pipewire = {
