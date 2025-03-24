@@ -19,7 +19,7 @@
     ./zathura.nix
     # ./waybar/waybar.nix
     # ./legacy/legacy.nix
-    # ./scripts/scripts.nix
+    ./scripts/scripts.nix
     # ./python/environment.nix
     # ./colorschemes.nix
   ];
