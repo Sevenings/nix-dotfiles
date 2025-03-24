@@ -5,8 +5,8 @@
 
     services.hyprpaper.settings = {
         
-        "$imagePath" = "~/Imagens/wallpapers/tengen toppa gurren langann/851137.png";
-        "$secondMonitorPath" = "~/Imagens/wallpapers/tengen toppa gurren langann/851137.png";
+        "$imagePath" = "~/Imagens/Wallpapers/tengen toppa gurren langann/851137.png";
+        "$secondMonitorPath" = "~/Imagens/Wallpapers/tengen toppa gurren langann/851137.png";
 
         preload = [
             "$imagePath"
