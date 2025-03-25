@@ -194,7 +194,7 @@
         "tooltip-format-off": "Bluetooth Module Off",
         "tooltip-format-on": "No devices connected",
         "tooltip-format-connected": "Status: {status}\nBattery: {device_battery_percentage}\nAddr: {device_address}",
-        "on-click": "bluetoothManager.sh"
+        "on-click": "bluetoothManager"
     },
 
     "battery": {

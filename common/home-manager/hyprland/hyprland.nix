@@ -33,11 +33,11 @@
     "$openMiniFileManager" = "$terminal --class=miniTerminal -e $fileManager";
     "$appLauncher" = "rofi -show drun -disable-history -show-icons";
     "$cmdLauncher" = "rofi -show run";
-    "$browser" = "firefox";
+    "$browser" = "zen";
     "$fzfShot" = "$scripts_root/fzfShot.sh";
     "$fuzzyShot" = "$terminal --class=floatingTerminal -e fzfShot.sh";
-    "$calendar" = "$scripts_root/openCalendar.sh";
-    "$calculator" = "$scripts_root/pythonCalculator/python_calculator.sh";
+    "$calendar" = "openCalendar";
+    "$calculator" = "python_calculator";
 
 
     # SPECIAL WORKSPACES

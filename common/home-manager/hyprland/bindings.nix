@@ -57,7 +57,7 @@
       # $mainMod, M, exec, firefox web.whatsapp.com
       "$mainMod, M, exec, firefox mail.google.com"
       # "$mainMod, Space, exec, $fuzzyShot"
-      "$mainMod, B, exec, babel.sh"
+      "$mainMod, B, exec, babel"
 
       # ColorPicker
       "ALT, Print, exec, colorPicker.sh"
