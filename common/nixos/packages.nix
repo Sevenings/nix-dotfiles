@@ -28,7 +28,6 @@
       gcc
       unzip
       zip
-      neofetch
       calcurse
       brightnessctl
       pulsemixer
