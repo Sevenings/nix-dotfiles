@@ -2,7 +2,6 @@
 
 {
     environment.systemPackages = with pkgs; [
-      nerdfetch
       exiftool
       killall
       tree-sitter
