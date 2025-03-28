@@ -8,7 +8,6 @@
     # ./hypridle.nix
     # ./swaylock.nix
     ./environment_variables.nix
-    ./fastfetch.nix
     ./git.nix
     ./gtk.nix
     ./kitty.nix
