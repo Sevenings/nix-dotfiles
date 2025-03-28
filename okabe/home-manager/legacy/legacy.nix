@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ ... }:
 
 {
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -9,11 +9,9 @@
     # symlink to the Nix store copy.
     ".config/calcurse".source = ./common/calcurse;
     ".config/ranger".source = ./common/ranger;
-    ".config/zsh".source = ./common/zsh;
 
     ".config/rofi".source = ./system/rofi;
     ".config/swaync".source = ./system/swaync;
-    ".zshrc".source = ./system/dot-zshrc;
   };
 
 }

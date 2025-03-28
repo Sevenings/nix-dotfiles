@@ -20,6 +20,7 @@
     # ./waybar/waybar.nix
     # ./legacy/legacy.nix
     ./scripts/scripts.nix
+    ./zsh/zsh.nix
     # ./python/environment.nix
     # ./colorschemes.nix
   ];

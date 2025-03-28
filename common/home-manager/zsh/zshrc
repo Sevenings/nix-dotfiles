@@ -77,7 +77,7 @@ eval "$(direnv hook zsh)"
 
 
 clear
-neofetch
+nerdfetch
 calcurse -d 7
 
 
