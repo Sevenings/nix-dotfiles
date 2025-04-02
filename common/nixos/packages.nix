@@ -2,6 +2,7 @@
 
 {
     environment.systemPackages = with pkgs; [
+      hyprpicker
       exiftool
       killall
       tree-sitter

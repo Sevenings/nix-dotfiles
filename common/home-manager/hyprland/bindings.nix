@@ -35,7 +35,7 @@
       ", XF86Calculator, exec, $calculator"
       "$mainMod, O, centerwindow"
       "$mainMod CTRL, S, pin"
-      "$mainMod, C, exec, openCalendar.sh"
+      "$mainMod, C, exec, openCalendar"
       "Ctrl, XF86Calculator, exec, kitty -e nvim"
       "$mainMod, N, exec, obsidian"
       "$mainMod, F1, exec, kitty --class=\"miniTerminal\" -e nvim '$HOME/Anotações/Todo/todo atual.md'"
@@ -55,12 +55,12 @@
       "$mainMod, Print, exec, grim -g \"$(hyprctl activewindow | grep at: | awk -F'[:,]' '{print $2 \",\" $3}') $(hyprctl activewindow | grep size: | awk -F'[:,]' '{print $2 \"x\" $3}')\" - | wl-copy && notify-send \"Captura de Janela\" \"Janela enviada para o Ctrl+C\""
       "$mainMod SHIFT, Print, exec, grim -g \"$(hyprctl activewindow | grep at: | awk -F'[:,]' '{print $2 \",\" $3}') $(hyprctl activewindow | grep size: | awk -F'[:,]' '{print $2 \"x\" $3}')\" && notify-send \"Captura de Janela\" \"Janela salva em Imagens\""
       # $mainMod, M, exec, firefox web.whatsapp.com
-      "$mainMod, M, exec, firefox mail.google.com"
+      "$mainMod, M, exec, zen mail.google.com"
       # "$mainMod, Space, exec, $fuzzyShot"
       "$mainMod, B, exec, babel"
 
       # ColorPicker
-      "ALT, Print, exec, colorPicker.sh"
+      "ALT, Print, exec, colorpicker"
 
       # Atalhos de Pastas
       "CTRL ALT, P, exec, kitty -e yazi ~/Projetos"
@@ -77,7 +77,7 @@
       ", XF86MonBrightnessDown, exec, brightnessctl --exponent=4 s 5%-"
 
       # Switch Dwindle and Master
-      "$mainMod, Y, exec, switchLayout.sh"
+      "$mainMod, Y, exec, switchlayout"
       
       # Switch keyboard style
       "$mainMod, Space, exec, hyprctl switchxkblayout at-translated-set-2-keyboard next"
