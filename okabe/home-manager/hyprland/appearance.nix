@@ -4,7 +4,7 @@
   wayland.windowManager.hyprland.settings = {
 
     general = {
-      "col.active_border" = lib.mkForce "rgb(ad3434)";
+      "col.active_border" = lib.mkForce "rgb(3a67cf)";
     };
 
     animation = [
