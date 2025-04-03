@@ -40,6 +40,9 @@
       "$mainMod, N, exec, obsidian"
       "$mainMod, F1, exec, kitty --class=\"miniTerminal\" -e nvim '$HOME/Anotações/Todo/todo atual.md'"
 
+      # Seletor de emojis
+      "$mainMod, period, exec, rofi -modi emoji -show emoji"
+
       # Copy from Memory
       "$mainMod SHIFT, C, exec, memoryCopy.sh"
 
