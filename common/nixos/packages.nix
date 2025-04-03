@@ -34,7 +34,6 @@
       pulsemixer
       luarocks
       pkgs.wl-clipboard
-      rofi
       swaynotificationcenter
       pkgs.wlogout
       grim
