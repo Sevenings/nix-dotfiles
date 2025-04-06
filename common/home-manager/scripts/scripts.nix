@@ -1,8 +1,6 @@
 { config, pkgs, ... }:
 
-let
-  HOME = config.home.homeDirectory;
-in {
+{
   home.packages = with pkgs; [
 
     # BluetoothManager
