@@ -55,5 +55,31 @@
       '';
     })
 
+    # Color Picker
+    (stdenv.mkDerivation {
+      pname = "colorpicker";
+      version = "1.0";
+      src = ./colorPicker.sh;
+      phases = [ "installPhase" ];
+      installPhase = ''
+        mkdir -p $out/bin
+        cp $src $out/bin/colorpicker
+        chmod +x $out/bin/colorpicker
+      '';
+    })
+
+    # Switch layout
+    (stdenv.mkDerivation {
+      pname = "switchlayout";
+      version = "1.0";
+      src = ./hyprland/switchLayout.sh;
+      phases = [ "installPhase" ];
+      installPhase = ''
+        mkdir -p $out/bin
+        cp $src $out/bin/switchlayout
+        chmod +x $out/bin/switchlayout
+      '';
+    })
+
   ];
 }

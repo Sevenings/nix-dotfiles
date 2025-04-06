@@ -2,6 +2,7 @@
 
 {
     environment.systemPackages = with pkgs; [
+      hyprpicker
       exiftool
       killall
       tree-sitter
@@ -33,7 +34,6 @@
       pulsemixer
       luarocks
       pkgs.wl-clipboard
-      rofi
       swaynotificationcenter
       pkgs.wlogout
       grim

@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 
 ID=1
 DELAY=2000

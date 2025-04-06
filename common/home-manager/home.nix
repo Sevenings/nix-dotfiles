@@ -4,9 +4,6 @@
 
   imports = [
     ./hyprland/hyprland.nix
-    # ./hyprpaper.nix
-    # ./hypridle.nix
-    # ./swaylock.nix
     ./environment_variables.nix
     ./fastfetch.nix
     ./git.nix
@@ -17,12 +14,9 @@
     ./wlogout/wlogout.nix
     ./yazi/yazi.nix
     ./zathura.nix
-    # ./waybar/waybar.nix
-    # ./legacy/legacy.nix
     ./scripts/scripts.nix
     ./zsh/zsh.nix
-    # ./python/environment.nix
-    # ./colorschemes.nix
+    ./programs.nix
   ];
 
   manual.html.enable = true;
