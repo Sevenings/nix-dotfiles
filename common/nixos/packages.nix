@@ -3,6 +3,7 @@
 {
     environment.systemPackages = with pkgs; [
       yq
+      gimp
       hyprpicker
       exiftool
       killall
