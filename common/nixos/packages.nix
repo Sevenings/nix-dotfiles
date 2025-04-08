@@ -2,6 +2,7 @@
 
 {
     environment.systemPackages = with pkgs; [
+      yq
       hyprpicker
       exiftool
       killall
