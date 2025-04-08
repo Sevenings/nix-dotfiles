@@ -1,4 +1,4 @@
-{ ... }:
+{ config, pkgs, ... }:
 
 {
   # Display Manager
@@ -6,7 +6,13 @@
     sddm = {
       enable = true;
       wayland.enable = true;
+      theme = "catppuccin-sddm-corners";
     };
     defaultSession = "hyprland-uwsm";
   };
+
+
+  environment.systemPackages = with pkgs; [
+    catppuccin-sddm-corners
+  ];
 }
