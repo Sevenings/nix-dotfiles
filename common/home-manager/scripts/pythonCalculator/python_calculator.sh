@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 terminal="kitty"
 calculatorKittyConfig="$HOME/.dotfiles/common/home-manager/scripts/pythonCalculator/calculatorConfig/kitty.conf"
 calculator="$terminal \

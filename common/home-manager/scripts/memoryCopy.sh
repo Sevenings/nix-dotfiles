@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 config_file="$HOME/.config/rofi/itemSelectorConfig.rasi"
 
 number_options=3

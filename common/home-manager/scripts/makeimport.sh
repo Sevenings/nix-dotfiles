@@ -1,4 +1,4 @@
-#/bin/zsh
+#!/usr/bin/env bash
 
 function list_options() {
     echo Options:

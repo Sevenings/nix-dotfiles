@@ -1,4 +1,4 @@
-#/bin/zsh
+#!/usr/bin/env bash
 
 source ~/.config/globals/global_variables.sh
 

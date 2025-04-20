@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 OUTPUT_PATH="$HOME/Musicas/Downloads"
 
 if [ ! -e "$OUTPUT_PATH" ]; then

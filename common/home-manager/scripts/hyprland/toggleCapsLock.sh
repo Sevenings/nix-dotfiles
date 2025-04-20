@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 STATUS=$(hyprctl getoption input:kb_options | grep str: | awk -F' ' '{print $2}')
 DELAY=2000
