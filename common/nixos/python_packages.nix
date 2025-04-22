@@ -1,9 +1,13 @@
 { pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs.python3Packages; [
-    numpy
-    notebook
+  environment.systemPackages = with pkgs; [
+    (python3.withPackages (ps: with ps; [ 
+      numpy 
+      scipy 
+      matplotlib 
+      ]
+    ))
   ];
 }
 

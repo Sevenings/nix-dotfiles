@@ -2,7 +2,6 @@
 
 {
     environment.systemPackages = with pkgs; [
-      python312Packages.numpy
       bash
       xorg.xauth
       xorg.xhost
@@ -47,7 +46,6 @@
       slurp
       libnotify
       nodejs
-      python3
       bluez
       bluez-tools
       ani-cli
