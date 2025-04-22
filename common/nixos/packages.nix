@@ -2,6 +2,7 @@
 
 {
     environment.systemPackages = with pkgs; [
+      python312Packages.numpy
       bash
       xorg.xauth
       xorg.xhost
