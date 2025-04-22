@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 
 DIURNO_MONITOR_LEFT="$HOME/Imagens/Wallpapers/archivezip4.jpg"
 DIURNO_MONITOR_RIGHT="$HOME/Imagens/Wallpapers/archivezip4.jpg"

@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 wallpaperDaemon=$(globals.sh wallpaperManager)
 
 killall $wallpaperDaemon

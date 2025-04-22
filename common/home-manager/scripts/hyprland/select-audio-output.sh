@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env bash
 
 # Arquivo de configuração do Rofi com o Layout para seleção de itens
 rofi_config_file="$HOME/.config/rofi/itemSelectorConfig.rasi"

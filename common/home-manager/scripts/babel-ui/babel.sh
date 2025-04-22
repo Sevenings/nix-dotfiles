@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 config_file="$HOME/.config/rofi/itemSelectorConfig.rasi"
 title='Biblioteca de Babel'

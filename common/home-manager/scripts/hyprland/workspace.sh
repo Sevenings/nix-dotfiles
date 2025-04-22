@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/usr/bin/env bash
 
 # Use: workspace.sh <action> <workspace> [workspaces per monitor]
 # Actions:

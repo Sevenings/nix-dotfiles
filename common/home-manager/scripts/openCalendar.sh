@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 MODE=$1
 
 calcurseKittyConfig=$(globals.sh get calcurseKittyConfig)

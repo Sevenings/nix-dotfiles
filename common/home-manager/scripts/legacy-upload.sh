@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 file=$1
 
 if [[ -n $file ]]; then

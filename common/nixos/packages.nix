@@ -3,6 +3,7 @@
 {
     environment.systemPackages = with pkgs; [
       bash
+      xorg.xhost
       yq
       gimp
       hyprpicker
