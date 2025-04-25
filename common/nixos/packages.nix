@@ -2,6 +2,7 @@
 
 {
     environment.systemPackages = with pkgs; [
+      bash
       xorg.xauth
       xorg.xhost
       yq
@@ -11,6 +12,7 @@
       killall
       tree-sitter
       pandoc_3_5
+      firefox
       inputs.zen-browser.packages."${system}".default
       undollar
       cargo
@@ -44,7 +46,6 @@
       slurp
       libnotify
       nodejs
-      python3
       bluez
       bluez-tools
       ani-cli

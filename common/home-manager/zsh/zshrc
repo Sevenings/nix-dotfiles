@@ -27,6 +27,7 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zsh_arduino-completion.sh
 source $HOME/.config/zsh/yazi.sh
+source $HOME/.config/zsh/plugins/zsh-nix-shell/nix-shell.plugin.zsh
 
 # User configuration
 
