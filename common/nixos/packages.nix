@@ -2,6 +2,7 @@
 
 {
     environment.systemPackages = with pkgs; [
+      xorg.xauth
       xorg.xhost
       yq
       gimp
