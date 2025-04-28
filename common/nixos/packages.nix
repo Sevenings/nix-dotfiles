@@ -2,6 +2,7 @@
 
 {
     environment.systemPackages = with pkgs; [
+      arduino-cli
       bash
       xorg.xauth
       xorg.xhost
