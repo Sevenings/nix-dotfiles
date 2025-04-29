@@ -6,6 +6,7 @@
   ];
 
   services.udev.packages = with pkgs; [
-    arduino-udev-rules
+    platformio   # já inclui regras de udev para placas suportadas
   ];
+
 }
