@@ -76,6 +76,7 @@ noremap <leader>p "+p
 map <C-s> :w<CR>
 
 " Makefile setup mappings
+map <F7> :!make test<CR>
 map <F6> :w<CR>:!clear<CR>:!make compile<CR>
 map <F5> :!make run<CR>
 

@@ -8,6 +8,7 @@
       ./python_packages.nix
       ./display_manager.nix
       ./docker.nix
+      ./arduino.nix
       # ./printing.nix
     ];
 
@@ -59,6 +60,8 @@
     enable = true;
     pulse.enable = true;
   };
+
+  networking.firewall.enable = false;
 
   # Fonts
   # fonts.fontDir.enable = true;
