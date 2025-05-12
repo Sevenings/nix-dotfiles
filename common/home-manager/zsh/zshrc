@@ -58,6 +58,7 @@ alias allow_usb='sudo chmod a+rw /dev/ttyUSB0'
 alias allow_usb1='sudo chmod a+rw /dev/ttyUSB1'
 alias clip='wl-copy'
 alias venv='source .venv/bin/activate'
+alias dovenv'python -m venv .venv'
 alias s="kitten ssh"
 alias goserver="kitten ssh lucas@tce-automacao"
 alias dockerserver="kitten ssh docker@tce-automacao"
