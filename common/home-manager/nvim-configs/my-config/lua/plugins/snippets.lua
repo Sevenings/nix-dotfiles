@@ -19,26 +19,27 @@ return {
             imap <silent><expr> <S-Tab> luasnip#jumpable(-1) ? '<Plug>luasnip-jump-prev' : '<S-Tab>'
             smap <silent><expr> <S-Tab> luasnip#jumpable(-1) ? '<Plug>luasnip-jump-prev' : '<S-Tab>'
             ]]
+            
+            -- Keymaps
+            vim.keymap.set({"i", "s"}, "<c-n>", function()
+              if ls.choice_active() then
+                ls.change_choice(1)
+              end
+            end)
 
         end,
         init = function ()
-
             -- Configuration
-            require("luasnip").config.set_config({ -- Setting LuaSnip config
-
-              -- Enable autotriggered snippets
+            local ls = require("luasnip")
+            ls.config.set_config({ -- Setting LuaSnip config
               enable_autosnippets = true,
-
-              -- Use Tab (or some other key if you prefer) to trigger visual selection
               store_selection_keys = "<Tab>",
-
               update_events = 'TextChanged,TextChangedI'
             })
 
-            -- Load snippets from ~/.config/nvim/Snippets/
-            -- require("luasnip.loaders.from_lua").lazy_load({paths = "~/.config/nvim/snippets/"})
-            -- require("luasnip.loaders.from_vscode").lazy_load()
-            require("luasnip.loaders.from_snipmate").load({paths = "~/.config/nvim/snippets/"})
+            -- Aditional Snippets
+            require("luasnip.loaders.from_snipmate").lazy_load({paths = "./snippets/snipmate"})
+            require("luasnip.loaders.from_lua").load({paths = "./snippets/lua"})
 
         end
     },

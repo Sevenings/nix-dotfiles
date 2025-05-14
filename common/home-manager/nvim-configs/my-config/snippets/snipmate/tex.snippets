@@ -79,10 +79,11 @@ snippet gat gather(ed) environment
 		${0:${VISUAL}}
 	\\end{gather$1}
 # Equation
-snippet eq equation environment
+autosnippet eqq equation environment
 	\\begin{equation}
-		${0:${VISUAL}}
+		${1:${VISUAL}}
 	\\end{equation}
+  $0
 # Equation
 snippet eql Labeled equation environment
 	\\begin{equation}
@@ -458,7 +459,29 @@ autosnippet mk "Inline Math"
     $${1}$ $2
 # Display Math
 autosnippet dm "Display Math"
-    \[
+    \\[
     $1
-    .\] $0
+    \\] $0
+# Fração 
+autosnippet // "Fraction"
+    \\frac{$1}{$2}$0
+# Fração Visual
+snippet / "Fraction"
+    \\frac{${VISUAL}}{$1} $0
+# Pi
+snippet pi Pi
+    \\pi $0
+# Barra
+autosnippet bar "bar"
+    \\overline{$1} $0
+# Chapéu
+autosnippet hat Chapéu
+    \\hat{$1} $0
+# Elevado / Sobrescrito
+autosnippet ee Elevado / Sobrescrito 
+    ^{$1} $0
+# Subescrito
+autosnippet _ Subescrito
+    _{$1} $0
+    
 
