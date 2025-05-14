@@ -9,7 +9,5 @@
       displayManager.session = "wayland";
     };
 
-    flatpak.enable = true;
-
   };
 }
