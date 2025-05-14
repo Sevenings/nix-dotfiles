@@ -38,8 +38,9 @@ set noshowmode
 " =========
 
 function TextModeOn()
-    setlocal spell spelllang=pt_br
+    setlocal spell spelllang=pt_br,en
     set textwidth=67
+    inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
 endfunction
 
 function TextModeOff()
@@ -137,7 +138,10 @@ noremap n nzz
 noremap N Nzz
 
 " Surround
-vmap s" c"<c-r>"<esc>
+vmap " c"<c-r>"<esc>
+vmap ( c(<c-r>")<esc>
+vmap [ c[<c-r>"]<esc>
+vmap { c{<c-r>"}<esc>
 
 map ç ;
 map Ç :

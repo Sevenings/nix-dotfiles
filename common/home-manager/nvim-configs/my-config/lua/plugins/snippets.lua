@@ -1,7 +1,4 @@
 return {
-    -- Adittional Snippets
-    {'rafamadriz/friendly-snippets'},
-
     -- Cmp compatibility
     {'saadparwaiz1/cmp_luasnip'},
 
@@ -39,8 +36,14 @@ return {
             })
 
             -- Load snippets from ~/.config/nvim/Snippets/
-            require("luasnip.loaders.from_lua").lazy_load({paths = "~/.config/nvim/snippets/"})
+            -- require("luasnip.loaders.from_lua").lazy_load({paths = "~/.config/nvim/snippets/"})
+            -- require("luasnip.loaders.from_vscode").lazy_load()
+            require("luasnip.loaders.from_snipmate").load({paths = "~/.config/nvim/snippets/"})
 
         end
     },
+
+    -- Adittional Snippets
+    -- { 'rafamadriz/friendly-snippets', },
+
 }
