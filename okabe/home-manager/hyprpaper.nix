@@ -5,7 +5,7 @@
 
     services.hyprpaper.settings = {
         
-        "$imagePath" = "~/.dotfiles/okabe/wallpapers/nix-wallpaper-gear.png";
+        "$imagePath" = "~/.dotfiles/okabe/wallpapers/landscape.jpeg";
         "$secondMonitorPath" = "~/.dotfiles/okabe/wallpapers/nix-wallpaper-gear.png";
 
         preload = [
