@@ -20,24 +20,17 @@ local types = require("luasnip.util.types")
 local conds = require("luasnip.extras.expand_conditions")
 
 
+-- Markdown
+
 return {
-  -- Letras com indice, a_1, a_2, a_3...
-	s(
-    { trig = "(%a+)(%d+)", regTrig = true, snippetType="autosnippet" },
-    f(function(_, snip)
-      return snip.captures[1].."_".. snip.captures[2]
-    end, {})
+  -- Bold
+	s( "b",
+    fmt("**{1}** {2}", {i(1), i(2)})
+  ),
+  -- Italic
+	s( "i",
+    fmt("_{1}_ {2}", {i(1), i(2)})
   ),
 
-  -- Ao quadrado
-  s(
-    { trig = "sq", snippetType="autosnippet", wordTrig = false },
-      t("^2")
-  ),
-  -- Ao cubo
-  s(
-    { trig = "cb", snippetType="autosnippet", wordTrig = false },
-      t("^3")
-  ),
 }
 

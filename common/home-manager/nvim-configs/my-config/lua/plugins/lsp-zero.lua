@@ -3,12 +3,14 @@ return {
     -- Mason, LSP Manager
     {
         'williamboman/mason.nvim',
+        version = "1.11.0",
         init = function()
             require('mason').setup({})
         end,
     },
     {
         'williamboman/mason-lspconfig.nvim',
+        version = "1.32.0",
         config = function()
             require('mason-lspconfig').setup({
                 ensure_installed = { -- My language servers list
@@ -39,14 +41,6 @@ return {
     {
         'VonHeikemen/lsp-zero.nvim',
         init = function()
-            local lsp_zero = require('lsp-zero')
-
-            lsp_zero.on_attach(function(client, bufnr)
-                -- see :help lsp-zero-keybindings
-                -- to learn the available actions
-                lsp_zero.default_keymaps({ buffer = bufnr })
-            end)
-
             local lsp_zero = require('lsp-zero')
 
             lsp_zero.on_attach(function(client, bufnr)
@@ -90,13 +84,33 @@ return {
               }
             })
 
+            MY_FQBN = "arduino:avr:uno"
+
+            lsp_zero.configure('arduino_language_server', {
+              cmd = {
+                "arduino-language-server",
+                "-cli-config", "/home/okabe/.arduinoIDE/arduino-cli.yaml",
+                "-fqbn",
+                MY_FQBN
+              }
+            })
+
             lsp_zero.setup()
         end
     },
 
 
     -- Nvim-cmp. Autosugestion e completion
-    {'hrsh7th/nvim-cmp'},
+     { -- optional cmp completion source for require statements and module annotations
+      "hrsh7th/nvim-cmp",
+      opts = function(_, opts)
+        opts.sources = opts.sources or {}
+        table.insert(opts.sources, {
+          name = "lazydev",
+          group_index = 0, -- set group index to 0 to skip loading LuaLS completions
+        })
+      end,
+    },
     {'hrsh7th/cmp-nvim-lsp'},
     {'hrsh7th/cmp-path'},
     {'saadparwaiz1/cmp_luasnip'},

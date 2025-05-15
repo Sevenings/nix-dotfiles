@@ -2,6 +2,7 @@
 
 {
     environment.systemPackages = with pkgs; [
+      pnpm
       bash
       xorg.xauth
       xorg.xhost
@@ -38,6 +39,7 @@
       calcurse
       brightnessctl
       pulsemixer
+      lua-language-server
       luarocks
       pkgs.wl-clipboard
       swaynotificationcenter

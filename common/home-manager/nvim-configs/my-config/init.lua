@@ -13,8 +13,6 @@ vim.cmd.source(vimrc)
 require('extras.screenshots')
 require('extras.nvim-cmp-configs')
 
-require("luasnip.loaders.from_vscode").lazy_load()
-
 -- Configurações específicas para arquivos
 require('config.file_specifics')
 
