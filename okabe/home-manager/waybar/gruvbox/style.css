@@ -65,7 +65,11 @@ tooltip label{
 
 window#waybar {
   color: @fg-color;
-  background: none;
+  background-color: rgba(32, 32, 32, 0.3);
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 5px;
+  margin-bottom: 0px;
 }
 
 window#waybar.hidden {

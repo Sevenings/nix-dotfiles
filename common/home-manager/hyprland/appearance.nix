@@ -5,8 +5,8 @@
   wayland.windowManager.hyprland.settings = {
 
     general = {
-      gaps_in = 5;
-      gaps_out = 5;
+      gaps_in = 8;
+      gaps_out = 12;
       border_size = 3;
 
       "col.active_border" = "rgb(f92672)";
@@ -19,12 +19,13 @@
     };
 
     decoration = {
-      rounding = 12;
+      rounding = 2;
 
       blur = {
         enabled = true;
         size = 7;
         passes = 3;
+        vibrancy = 0.1696;
       };
 
       shadow = {
@@ -33,6 +34,10 @@
         render_power = 3;
         color = "rgba(1a1a1aee)";
       };
+
+      layerrule = [
+        "blur,waybar"
+      ];
     };
 
     animations = {
