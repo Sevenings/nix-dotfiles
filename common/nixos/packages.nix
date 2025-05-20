@@ -2,6 +2,7 @@
 
 {
     environment.systemPackages = with pkgs; [
+      filezilla
       pnpm
       bash
       xorg.xauth
