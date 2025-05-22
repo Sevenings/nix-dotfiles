@@ -1,10 +1,10 @@
-pull:
-	git pull
-
 rebuild:
 	nixos-rebuild switch --flake .# --use-remote-sudo
 
 home:
 	home-manager switch --flake .
 
-update: home rebuild
+pull:
+	git pull
+
+update: pull home rebuild
