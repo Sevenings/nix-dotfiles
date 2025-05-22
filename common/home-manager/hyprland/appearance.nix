@@ -59,7 +59,6 @@
       "borderangle, 1, 8, default"
       "fade, 1, 3, default"
 
-      "workspaces, 1, 3, default, slidefade 10%"
       "specialWorkspace, 1, 3, easeOutBack, slidevert"
     ];
 
