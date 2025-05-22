@@ -10,7 +10,7 @@
     };
 
     animation = [
-      "workspaces, 1, 2.6, rush, slidevert"
+      "workspaces, 1, 3, default, slidefadevert 10%"
     ];
 
   };

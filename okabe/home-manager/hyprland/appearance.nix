@@ -8,7 +8,7 @@
     };
 
     animation = [
-      "workspaces, 1, 2.6, rush"
+      "workspaces, 1, 3, default, slidefade 10%"
     ];
     
   };
