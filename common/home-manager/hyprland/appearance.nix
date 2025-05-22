@@ -42,25 +42,26 @@
 
     animations = {
       enabled = true;
-
-      bezier = [
-        "myBezier, 0.05, 0.9, 0.1, 1.05"
-        "Abezier, 0.99, 0.39, 0.04, 0.59"
-        "linear, 0, 0, 1, 1"
-        "easeOutBack, .25,-0.01,.28,1.16"
-        "rush, 0,.97,.26,.98"
-      ];
-
-      animation = [
-        "windows, 1, 3, myBezier"
-        "windowsOut, 1, 3, default, popin 80%"
-        "border, 1, 10, default"
-        "borderangle, 1, 8, default"
-        "fade, 1, 3, default"
-
-        "specialWorkspace, 1, 3, easeOutBack, slidevert"
-      ];
     };
+
+    bezier = [
+      "myBezier, 0.05, 0.9, 0.1, 1.05"
+      "Abezier, 0.99, 0.39, 0.04, 0.59"
+      "linear, 0, 0, 1, 1"
+      "easeOutBack, .25,-0.01,.28,1.16"
+      "rush, 0,.97,.26,.98"
+    ];
+
+    animation = [
+      "windows, 1, 3, myBezier"
+      "windowsOut, 1, 3, default, popin 80%"
+      "border, 1, 10, default"
+      "borderangle, 1, 8, default"
+      "fade, 1, 3, default"
+
+      "workspaces, 1, 3, default, slidefade 10%"
+      "specialWorkspace, 1, 3, easeOutBack, slidevert"
+    ];
 
     plugin = {
       hyprbars = {
