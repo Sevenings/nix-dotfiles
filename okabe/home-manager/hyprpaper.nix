@@ -5,8 +5,8 @@
 
     services.hyprpaper.settings = {
         
-        "$imagePath" = "~/.dotfiles/okabe/wallpapers/landscape.jpeg";
-        "$secondMonitorPath" = "~/.dotfiles/okabe/wallpapers/landscape.jpeg";
+        "$imagePath" = "~/Imagens/Wallpapers/forge-of-empires.png";
+        "$secondMonitorPath" = "~/Imagens/Wallpapers/forge-of-empires.png";
 
         preload = [
             "$imagePath"
