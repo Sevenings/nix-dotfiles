@@ -4,7 +4,7 @@
   programs.kitty = {
     enable = true;
     font = {
-      name = "Source Code Pro";
+      name = "JetBrainsMono Nerd Font";
     };
     settings = {
       background = "#0d0f18";
