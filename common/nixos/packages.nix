@@ -3,6 +3,7 @@
 {
     environment.systemPackages = with pkgs; [
       gparted
+      hyprpolkitagent
       clipcat
       eog
       filezilla

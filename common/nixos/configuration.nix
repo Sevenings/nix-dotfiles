@@ -77,4 +77,6 @@
 
   console.keyMap = "br-abnt2";
 
+  security.polkit.enable = true;
+
 }
