@@ -44,7 +44,10 @@
       "$mainMod, period, exec, rofi -modi emoji -show emoji"
 
       # Copy from Memory
-      "$mainMod SHIFT, C, exec, memoryCopy.sh"
+      # "$mainMod SHIFT, C, exec, memoryCopy.sh"
+
+      # Clipboard Manager
+      "$mainMod SHIFT, C, exec, clipcat-menu"
 
       # Open Menu
       "$mainMod, Z, exec, launch_dashboard.sh"
