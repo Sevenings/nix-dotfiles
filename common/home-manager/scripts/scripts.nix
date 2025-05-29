@@ -81,5 +81,18 @@
       '';
     })
 
+    # Focus Mode
+    (stdenv.mkDerivation {
+      pname = "focusmode";
+      version = "1.0";
+      src = ./focusmode.sh;
+      phases = [ "installPhase" ];
+      installPhase = ''
+        mkdir -p $out/bin
+        cp $src $out/bin/focusmode
+        chmod +x $out/bin/focusmode
+      '';
+    })
+
   ];
 }
