@@ -2,8 +2,9 @@
 
 {
     environment.systemPackages = with pkgs; [
-      gparted
       hyprpolkitagent
+      gnome-disk-utility
+      kdePackages.partitionmanager
       clipcat
       eog
       filezilla
