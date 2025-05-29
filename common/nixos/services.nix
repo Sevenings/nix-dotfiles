@@ -9,5 +9,7 @@
       displayManager.session = "wayland";
     };
 
+    clipcat.enable = true;
+
   };
 }
