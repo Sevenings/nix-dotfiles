@@ -67,9 +67,7 @@
   # fonts.fontDir.enable = true;
   # fonts.packages = [] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
   # Before 25.05 (24.05 or earlier)
-  fonts.packages = with pkgs; [
-    nerdfonts
-  ];
+  fonts.packages = [] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 
   qt = {
       enable = true;
