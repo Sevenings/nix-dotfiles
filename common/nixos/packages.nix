@@ -14,7 +14,7 @@
       exiftool
       killall
       tree-sitter
-      pandoc_3_5
+      pandoc
       firefox
       inputs.zen-browser.packages."${system}".default
       undollar
