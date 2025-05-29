@@ -3,7 +3,6 @@
 {
     environment.systemPackages = with pkgs; [
       hyprpolkitagent
-      gnome-disk-utility
       kdePackages.partitionmanager
       clipcat
       eog
