@@ -18,12 +18,12 @@
             }
 
             {
-                timeout = 240; # 4mins
+                timeout = 300; # 5mins
                 on-timeout = "loginctl lock-session";
             }
 
             {
-                timeout = 242; # 4mins 2s
+                timeout = 485; # 4mins 2s
                 on-timeout = "systemctl suspend";
             }
         ];
