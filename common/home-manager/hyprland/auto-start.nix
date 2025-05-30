@@ -10,6 +10,7 @@
           "systemctl --user start hyprpolkitagent"
           "hyprpaper"
           "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+          "clipcatd"
         ];
 
     };
