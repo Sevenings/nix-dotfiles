@@ -52,7 +52,7 @@
 
   networking.extraHosts = ''
     172.17.120.54 tce-automacao
-    192.168.0.186 beebopi
+    192.168.0.84 beebopi
   '';
 
   # Enable sound.
