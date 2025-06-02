@@ -4,7 +4,7 @@ preview_length = 80
 
 [rofi]
 line_length = 100
-menu_length = 5
+menu_length = 8
 menu_prompt = "Clipcat"
 extra_arguments = []
 
