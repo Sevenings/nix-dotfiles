@@ -11,5 +11,7 @@
 
     clipcat.enable = true;
 
+    preload.enable = true;
+
   };
 }
