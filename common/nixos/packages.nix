@@ -2,6 +2,7 @@
 
 {
     environment.systemPackages = with pkgs; [
+      wireshark-qt
       hyprpolkitagent
       kdePackages.partitionmanager
       clipcat
