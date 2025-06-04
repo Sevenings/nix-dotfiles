@@ -138,8 +138,8 @@ noremap n nzz
 noremap N Nzz
 
 " Surround
-vmap ' c'<c-r>'<esc>
-vmap " c"<c-r>"<esc>
+vmap ' c'<c-r>"'<esc>
+vmap " c"<c-r>""<esc>
 vmap ( c(<c-r>")<esc>
 vmap [ c[<c-r>"]<esc>
 vmap { c{<c-r>"}<esc>
