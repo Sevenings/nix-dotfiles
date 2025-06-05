@@ -171,7 +171,7 @@
         # Plugins / Extras
 
         # Drag and Drop # [D]rop [F]ile
-        { on = [ "d" "f" ];        run = '' shell --confirm 'dragon -x -a "$@"' '';    desc = "Drag n Drop"; }
+        { on = [ "d" "f" ];        run = '' shell --confirm 'dragon-drop -x -a "$@"' '';    desc = "Drag n Drop"; }
 
         # Create Template File
         { on = [ "c" "e" ];       run = "plugin new-project";    desc = "New Project"; }
