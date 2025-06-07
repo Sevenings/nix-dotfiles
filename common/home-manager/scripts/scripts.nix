@@ -94,5 +94,17 @@
       '';
     })
 
+    # ToggleCaps
+    (stdenv.mkDerivation {
+      pname = "toggleCaps";
+      version = "1.0";
+      src = ./hyprland/toggleCapsLock.sh;
+      phases = [ "installPhase" ];
+      installPhase = ''
+        mkdir -p $out/bin
+        cp $src $out/bin/togglecapslock
+        chmod +x $out/bin/togglecapslock
+      '';
+    })
   ];
 }
