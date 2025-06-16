@@ -1,7 +1,10 @@
-{ pkgs, system, inputs, ... }:
+{ pkgs, system, inputs, nixpkgs-unstable, ... }:
 
 {
     environment.systemPackages = with pkgs; [
+      quartus-prime-lite
+      nixpkgs-unstable.dbeaver-bin
+      sqlite
       wireshark-qt
       hyprpolkitagent
       kdePackages.partitionmanager
