@@ -13,6 +13,7 @@
     ./mimetypes.nix
     ./nvim.nix
     ./programs.nix
+    ./python/environment.nix
     ./scripts/scripts.nix
     ./wlogout/wlogout.nix
     ./yazi/yazi.nix
