@@ -2,7 +2,6 @@
 
 {
     environment.systemPackages = with pkgs; [
-      quartus-prime-lite
       nixpkgs-unstable.dbeaver-bin
       sqlite
       wireshark-qt
