@@ -5,9 +5,10 @@
     (python3.withPackages (ps: with ps; [ 
       numpy 
       scipy 
-      matplotlib 
-      ]
-    ))
+      matplotlib
+      pandas
+      openpyxl
+    ]))
   ];
 }
 
