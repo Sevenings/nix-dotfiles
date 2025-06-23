@@ -13,6 +13,8 @@
 
         # Outros monitores: espelhados por padrão
         ", highres, 0x1080, 1, mirror, eDP-1"  
+        # Outros monitores: Extender à esquerda
+        # ", highres, -1920x0, 1"  
       ];
 
     };
