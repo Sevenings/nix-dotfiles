@@ -55,12 +55,6 @@
     192.168.0.84 beebopi
   '';
 
-  # Enable sound.
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-  };
-
   networking.firewall.enable = false;
 
   # Fonts

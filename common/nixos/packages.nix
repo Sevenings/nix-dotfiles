@@ -2,6 +2,9 @@
 
 {
     environment.systemPackages = with pkgs; [
+      usbutils
+      usb-blaster-udev-rules
+      quartus-prime-lite
       nixpkgs-unstable.dbeaver-bin
       sqlite
       wireshark-qt
