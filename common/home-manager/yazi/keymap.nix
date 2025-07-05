@@ -62,7 +62,7 @@
         { on = [ "<Enter>" ];   run = "enter";                      desc = "Open the selected files"; }
         { on = [ "<C-Enter>" ]; run = "open --interactive";         desc = "Open the selected files interactively"; }
         { on = [ "l" ];         run = "open";                       desc = "Open the selected files"; }
-        { on = [ "y" "y" ];    run = "yank";                        desc = "Copy the selected files"; }
+        { on = [ "y" "y" ];     run = [ "shell -- for path in \"$@\"; do echo \"file://$path\"; done | wl-copy -t text/uri-list" "yank" ];  desc = "Copy the selected files"; }
         { on = [ "Y" ];         run = "unyank";                     desc = "Cancel the yank status of files"; }
         { on = [ "d" "d" ];    run = "yank --cut";                  desc = "Cut the selected files"; }
         { on = [ "p" ];         run = "paste";                      desc = "Paste the files"; }
