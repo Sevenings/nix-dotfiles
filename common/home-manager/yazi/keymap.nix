@@ -189,6 +189,9 @@
 
         # Lazygit
         { on = [ "<Space>" "l" "g" ]; run = "plugin lazygit"; desc = "Lazy Git"; }
+
+        # Mount
+        { on = [ "M" ]; run = "plugin mount"; desc = "Mount Menu"; }
       ];
 
       tasks = {
