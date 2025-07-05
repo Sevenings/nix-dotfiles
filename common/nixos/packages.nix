@@ -2,6 +2,7 @@
 
 {
     environment.systemPackages = with pkgs; [
+      udisks
       usbutils
       usb-blaster-udev-rules
       nixpkgs-unstable.dbeaver-bin

@@ -3,7 +3,7 @@
 {
   programs.yazi.keymap = {
 
-    manager = {
+    mgr = {
       
       keymap = [
         { on = [ "<Esc>" ]; run = "escape";             desc = "Exit visual mode, clear selected, or cancel search"; }
