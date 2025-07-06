@@ -19,7 +19,7 @@
       [filechooser]
       # usa o script de wrapper instalado junto ao pacote
       cmd=${pkgs.xdg-desktop-portal-termfilechooser}/share/xdg-desktop-portal-termfilechooser/yazi-wrapper.sh
-      default_dir=${config.home.homeDirectory}/Downloads
+      default_dir=$HOME/Downloads
     '';
   };
 }

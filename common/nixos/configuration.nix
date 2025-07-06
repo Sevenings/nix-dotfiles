@@ -12,7 +12,6 @@
       ./python_packages.nix
       ./services.nix
       ./sessionVariables.nix
-      ./xdg.nix
     ];
 
   # Nix Flakes
