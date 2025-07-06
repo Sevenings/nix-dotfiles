@@ -3,14 +3,16 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-      ./packages.nix
-      ./programs.nix
-      ./python_packages.nix
+      ./arduino.nix
       ./display_manager.nix
       ./docker.nix
-      ./arduino.nix
+      ./packages.nix
       # ./printing.nix
+      ./programs.nix
+      ./python_packages.nix
       ./services.nix
+      ./sessionVariables.nix
+      ./xdg.nix
     ];
 
   # Nix Flakes
@@ -75,3 +77,4 @@
   security.polkit.enable = true;
 
 }
+
