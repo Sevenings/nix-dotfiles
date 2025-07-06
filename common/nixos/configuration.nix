@@ -10,6 +10,7 @@
       ./docker.nix
       ./arduino.nix
       # ./printing.nix
+      ./services.nix
     ];
 
   # Nix Flakes
