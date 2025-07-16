@@ -77,7 +77,6 @@
         { on = [ "r" ];         run = "rename --cursor=before_ext"; desc = "Rename a file or directory"; }
         { on = [ "s" ];         run = "shell --interactive";        desc = "Run a shell command"; }
         { on = ["<Backspace>"]; run = "hidden toggle";              desc = "Toggle the visibility of hidden files"; }
-        { on = [ "<C-s>" ];     run = "search none";                desc = "Cancel the ongoing search"; }
 
         # Sudo Operations
         { on = ["S" "p"];      run = "plugin sudo --args='paste'";      desc = "sudo Paste"; }
@@ -108,6 +107,10 @@
         { on = [ "?" ]; run = "find --previous --smart"; desc = "Find previous file"; }
         { on = [ "n" ]; run = "find_arrow";              desc = "Go to next found file"; }
         { on = [ "N" ]; run = "find_arrow --previous";   desc = "Go to previous found file"; }
+
+        # Search
+        { on = [ "<Esc>" ];           run = "search none";                  desc = "Cancel the ongoing search"; }
+        { on = [ "<Space>" "f" "f" ]; run = "search --via=fd";              desc = "Fuzzy Search File"; }
 
         # Sorting
         { on = [ "," "m" ]; run = "sort modified --dir-first";               desc = "Sort by modified time"; }
