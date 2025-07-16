@@ -20,7 +20,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
     users.users.okabe = {
       isNormalUser = true;
-      extraGroups = [ "networkmanager" "wheel" "docker" "dialout" ]; # Enable ‘sudo’ for the user.
+      extraGroups = [ "networkmanager" "wheel" "docker" "dialout" "video" ]; # Enable ‘sudo’ for the user.
       packages = with pkgs; [
         tree
       ];
