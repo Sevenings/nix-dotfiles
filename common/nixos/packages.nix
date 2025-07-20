@@ -2,6 +2,8 @@
 
 {
     environment.systemPackages = with pkgs; [
+      mpc
+      inori
       usbutils
       usb-blaster-udev-rules
       quartus-prime-lite
