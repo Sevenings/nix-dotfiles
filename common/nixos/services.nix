@@ -3,7 +3,6 @@
 {
   services = {
 
-
     clipcat.enable = true;
 
     pipewire = {

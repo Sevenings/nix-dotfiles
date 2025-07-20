@@ -11,6 +11,7 @@
       ./arduino.nix
       # ./printing.nix
       ./services.nix
+      ./sound.nix
     ];
 
   # Nix Flakes
