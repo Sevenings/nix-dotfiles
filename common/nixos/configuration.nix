@@ -10,10 +10,16 @@
       ./docker.nix
       ./arduino.nix
       # ./printing.nix
+      ./services.nix
     ];
 
   # Nix Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  nix.settings.substituters = [
+    "https://cache.nixos.org" 
+    "https://nix-community.cachix.org" 
+  ];
 
   # Nixpkgs
   nixpkgs.config = {
