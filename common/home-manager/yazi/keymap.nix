@@ -111,6 +111,7 @@
         # Search
         { on = [ "<Esc>" ];           run = "search none";                  desc = "Cancel the ongoing search"; }
         { on = [ "<Space>" "f" "f" ]; run = "search --via=fd";              desc = "Fuzzy Search File"; }
+        { on = [ "<Space>" "f" "g" ]; run = "search --via=rg";              desc = "Fuzzy Search File Content"; }
 
         # Sorting
         { on = [ "," "m" ]; run = "sort modified --dir-first";               desc = "Sort by modified time"; }
