@@ -20,6 +20,12 @@
       inputs.hyprland.follows = "hyprland"; # <- make sure this line is present for the plugin to work as intended
     };
 
+    # Ignis
+    ignis = {
+      url = "github:ignis-sh/ignis";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Yazi
 		yazi.url = "github:sxyazi/yazi"; 
 
@@ -33,6 +39,7 @@
     nixpkgs-unstable,
     home-manager,
     split-monitor-workspaces,
+    ignis,
     yazi,
     zen-browser,
     ...
