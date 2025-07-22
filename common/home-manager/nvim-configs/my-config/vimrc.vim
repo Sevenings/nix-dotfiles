@@ -147,6 +147,8 @@ vmap { c{<c-r>"}<esc>
 map ç ;
 map Ç :
 
+" Beautifier
+map <F9> :Neoformat<CR>
 
 " Vimtex plugin configuration test
 "
