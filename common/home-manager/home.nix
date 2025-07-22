@@ -9,6 +9,7 @@
     ./fastfetch.nix
     ./git.nix
     ./gtk.nix
+    ./ignis.nix
     ./kitty.nix
     ./mimetypes.nix
     ./nvim.nix
