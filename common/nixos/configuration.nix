@@ -3,15 +3,14 @@
 {
   imports =
     [ # Include the results of the hardware scan.
+      ./arduino.nix
+      ./display_manager.nix
+      ./docker.nix
+      # ./printing.nix
       ./packages.nix
       ./programs.nix
       ./python_packages.nix
-      ./display_manager.nix
-      ./docker.nix
-      ./arduino.nix
-      # ./printing.nix
       ./services.nix
-      ./sound.nix
     ];
 
   # Nix Flakes
