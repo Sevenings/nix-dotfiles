@@ -2,6 +2,8 @@
 
 {
     environment.systemPackages = with pkgs; [
+      inputs.ignis.packages.${system}.ignis
+      nodePackages_latest.js-beautify
       unar
       mpc
       inori
