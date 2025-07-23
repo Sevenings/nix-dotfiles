@@ -4,6 +4,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./arduino.nix
+      ./devices.nix
       ./display_manager.nix
       ./docker.nix
       ./packages.nix
