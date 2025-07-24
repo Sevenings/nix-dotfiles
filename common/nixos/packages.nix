@@ -2,6 +2,8 @@
 
 {
     environment.systemPackages = with pkgs; [
+      nautilus
+      unar
       udisks
       usbutils
       usb-blaster-udev-rules
