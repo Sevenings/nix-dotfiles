@@ -1,0 +1,58 @@
+;; Bar
+
+(defwidget right []
+	(box :orientation "h" 
+		 :space-evenly false  
+         :halign "end"
+		 :class "right_modules"
+    "right"
+; (bright)
+; (volume)
+; (wifi)
+; (sep)
+; (bat)
+; (mem)
+; (sep)
+; (clock_module)
+))
+
+
+(defwidget left []
+	(box :orientation "h" 
+		 :space-evenly false  
+         :halign "start"
+		 :class "left_modules"
+    "left"
+; (workspaces)
+))
+
+
+(defwidget center []
+	(box :orientation "h" 
+		 :space-evenly false  
+         :halign "center"
+		 :class "center_modules"
+      "center"
+; (music)
+))
+
+(defwidget bar_1 []
+  (box :class "bar_class"
+       :orientation "h"
+  (left)
+  (center)
+  (right)
+    ))
+
+(defwindow bar
+          :monitor 1
+          :geometry (geometry :x "0%"
+                       :y "9px"
+                       :width "98%"
+                       :height "30px"
+                       :anchor "top center")
+          :exclusive true
+          :stacking "fg"
+  (bar_1))
+  
+
