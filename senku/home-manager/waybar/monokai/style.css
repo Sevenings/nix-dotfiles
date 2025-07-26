@@ -77,7 +77,7 @@ window#waybar.hidden {
 #custom-toggle_wallpaper_theme,
 #custom-power_profile,
 #custom-horario_ponto,
-#custom-rofi,
+#custom-launch,
 #workspaces button,
 #workspaces button:hover,
 #workspaces button.visible,
@@ -114,11 +114,10 @@ window#waybar.hidden {
 /*         rofi module              */
 /* ================================ */
 
-#custom-rofi {
+#custom-launch {
     color: @bg-color;
 	background: @rofi-color;
     padding: 0px 6px;
-    /*border-bottom: 2px solid @rofi-color;*/
 }
 
 /* ================================ */
@@ -155,7 +154,9 @@ window#waybar.hidden {
     color: @workspace-selected-color;
     border-bottom: 2px solid @workspace-selected-color;
 
-    margin: 0px 4px;
+    margin-bottom: 0px;
+    margin-left: 4px;
+    margin-right: 4px;
 }
 
 #workspaces button.active:hover {
