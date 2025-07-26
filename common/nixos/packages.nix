@@ -2,6 +2,7 @@
 
 {
     environment.systemPackages = with pkgs; [
+      fd
       eww
       nautilus
       unar
