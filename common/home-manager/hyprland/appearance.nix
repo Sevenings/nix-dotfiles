@@ -79,16 +79,16 @@
 
         hyprbars-button = [
           # color, size, icon, on-click
-          "rgb(ff1f1f), 14, , hyprctl dispatch killactive"
-          "rgb(f2e41b), 14, , hyprctl dispatch togglefloating #"
-          "rgb(58fc2b), 14, , hyprctl dispatch fullscreen 1"
+          "rgb(ff6188), 14, , hyprctl dispatch killactive"
+          "rgb(ffd866), 14, , hyprctl dispatch togglefloating #"
+          "rgb(a9dc76), 14, , hyprctl dispatch fullscreen 1"
         ];
       };
     };
 
     windowrulev2 = [
-      "bordercolor rgb(00ff33),class:(floatingTerminal),title:(python3)"
-      "bordercolor rgb(FFB900),class:(floatingTerminal),title:(calcurse)"
+      "bordercolor rgb(a9dc76),class:(floatingTerminal),title:(python3)"
+      "bordercolor rgb(ffd866),class:(floatingTerminal),title:(calcurse)"
     ];
   };
 }
