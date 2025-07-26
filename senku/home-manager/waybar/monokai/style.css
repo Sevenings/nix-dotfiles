@@ -10,7 +10,6 @@
 @define-color orange-color #fc9867;
 @define-color yellow-color #ffd866;
 @define-color green-color #a9dc76;
-@define-color cyan-color #83a598;
 @define-color blue-color #78dce8;
 @define-color purple-color #ab9df2;
 
@@ -23,7 +22,7 @@
 @define-color workspace-selected-color @green-color;
 @define-color workspace-hover-color @purple-color;
 @define-color workspace-urgent-color @red-color;
-@define-color pulseaudio-color @cyan-color;
+@define-color pulseaudio-color @blue-color;
 @define-color pulseaudio-muted-color @red-color;
 @define-color network-color @yellow-color;
 @define-color power-color @red-color;
@@ -116,7 +115,7 @@ window#waybar.hidden {
 /* ================================ */
 
 #custom-rofi {
-    color: @white-color;
+    color: @bg-color;
 	background: @rofi-color;
     padding: 0px 6px;
     /*border-bottom: 2px solid @rofi-color;*/
