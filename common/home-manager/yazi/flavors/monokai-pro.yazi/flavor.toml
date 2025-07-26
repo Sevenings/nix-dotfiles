@@ -40,7 +40,7 @@ border_style  = { fg = "#939293" }
 cols = 2
 separator = " | "
 separator_style = { fg = "#292B30" } 
-mask = { bg = "#16161d" } # dark bg
+mask = { bg = "#2d2a2e" } # dark bg
 rest = { fg = "#727169" } # darkgrey
 cand = { fg = "#fcfcfa" }
 desc = { fg = "#565666" }
@@ -82,7 +82,7 @@ title   = {}
 hovered = { fg = "#ab9df2" } # magenta
 
 [help]
-on      = { fg = "#7aa89f" } # cyan
+on      = { fg = "#78dce8" } # cyan
 run     = { fg = "#ab9df2" } # magenta
 desc    = {}
 hovered = { reversed = true, bold = true }

@@ -9,8 +9,8 @@
       gaps_out = 12;
       border_size = 3;
 
-      "col.active_border" = "rgb(f92672)";
-      "col.inactive_border" = "rgba(595959aa)";
+      "col.active_border" = "rgb(a9dc76)";
+      "col.inactive_border" = "rgba(#2d2a2e)";
 
       layout = "dwindle";
 
@@ -65,8 +65,8 @@
     plugin = {
       hyprbars = {
         bar_height = 18;
-        bar_color = "rgb(1F1F28)";
-        "col.text" = "rgb(f7f3d2)";
+        bar_color = "rgb(221f22)";
+        "col.text" = "rgb(fcfcfa)";
         bar_text_size = 12;
         bar_text_font = "Cantarell Bold";
         bar_title_enabled = true;
