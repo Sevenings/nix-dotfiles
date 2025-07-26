@@ -166,6 +166,7 @@
         { on = [ "g" "d" "d" ];    run = "cd /run/media/zenitsu";                  desc = "Go to Pendrives"; }
         { on = [ "g" "e" ];        run = "cd ~/Documentos/'Estudos Espiritismo'";  desc = "Go to Estudos Espiritismo"; }
         { on = [ "g" "n" ];        run = "cd /etc/nixos/";                         desc = "Go to Nixos"; }
+        { on = [ "g" "j" ];        run = "cd ~/Jogos";                             desc = "Go to Jogos"; }
         { on = [ "g" "r" ];        run = "shell -- ya emit cd \"$(git rev-parse --show-toplevel)\"";  desc = "Go to root of git repository"; }
 
         # Plugins / Extras
