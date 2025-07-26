@@ -4,13 +4,14 @@
   programs.yazi.flavors = {
       everforest-medium = ./flavors/everforest-medium.yazi;
       monokai-vibrant = ./flavors/monokai-vibrant.yazi;
+      monokai-pro = ./flavors/monokai-pro.yazi;
       ayu-dark = ./flavors/ayu-dark.yazi;
     };
 
   programs.yazi.theme = {
 
     flavor = {
-      dark = "monokai-vibrant";
+      dark = "monokai-pro";
     };
 
 
