@@ -11,7 +11,10 @@
 ; Windows
 (defwindow clock
   :monitor 0
-  :geometry (geometry :anchor "top left")
+  :geometry (geometry :anchor "top left" 
+                      :x "2%"
+                      :y "4%"
+                      )
   :exclusive false :stacking "bg"
   (clock_0)
 )

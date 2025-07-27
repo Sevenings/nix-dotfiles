@@ -1,0 +1,39 @@
+@import "./components/clock.css";
+
+* {
+  background: none;
+  font-family: "JetBrainsMono Nerd Font Propo";
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.left_modules {
+  margin-left:0px;
+}
+
+.bar_class {
+  background-color: #19181a;
+  border-radius: 12px;
+}
+
+.clock {
+  margin: 0px 5px;
+  border-bottom: 2px solid #ffffff;
+}
+
+.launch {
+  color: #19181a;
+  background-color: #78DCE8;
+  font-size: 16px;
+  margin: 0px 5px 0px 0px;
+  border-radius: 12px 0px 0px 12px;
+  padding: 0px 9px 0px 12px;
+}
+
+.workspace {
+  padding: 0px 5px;
+}
+
+.workspace.active {
+  color: #A9DC76;
+}
