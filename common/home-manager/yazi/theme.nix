@@ -21,12 +21,12 @@
         { name = "Arduino"; text = ""; }
         { name = "Documentos"; text = ""; }
         { name = "Imagens"; text = ""; }
-        { name = "Jogos"; text = "󱎓"; }
+        { name = "Jogos"; text = "󰮂"; }
         { name = "Musicas"; text = ""; }
         { name = "Playground"; text = "󱊈"; }
         { name = "Projetos"; text = ""; }
+        { name = "Server"; text = "󰒋"; }
       ];
     };
-
   };
 }
