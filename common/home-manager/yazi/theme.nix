@@ -18,8 +18,10 @@
     icon = {
       prepend_dirs = [
         { name = "Anotações"; text = ""; }
+        { name = "Arduino"; text = ""; }
         { name = "Documentos"; text = ""; }
         { name = "Imagens"; text = ""; }
+        { name = "Jogos"; text = "󱎓"; }
         { name = "Musicas"; text = ""; }
         { name = "Playground"; text = "󱊈"; }
         { name = "Projetos"; text = ""; }
