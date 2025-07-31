@@ -2,6 +2,7 @@
 
 {
     environment.systemPackages = with pkgs; [
+      lua5_3_compat
       jq
       socat
       fd
