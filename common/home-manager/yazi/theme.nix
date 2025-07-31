@@ -25,7 +25,7 @@
         { name = "Musicas"; text = ""; }
         { name = "Playground"; text = "󱊈"; }
         { name = "Projetos"; text = ""; }
-        { name = "Server"; text = "󰒋"; }
+        { name = "server"; text = "󰒋"; }
       ];
     };
   };
