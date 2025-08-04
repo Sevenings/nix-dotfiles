@@ -15,6 +15,8 @@
         plugins = [ "git" ];
         theme = "robbyrussell";
       };
+      autosuggestions.enable = true;
+      syntaxHighlighting.enable = true;
     };
 
     obs-studio = {

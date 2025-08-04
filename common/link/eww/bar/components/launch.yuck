@@ -1,0 +1,8 @@
+(defwidget launch []
+  (eventbox :onclick "rofi -show drun -disable-history -show-icons &"
+    (label :class "launch"
+           :halign "center"
+           :text ""
+    )
+  )
+)

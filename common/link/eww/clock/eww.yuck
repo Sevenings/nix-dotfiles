@@ -1,0 +1,36 @@
+; Constants
+(defvar size 128)
+
+; Variables
+(defpoll time :interval "1s"
+  `date +%H:%M`)
+(defpoll date :interval "1s"
+  `date +%d/%m/%y`)
+
+
+; Windows
+(defwindow clock
+  :monitor 0
+  :geometry (geometry :anchor "top left" 
+                      :x "2%"
+                      :y "4%"
+                      )
+  :exclusive false :stacking "bg"
+  (clock_0)
+)
+
+; Widgets
+(defwidget clock_0 []
+  (box :class "clock_class"
+       :orientation "v"
+       :halign "center"
+       :space-evenly false
+       (label :text time
+              :class "time_label"
+              :halign "center")
+       (label :text date
+              :class "date_label"
+              :halign "center")
+  )
+)
+

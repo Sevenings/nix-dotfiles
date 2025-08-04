@@ -13,20 +13,9 @@
       wireplumber.enable = true;
     };
 
-    mpd = {
-      enable = true;
-      user = "okabe";
-      musicDirectory = "/home/okabe/Musicas";
-      network.listenAddress = "any";
-      startWhenNeeded = false;
+    udisks2.enable = true;
 
-      extraConfig = ''
-        audio_output {
-          type        "pulse"
-          name        "PipeWire Pulse"
-          server      "127.0.0.1"
-        }
-      '';
-    };
+    dbus.enable = true;
+
   };
 }

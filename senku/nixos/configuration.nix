@@ -12,6 +12,8 @@
       ./nvidia.nix
       ./packages.nix
       ./programs.nix
+      ./services.nix
+      ./steam.nix
     ];
 
   networking = {

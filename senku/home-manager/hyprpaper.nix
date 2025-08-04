@@ -5,8 +5,8 @@
 
     services.hyprpaper.settings = {
         
-        "$imagePath" = "/home/senku/.dotfiles/senku/wallpapers/1347179.png";
-        "$secondMonitorPath" = "/home/senku/.dotfiles/senku/wallpapers/1347179.png";
+        "$imagePath" = "/home/senku/Imagens/green-plains.png";
+        "$secondMonitorPath" = "/home/senku/Imagens/green-plains.png";
 
         preload = [
             "$imagePath"

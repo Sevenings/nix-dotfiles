@@ -1,0 +1,12 @@
+
+(defwidget workspaces []
+  (box :class "workspaces"
+       :orientation "h"
+       :halign "center"
+    (for workspace in workspaces
+      (label :class "workspace ${workspace.id == active_workspace ? "active" : ""}"
+        :text "${workspace.id}"
+      )
+    )
+  )
+)

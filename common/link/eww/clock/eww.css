@@ -1,0 +1,18 @@
+* {
+  font-family: "Iosevka Nerd Font Propo";
+  background: none;
+}
+
+.time_label {
+  font-size: 128px;
+}
+
+.date_label {
+  font-size: 64px;
+  margin-top: -20px;
+}
+
+.clock_class {
+  /* background-color: #000; */
+}
+

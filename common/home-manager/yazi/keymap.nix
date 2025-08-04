@@ -3,7 +3,7 @@
 {
   programs.yazi.keymap = {
 
-    manager = {
+    mgr = {
       
       keymap = [
         { on = [ "<Esc>" ]; run = "escape";             desc = "Exit visual mode, clear selected, or cancel search"; }
@@ -62,7 +62,7 @@
         { on = [ "<Enter>" ];   run = "enter";                      desc = "Open the selected files"; }
         { on = [ "<C-Enter>" ]; run = "open --interactive";         desc = "Open the selected files interactively"; }
         { on = [ "l" ];         run = "open";                       desc = "Open the selected files"; }
-        { on = [ "y" "y" ];    run = "yank";                        desc = "Copy the selected files"; }
+        { on = [ "y" "y" ];     run = [ "shell -- for path in \"$@\"; do echo \"file://$path\"; done | wl-copy -t text/uri-list" "yank" ];  desc = "Copy the selected files"; }
         { on = [ "Y" ];         run = "unyank";                     desc = "Cancel the yank status of files"; }
         { on = [ "d" "d" ];    run = "yank --cut";                  desc = "Cut the selected files"; }
         { on = [ "p" ];         run = "paste";                      desc = "Paste the files"; }
@@ -170,6 +170,7 @@
         { on = [ "g" "d" "d" ];    run = "cd /run/media/zenitsu";                  desc = "Go to Pendrives"; }
         { on = [ "g" "e" ];        run = "cd ~/Documentos/'Estudos Espiritismo'";  desc = "Go to Estudos Espiritismo"; }
         { on = [ "g" "n" ];        run = "cd /etc/nixos/";                         desc = "Go to Nixos"; }
+        { on = [ "g" "j" ];        run = "cd ~/Jogos";                             desc = "Go to Jogos"; }
         { on = [ "g" "r" ];        run = "shell -- ya emit cd \"$(git rev-parse --show-toplevel)\"";  desc = "Go to root of git repository"; }
 
         # Plugins / Extras
@@ -193,6 +194,9 @@
 
         # Lazygit
         { on = [ "<Space>" "l" "g" ]; run = "plugin lazygit"; desc = "Lazy Git"; }
+
+        # Mount
+        { on = [ "M" ]; run = "plugin mount"; desc = "Mount Menu"; }
       ];
 
       tasks = {

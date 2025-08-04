@@ -2,15 +2,17 @@
 
 {
     environment.systemPackages = with pkgs; [
-      inputs.ignis.packages.${system}.ignis
-      nodePackages_latest.js-beautify
+      lua5_3_compat
+      jq
+      socat
+      fd
+      eww
+      nautilus
       unar
-      mpc
-      inori
+      udisks
       usbutils
       usb-blaster-udev-rules
-      quartus-prime-lite
-      nixpkgs-unstable.dbeaver-bin
+      dbeaver-bin
       sqlite
       wireshark-qt
       hyprpolkitagent

@@ -9,8 +9,8 @@
       gaps_out = 12;
       border_size = 3;
 
-      "col.active_border" = "rgb(f92672)";
-      "col.inactive_border" = "rgba(595959aa)";
+      "col.active_border" = "rgb(a9dc76)";
+      "col.inactive_border" = "rgb(2d2a2e)";
 
       layout = "dwindle";
 
@@ -65,8 +65,8 @@
     plugin = {
       hyprbars = {
         bar_height = 18;
-        bar_color = "rgb(1F1F28)";
-        "col.text" = "rgb(f7f3d2)";
+        bar_color = "rgb(221f22)";
+        "col.text" = "rgb(fcfcfa)";
         bar_text_size = 12;
         bar_text_font = "Cantarell Bold";
         bar_title_enabled = true;
@@ -79,16 +79,16 @@
 
         hyprbars-button = [
           # color, size, icon, on-click
-          "rgb(ff1f1f), 14, , hyprctl dispatch killactive"
-          "rgb(f2e41b), 14, , hyprctl dispatch togglefloating #"
-          "rgb(58fc2b), 14, , hyprctl dispatch fullscreen 1"
+          "rgb(ff6188), 14, , hyprctl dispatch killactive"
+          "rgb(ffd866), 14, , hyprctl dispatch togglefloating #"
+          "rgb(a9dc76), 14, , hyprctl dispatch fullscreen 1"
         ];
       };
     };
 
     windowrulev2 = [
-      "bordercolor rgb(00ff33),class:(floatingTerminal),title:(python3)"
-      "bordercolor rgb(FFB900),class:(floatingTerminal),title:(calcurse)"
+      "bordercolor rgb(a9dc76),class:(floatingTerminal),title:(python3)"
+      "bordercolor rgb(ffd866),class:(floatingTerminal),title:(calcurse)"
     ];
   };
 }
