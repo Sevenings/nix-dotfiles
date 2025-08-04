@@ -4,9 +4,9 @@
   programs.waybar = {
     enable = true;
     settings = {
-      mainBar = builtins.fromJSON ( builtins.readFile ./waybar/linux-mobile/config.json );
+      mainBar = builtins.fromJSON ( builtins.readFile ./waybar/gruvbox/config.json );
     };
-    style = ./waybar/linux-mobile/style.css;
+    style = ./waybar/gruvbox/style.css;
   };
 
 }
