@@ -3,19 +3,14 @@
 {
   services = {
 
-    # xserver = {
-    #   enable = true;
-    #   xwayland.enable = true;
-    #   displayManager.session = "wayland";
-    # };
-
     clipcat.enable = true;
-
-    preload.enable = true;
 
     pipewire = {
       enable = true;
+      alsa.enable = true;
+      jack.enable = true;
       pulse.enable = true;
+      wireplumber.enable = true;
     };
 
     udisks2.enable = true;

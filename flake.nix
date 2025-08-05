@@ -20,6 +20,12 @@
       inputs.hyprland.follows = "hyprland"; # <- make sure this line is present for the plugin to work as intended
     };
 
+    # Ignis
+    ignis = {
+      url = "github:ignis-sh/ignis";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Yazi
 		yazi.url = "github:sxyazi/yazi"; 
 
@@ -27,18 +33,11 @@
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    nixpkgs-unstable,
-    home-manager,
-    split-monitor-workspaces,
-    yazi,
-    zen-browser,
-    ...
-  } @ inputs: let
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs: let
     inherit (self) outputs;
     system = "x86_64-linux";
+    specialArgs = { inherit system inputs; nixpkgs-unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;};  # <- passing inputs to the attribute set for home-manager
+    extraSpecialArgs = { inherit system inputs; nixpkgs-unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;};  # <- passing inputs to the attribute set for home-manager
   in {
     # Your custom packages
     # Accessible through 'nix build', 'nix shell', etc
@@ -56,7 +55,7 @@
     nixosConfigurations = {
 
       fatima = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs outputs system; nixpkgs-unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;};
+        inherit specialArgs;
         modules = [
           # > Our main nixos configuration file <
           ./common/nixos/configuration.nix
@@ -65,7 +64,7 @@
       };
 
       stonebox = nixpkgs.lib.nixosSystem {
-        specialArgs = { inherit inputs outputs system; nixpkgs-unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;};
+        inherit specialArgs;
         modules = [
           # > Our main nixos configuration file <
           ./common/nixos/configuration.nix
@@ -81,7 +80,7 @@
       
       "okabe@fatima" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        extraSpecialArgs = {inherit inputs outputs; nixpkgs-unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;};
+        inherit extraSpecialArgs;
         modules = [
           # > Our main home-manager configuration file <
           ./common/home-manager/home.nix
@@ -91,7 +90,7 @@
 
       "senku@stonebox" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        extraSpecialArgs = {inherit inputs outputs; nixpkgs-unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;};
+        inherit extraSpecialArgs;
         modules = [
           # > Our main home-manager configuration file <
           ./common/home-manager/home.nix

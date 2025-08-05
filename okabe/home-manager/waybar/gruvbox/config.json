@@ -1,8 +1,8 @@
 {
-    "layer": "top", 
-    "position": "top", 
-    "height": 30, 
-    "spacing": 4, 
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "spacing": 4,
     "margin-top": 4,
     "margin-right": 6,
     "margin-left": 6,
@@ -16,7 +16,7 @@
 
     "modules-center": [
         "hyprland/workspaces"
-    ], 
+    ],
 
     "modules-right": [
         "pulseaudio",
@@ -167,12 +167,12 @@
         "on-click": "startWallpaper.sh toggle"
     },
 
-    
+
     "custom/rofi": {
         "format": "",
         "on-click": "rofi -show drun -disable-history -show-icons",
-        "escape" : true,
-        "tooltip" : false
+        "escape": true,
+        "tooltip": false
     },
 
     "wlr/taskbar": {
@@ -183,10 +183,10 @@
         "on-click": "activate",
         "on-click-middle": "close",
         "ignore-list": [
-           "Alacritty"
+            "Alacritty"
         ],
         "app_ids-mapping": {
-          "firefoxdeveloperedition": "firefox-developer-edition"
+            "firefoxdeveloperedition": "firefox-developer-edition"
         },
         "rewrite": {
             "Firefox Web Browser": "Firefox",
@@ -231,4 +231,3 @@
         "exec-if": "se_expediente.sh"
     }
 }
-
