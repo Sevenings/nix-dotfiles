@@ -4,9 +4,9 @@
   programs.waybar = {
     enable = true;
     settings = {
-      mainBar = builtins.fromJSON ( builtins.readFile ./waybar/gruvbox/config.json );
+      mainBar = builtins.fromJSON ( builtins.readFile ./waybar/monokai/config.json );
     };
-    style = ./waybar/gruvbox/style.css;
+    style = ./waybar/monokai/style.css;
   };
 
 }
