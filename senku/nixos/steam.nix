@@ -18,16 +18,20 @@
       capSysNice = true;
     };
 
+    gamemode.enable = true;
+
   };
 
-  hardware.xone.enable = true; # support for the xbox controller USB dongle
+  environment.systemPackages = with pkgs; [
+    mangohud
+    steam-run
+    xdg-utils               # xdg-open
+    pkgsi686Linux.libxkbcommon
+    wayland
+    pkgsi686Linux.wayland
+  ];
 
-  services.getty.autologinUser = "senku";
+  # Force o uso de Wayland no SDL
+  environment.variables.SDL_VIDEODRIVER = "wayland";
 
-  environment = {
-    systemPackages = pkgs.mangohud;
-    loginShellInit = ''
-      [[ "$(tty)" = "/dev/tty1" ]] && ./gs.sh
-    '';
-  };
 }
