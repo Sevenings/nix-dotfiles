@@ -147,6 +147,8 @@ vmap { c{<c-r>"}<esc>
 map ç ;
 map Ç :
 
+map <Leader>df :!dragon-drop %<CR>
+
 
 " Vimtex plugin configuration test
 "
