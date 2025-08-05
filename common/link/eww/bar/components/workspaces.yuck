@@ -1,3 +1,9 @@
+(deflisten workspaces :initial "[{'window'}]"
+"./scripts/workspaces.sh")
+
+(deflisten active_workspace :initial "1"
+"./scripts/active_workspace.sh")
+
 
 (defwidget workspaces []
   (box :class "workspaces"

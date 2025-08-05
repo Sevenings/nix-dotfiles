@@ -1,9 +1,7 @@
-@import "./components/clock.css";
-
 * {
   background: none;
   font-family: "JetBrainsMono Nerd Font Propo";
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 700;
 }
 
@@ -37,3 +35,17 @@
 .workspace.active {
   color: #A9DC76;
 }
+
+.volume-scale trough {
+    background-color: #2D2A2E;
+    min-height: 5px;
+    border-radius: 5px;
+}
+
+
+.volume-scale trough highlight {
+    background-color: #78DCE8;
+    min-height: 5px;
+    border-radius: 5px;
+}
+

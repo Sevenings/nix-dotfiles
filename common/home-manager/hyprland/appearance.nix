@@ -89,6 +89,8 @@
     windowrulev2 = [
       "bordercolor rgb(a9dc76),class:(floatingTerminal),title:(python3)"
       "bordercolor rgb(ffd866),class:(floatingTerminal),title:(calcurse)"
+      "bordercolor rgb(AB9DF2),class:(obsidian)"
+      "bordercolor rgb(144D37),title:(*WhatsApp*)"
     ];
   };
 }

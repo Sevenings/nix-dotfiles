@@ -106,5 +106,18 @@
         chmod +x $out/bin/togglecapslock
       '';
     })
+
+    # Hyprland Workspace
+    (stdenv.mkDerivation {
+      pname = "workspace";
+      version = "1.0";
+      src = ./hyprland/workspace.sh;
+      phases = [ "installPhase" ];
+      installPhase = ''
+        mkdir -p $out/bin
+        cp $src $out/bin/workspace
+        chmod +x $out/bin/workspace
+      '';
+    })
   ];
 }
