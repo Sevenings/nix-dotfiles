@@ -9,7 +9,7 @@
 
 
     "modules-left": [
-        "custom/rofi",
+        "custom/launch",
         "clock",
         "custom/horario_ponto"
     ],
@@ -219,7 +219,7 @@
     },
 
     "backlight": {
-        "format": "<span color='#2d2a2e' bgcolor='fcfcfa'> {icon} </span> {percent}%",
+        "format": "<span color='#2d2a2e' bgcolor='#fcfcfa'> {icon} </span> {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
 
