@@ -1,35 +1,23 @@
-(include "./variables.yuck")
-(include "./components/launch.yuck")
-(include "./components/clock.yuck")
-(include "./components/workspaces.yuck")
+(include "components/clock.yuck")
+(include "components/launch.yuck")
+(include "components/workspaces.yuck")
+(include "components/volume.yuck")
+(include "components/tray.yuck")
 
-;; widgets
 (defwindow bar
   :monitor 0
-  :geometry (geometry :x "0%"
-                      :y "9px"
-                      :width "99.5%"
-                      :height "30px"
-                      :anchor "top center")
   :stacking "fg"
   :exclusive true
-  (bar_1)
-)
-
-(defwidget bar_1 []
-  (box :class "bar_class"
-       :orientation "h"
+  :geometry (geometry :x "0%" :y "9px" :width "99.5%" :height "30px" :anchor "top center")
+  (box :class "bar_class" :orientation "h"
     (left)
     (center)
     (right)
-  ))
-
+  )
+)
 
 (defwidget left []
-	(box :orientation "h" 
-		:space-evenly false  
-    :halign "start"
-	  :class "left_modules"
+  (box :orientation "h" :space-evenly false  :halign "start" :class "left_modules"
     (launch)
     (clock)
   )
@@ -37,20 +25,16 @@
 
 
 (defwidget center []
-	(box :orientation "h" 
-		:space-evenly false  
-    :halign "center"
-		:class "center_modules"
+  (box :orientation "h" :space-evenly false :halign "center" :class "center_modules"
     (workspaces)
   )
 )
 
 
 (defwidget right []
-	(box :orientation "h" 
-		:space-evenly false  
-    :halign "end"
-		:class "right_modules"
+  (box :orientation "h" :space-evenly false  :halign "end" :class "right_modules"
+    (volume)
+    (tray_button)
   )
 )
 
