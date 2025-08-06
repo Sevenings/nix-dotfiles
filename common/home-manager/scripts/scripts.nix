@@ -1,5 +1,12 @@
 { config, pkgs, ... }:
 
+let
+installPhase = name: ''
+        mkdir -p $out/bin
+        cp $src $out/bin/${name}
+        chmod +x $out/bin/${name}
+      '';
+in
 {
   home.packages = with pkgs; [
 
@@ -9,11 +16,7 @@
       version = "1.0";
       src = ./bluetoothManager.sh;
       phases = [ "installPhase" ];
-      installPhase = ''
-        mkdir -p $out/bin
-        cp $src $out/bin/bluetoothManager
-        chmod +x $out/bin/bluetoothManager
-      '';
+      installPhase = installPhase "bluetoothManager";
     })
 
     # openCalendar
@@ -22,11 +25,7 @@
       version = "1.0";
       src = ./openCalendar.sh;
       phases = [ "installPhase" ];
-      installPhase = ''
-        mkdir -p $out/bin
-        cp $src $out/bin/openCalendar
-        chmod +x $out/bin/openCalendar
-      '';
+      installPhase = installPhase "openCalendar";
     })
 
     # python_calculator
@@ -35,11 +34,7 @@
       version = "1.0";
       src = ./pythonCalculator/python_calculator.sh;
       phases = [ "installPhase" ];
-      installPhase = ''
-        mkdir -p $out/bin
-        cp $src $out/bin/python_calculator
-        chmod +x $out/bin/python_calculator
-      '';
+      installPhase = installPhase "python_calculator";
     })
 
     # Babel
@@ -48,11 +43,7 @@
       version = "1.0";
       src = ./babel-ui/babel.sh;
       phases = [ "installPhase" ];
-      installPhase = ''
-        mkdir -p $out/bin
-        cp $src $out/bin/babel
-        chmod +x $out/bin/babel
-      '';
+      installPhase = installPhase "babel;"
     })
 
     # Color Picker
@@ -61,11 +52,7 @@
       version = "1.0";
       src = ./colorPicker.sh;
       phases = [ "installPhase" ];
-      installPhase = ''
-        mkdir -p $out/bin
-        cp $src $out/bin/colorpicker
-        chmod +x $out/bin/colorpicker
-      '';
+      installPhase = installPhase "colorpicker";
     })
 
     # Switch layout
@@ -74,11 +61,7 @@
       version = "1.0";
       src = ./hyprland/switchLayout.sh;
       phases = [ "installPhase" ];
-      installPhase = ''
-        mkdir -p $out/bin
-        cp $src $out/bin/switchlayout
-        chmod +x $out/bin/switchlayout
-      '';
+      installPhase = installPhase "switchlayout";
     })
 
     # Focus Mode
@@ -87,11 +70,7 @@
       version = "1.0";
       src = ./focusmode.sh;
       phases = [ "installPhase" ];
-      installPhase = ''
-        mkdir -p $out/bin
-        cp $src $out/bin/focusmode
-        chmod +x $out/bin/focusmode
-      '';
+      installPhase = installPhase "focusmode";
     })
 
     # ToggleCaps
@@ -100,11 +79,7 @@
       version = "1.0";
       src = ./hyprland/toggleCapsLock.sh;
       phases = [ "installPhase" ];
-      installPhase = ''
-        mkdir -p $out/bin
-        cp $src $out/bin/togglecapslock
-        chmod +x $out/bin/togglecapslock
-      '';
+      installPhase = installPhase "togglecapslock";
     })
 
     # Hyprland Workspace
@@ -113,11 +88,7 @@
       version = "1.0";
       src = ./hyprland/workspace.sh;
       phases = [ "installPhase" ];
-      installPhase = ''
-        mkdir -p $out/bin
-        cp $src $out/bin/workspace
-        chmod +x $out/bin/workspace
-      '';
+      installPhase = installPhase "workspace";
     })
   ];
 }
