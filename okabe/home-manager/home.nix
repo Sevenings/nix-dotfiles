@@ -7,7 +7,7 @@
     ./hypridle.nix
     ./swaylock.nix
     ./kitty.nix
-    ./waybar.nix
+    ./waybar/waybar.nix
     ./legacy/legacy.nix
   ];
 

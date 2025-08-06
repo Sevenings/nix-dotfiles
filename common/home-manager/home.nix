@@ -14,6 +14,7 @@
     ./nvim.nix
     ./programs.nix
     ./scripts/scripts.nix
+    ./waybar/waybar.nix
     ./wlogout/wlogout.nix
     # ./xdg.nix
     ./yazi/yazi.nix
