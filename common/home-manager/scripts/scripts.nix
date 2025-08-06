@@ -43,7 +43,7 @@ in
       version = "1.0";
       src = ./babel-ui/babel.sh;
       phases = [ "installPhase" ];
-      installPhase = installPhase "babel;"
+      installPhase = installPhase "babel";
     })
 
     # Color Picker
