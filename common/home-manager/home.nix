@@ -12,6 +12,7 @@
     ./kitty.nix
     ./mimetypes.nix
     ./nvim.nix
+    ./packages.nix
     ./programs.nix
     ./scripts/scripts.nix
     ./waybar/waybar.nix
