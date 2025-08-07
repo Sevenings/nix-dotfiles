@@ -5,7 +5,5 @@
   # $ nix search wget
     environment.systemPackages = with pkgs; [
       quartus-prime-lite
-      webtorrent_desktop
-      torrential
     ];
 }

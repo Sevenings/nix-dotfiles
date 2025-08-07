@@ -2,6 +2,8 @@
 
 {
     environment.systemPackages = with pkgs; [
+      webtorrent_desktop
+      torrential
       cura-appimage
       lua5_3_compat
       jq
