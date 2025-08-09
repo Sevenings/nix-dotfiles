@@ -68,7 +68,7 @@
     },
 
     "mpd": {
-        "format": "<span color='#2d2a2e' bgcolor='#ab9df2'> {stateIcon} </span> {artist} - {title} <span color='#2d2a2e' bgcolor='#ab9df2'>  </span> {volume}%",
+        "format": "<span color='#2d2a2e' bgcolor='#FC9867'> {stateIcon} </span> {artist} - {title} <span color='#2d2a2e' bgcolor='#FC9867'>  </span> {volume}%",
         "format-disconnected": "Disconnected ",
         "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
         "unknown-tag": "N/A",
