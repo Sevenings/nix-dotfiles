@@ -31,6 +31,7 @@
 @define-color battery-color @green-color;
 @define-color backlight-color @white-color;
 @define-color ponto-color @blue-color;
+@define-color mpd-color @purple-color;
 
 
 
@@ -73,6 +74,7 @@ window#waybar.hidden {
 }
 
 
+#mpd,
 #network,
 #custom-toggle_wallpaper_theme,
 #custom-power_profile,
@@ -243,4 +245,9 @@ window#waybar.hidden {
     border-bottom: 2px solid @ponto-color;
 
     font-size: 12px;
+}
+
+#mpd {
+    color: @mpd-color;
+    border-bottom: 2px solid @mpd-color;
 }
