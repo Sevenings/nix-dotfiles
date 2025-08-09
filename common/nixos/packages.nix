@@ -2,6 +2,7 @@
 
 {
     environment.systemPackages = with pkgs; [
+      yt-dlp
       webtorrent_desktop
       torrential
       cura-appimage
