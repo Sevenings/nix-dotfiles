@@ -11,6 +11,7 @@
     ./gtk.nix
     ./kitty.nix
     ./mimetypes.nix
+    ./mpd.nix
     ./nvim.nix
     ./packages.nix
     ./programs.nix

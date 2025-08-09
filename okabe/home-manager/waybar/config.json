@@ -11,7 +11,8 @@
     "modules-left": [
         "custom/launch",
         "clock",
-        "custom/horario_ponto"
+        "custom/horario_ponto",
+        "mpd"
     ],
 
     "modules-center": [

@@ -5,7 +5,6 @@
     ./hyprland/hyprland.nix
     ./hyprpaper.nix
     ./hypridle.nix
-    ./mpd.nix
     ./swaylock.nix
     ./kitty.nix
     ./waybar/waybar.nix
