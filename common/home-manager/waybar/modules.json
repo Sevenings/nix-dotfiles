@@ -47,19 +47,6 @@
         "interval": 2,
         "artist-len": 12,
         "title-len": 16,
-        "consume-icons": {
-            "on": " "
-        },
-        "random-icons": {
-            "off": "<span color=\"#ff6188\"></span> ",
-            "on": " "
-        },
-        "repeat-icons": {
-            "on": " "
-        },
-        "single-icons": {
-            "on": "1 "
-        },
         "state-icons": {
             "paused": "",
             "playing": ""
