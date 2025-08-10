@@ -1,3 +1,5 @@
+# Link do template dessa configuração:
+# https://github.com/Misterio77/nix-starter-configs/tree/main?tab=readme-ov-file
 {
   description = "My new nix config";
 
