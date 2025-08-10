@@ -15,3 +15,4 @@ yt-dlp -x --audio-format mp3 --audio-quality 0 \
   -o "%(artist, uploader)s - %(title)s.%(ext)s" \
   $url
 
+mpc rescan
