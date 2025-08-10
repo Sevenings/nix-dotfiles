@@ -99,6 +99,7 @@
         "tooltip-format": "Playing {title} {elapsedTime:%M:%S}/{totalTime:%M:%S}",
         "tooltip-format-disconnected": "Playing {title} {elapsedTime:%M:%S}/{totalTime:%M:%S}",
         "on-click": "mpc toggle",
+        "on-click-right": "kitty -e rmpc",
         "on-scroll-up": "mpc volume +5",
         "on-scroll-down": "mpc volume -5"
     },
