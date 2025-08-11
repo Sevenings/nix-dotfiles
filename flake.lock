@@ -514,6 +514,7 @@
         "hyprland": "hyprland",
         "nixpkgs": "nixpkgs_2",
         "nixpkgs-unstable": "nixpkgs-unstable",
+        "smart-filter-yazi": "smart-filter-yazi",
         "split-monitor-workspaces": "split-monitor-workspaces",
         "yazi": "yazi",
         "zen-browser": "zen-browser"
@@ -537,6 +538,26 @@
       "original": {
         "owner": "oxalica",
         "repo": "rust-overlay",
+        "type": "github"
+      }
+    },
+    "smart-filter-yazi": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1754913930,
+        "narHash": "sha256-8KR5pCwuB7Q1iWlxuGTZBU7Kh1cfo5Mwei2sI2P7RLg=",
+        "owner": "Sevenings",
+        "repo": "smart-filter",
+        "rev": "bc8e436d8f46cfcdaa5799599c6a96ff7787304a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Sevenings",
+        "repo": "smart-filter",
         "type": "github"
       }
     },
