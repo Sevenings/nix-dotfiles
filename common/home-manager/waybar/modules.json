@@ -42,7 +42,7 @@
     "mpd": {
         "format": "<span color='#2d2a2e' bgcolor='#FC9867'> {stateIcon} </span> {artist} - {title} <span color='#2d2a2e' bgcolor='#FC9867'>  </span> {volume}%",
         "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "format-stopped": "  ",
         "unknown-tag": "N/A",
         "interval": 2,
         "artist-len": 12,
