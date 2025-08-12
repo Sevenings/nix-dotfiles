@@ -22,9 +22,6 @@
 
   };
 
-  # Solução temporária dos plugins do yazi enquanto a solução via nix não funciona
-  # home.file.".config/yazi/plugins".source = ./plugins;
-
   imports = [
     ./settings.nix
     ./keymap.nix
