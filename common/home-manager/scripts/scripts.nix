@@ -11,12 +11,10 @@ in
   home.packages = with pkgs; [
 
     # BluetoothManager
-    (stdenv.mkDerivation {
-      pname = "bluetoothManager";
-      version = "1.0";
-      src = ./bluetoothManager.sh;
-      phases = [ "installPhase" ];
-      installPhase = installPhase "bluetoothManager";
+    (pkgs.writeShellApplication {
+      name = "bluetoothManager";
+      runtimeInputs = [ pkgs.rofi-wayland pkgs.bluez pkgs.gawk coreutils gnugrep ];
+      text = builtins.readFile ./bluetoothManager.sh;
     })
 
     # openCalendar

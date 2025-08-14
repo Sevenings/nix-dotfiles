@@ -1,49 +1,53 @@
 #!/usr/bin/env bash
+set -Eeuo pipefail
 
-config_file="$HOME/.config/rofi/itemSelectorConfig.rasi"
-
+config_file="${HOME}/.config/rofi/itemSelectorConfig.rasi"
 number_options=4
 
 op_power_on="Bluetooth on"
 op_power_off="Bluetooth off"
 op_connect="Connect Device"
 op_disconnect="Disconnect Device"
-op_pair="Pair Devices"
 
-options="$op_connect\n$op_disconnect\n$op_power_on\n$op_power_off"
+# Comando do rofi como array para evitar problemas de quoting
+dmenu_cmd=(rofi -dmenu -l "${number_options}" -config "${config_file}")
 
+blu() { bluetoothctl --timeout 5 "$@"; }  # timeout evita travas
 
-dmenu="rofi -dmenu -l $number_options -p Bluetooth -config $config_file"
-
-
-function disconnect() {
-    echo "disconnect" | bluetoothctl
+disconnect() {
+  blu disconnect
 }
 
-function connect() {
-    device=$(echo "devices Paired" | bluetoothctl | grep "Device" | $dmenu -p "Devices" | awk '{print $2}')
-    echo "connect $device" | bluetoothctl
+connect() {
+  # Lista pareados e manda pro rofi; mostra "MAC  Nome do device"
+  # Se cancelar, sai limpo.
+  mapfile -t choices < <(blu devices Paired | awk '{mac=$2; $1=$2=""; sub(/^  */,""); print mac "  " $0}')
+  [[ ${#choices[@]} -gt 0 ]] || { notify-send "Bluetooth" "Nenhum dispositivo pareado"; return; }
+
+  sel="$(printf '%s\n' "${choices[@]}" | "${dmenu_cmd[@]}" -p "Devices" || true)"
+  [[ -n "${sel}" ]] || return
+
+  mac="${sel%% *}"
+  [[ -n "${mac}" ]] && blu connect "${mac}"
 }
 
-function powerOff() {
-    echo "power off" | bluetoothctl
-}
+powerOff() { blu power off; }
+powerOn()  { blu power on;  }
 
-function powerOn() {
-    echo "power on" | bluetoothctl
-}
+# Menu principal
+selection="$(
+  printf '%s\n' \
+    "${op_connect}" \
+    "${op_disconnect}" \
+    "${op_power_on}" \
+    "${op_power_off}" \
+  | "${dmenu_cmd[@]}" -p "Bluetooth" || true
+)"
 
-selection=$(echo -e $options | $dmenu -p "Option")
-
-
-
-case $selection in
-    $op_power_on) powerOn;;
-    $op_power_off) powerOff;;
-    $op_connect) connect;;
-    $op_disconnect) disconnect;;
-    $op_pair) pair;;
+case "${selection}" in
+  "${op_power_on}")  powerOn   ;;
+  "${op_power_off}") powerOff  ;;
+  "${op_connect}")   connect   ;;
+  "${op_disconnect}") disconnect ;;
+  *) exit 0 ;; # cancelado
 esac
-
-
-
