@@ -15,16 +15,16 @@
   networking.hostName = "fatima"; # Define your hostname.
 
   # Enable touchpad support (enabled default in most desktopManager).
-    services.libinput.enable = true;
+  services.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-    users.users.okabe = {
-      isNormalUser = true;
-      extraGroups = [ "networkmanager" "wheel" "docker" "dialout" "video" ]; # Enable ‘sudo’ for the user.
-      packages = with pkgs; [
-        tree
-      ];
-    };
+  users.users.okabe = {
+    isNormalUser = true;
+    extraGroups = [ "networkmanager" "wheel" "docker" "dialout" "video" ]; # Enable ‘sudo’ for the user.
+    packages = with pkgs; [
+      tree
+    ];
+  };
 
 
 

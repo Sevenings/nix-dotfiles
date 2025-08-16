@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ ... }:
 
 {
   imports =
@@ -7,6 +7,7 @@
       ./devices.nix
       ./display_manager.nix
       ./docker.nix
+      ./fonts.nix
       ./packages.nix
       # ./printing.nix
       ./programs.nix
@@ -64,12 +65,6 @@
   '';
 
   networking.firewall.enable = false;
-
-  # Fonts
-  # fonts.fontDir.enable = true;
-  # fonts.packages = [] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
-  # Before 25.05 (24.05 or earlier)
-  fonts.packages = [] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 
   qt = {
       enable = true;

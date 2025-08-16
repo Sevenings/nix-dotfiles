@@ -3,7 +3,7 @@
 {
   programs.kitty = {
     font = {
-      size = 14.0;
+      size = 13.0;
     };
   };
 }

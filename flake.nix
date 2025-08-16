@@ -25,11 +25,18 @@
     # Yazi
 		yazi.url = "github:sxyazi/yazi"; 
 
+    # Yazi Plugins
+    smart-filter-yazi = {
+      url = "github:Sevenings/smart-filter";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Zen-Browser
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs: let
+  outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs: 
+  let
     inherit (self) outputs;
     system = "x86_64-linux";
     specialArgs = { inherit system inputs; nixpkgs-unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;};  # <- passing inputs to the attribute set for home-manager

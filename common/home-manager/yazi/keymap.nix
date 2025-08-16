@@ -171,6 +171,7 @@
         { on = [ "g" "e" ];        run = "cd ~/Documentos/'Estudos Espiritismo'";  desc = "Go to Estudos Espiritismo"; }
         { on = [ "g" "n" ];        run = "cd /etc/nixos/";                         desc = "Go to Nixos"; }
         { on = [ "g" "j" ];        run = "cd ~/Jogos";                             desc = "Go to Jogos"; }
+        { on = [ "g" "o" ];        run = "cd ~/Objetos";                           desc = "Go to Objetos"; }
         { on = [ "g" "r" ];        run = "shell -- ya emit cd \"$(git rev-parse --show-toplevel)\"";  desc = "Go to root of git repository"; }
 
         # Plugins / Extras
