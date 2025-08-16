@@ -86,7 +86,7 @@
       "$mainMod, Y, exec, switchlayout"
       
       # Switch keyboard style
-      "$mainMod, Space, exec, hyprctl switchxkblayout at-translated-set-2-keyboard next"
+      "$mainMod, Space, exec, hyprctl switchxkblayout $keyboard next"
 
 
       # ---------------------------------------------------

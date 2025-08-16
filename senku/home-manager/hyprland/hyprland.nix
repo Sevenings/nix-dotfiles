@@ -9,4 +9,8 @@
     ./plugins.nix
     ./workspaces.nix
   ];
+
+  wayland.windowManager.hyprland.settings = {
+    "$keyboard" = "kingston-hyperx-alloy-fps-mechanical-gaming-keyboard";
+  };
 }

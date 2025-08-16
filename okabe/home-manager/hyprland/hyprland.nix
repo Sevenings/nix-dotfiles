@@ -12,4 +12,8 @@
         ./plugins.nix
     ];
 
+    wayland.windowManager.hyprland.settings = {
+      "$keyboard" = "at-translated-set-2-keyboard";
+    };
+
 }
