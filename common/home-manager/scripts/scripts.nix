@@ -94,7 +94,7 @@ in
     # musicNow
     (stdenv.mkDerivation {
       pname = "musicnow";
-      version = "1.1";
+      version = "1.2.1";
       src = ./musicnow.sh;
       phases = [ "installPhase" ];
       installPhase = installPhase "musicnow";
