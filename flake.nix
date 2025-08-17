@@ -38,9 +38,30 @@
   outputs = { self, nixpkgs, nixpkgs-unstable, home-manager, ... }@inputs: 
   let
     inherit (self) outputs;
+
     system = "x86_64-linux";
-    specialArgs = { inherit system inputs; nixpkgs-unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;};  # <- passing inputs to the attribute set for home-manager
     extraSpecialArgs = { inherit system inputs; nixpkgs-unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;};  # <- passing inputs to the attribute set for home-manager
+
+    specialArgs = { inherit system inputs; nixpkgs-unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;};  # <- passing inputs to the attribute set for configuration
+
+
+    nixosConfigurations = user: (nixpkgs.lib.nixosSystem {
+        inherit specialArgs;
+        modules = [
+          ./common/nixos/configuration.nix
+          ./${user}/nixos/configuration.nix
+        ];
+      });
+
+    homeConfigurations = user: (home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
+        inherit extraSpecialArgs;
+        modules = [
+          # > Our main home-manager configuration file <
+          ./common/home-manager/home.nix
+          ./${user}/home-manager/home.nix
+        ];
+      });
   in {
     # Your custom packages
     # Accessible through 'nix build', 'nix shell', etc
@@ -49,6 +70,7 @@
     # Reusable nixos modules you might want to export
     # These are usually stuff you would upstream into nixpkgs
     nixosModules = import ./misc/modules/nixos;
+
     # Reusable home-manager modules you might want to export
     # These are usually stuff you would upstream into home-manager
     homeManagerModules = import ./misc/modules/home-manager;
@@ -56,51 +78,15 @@
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
-
-      fatima = nixpkgs.lib.nixosSystem {
-        inherit specialArgs;
-        modules = [
-          # > Our main nixos configuration file <
-          ./common/nixos/configuration.nix
-          ./okabe/nixos/configuration.nix
-        ];
-      };
-
-      stonebox = nixpkgs.lib.nixosSystem {
-        inherit specialArgs;
-        modules = [
-          # > Our main nixos configuration file <
-          ./common/nixos/configuration.nix
-          ./senku/nixos/configuration.nix
-        ];
-      };
-
+      fatima = nixosConfigurations "okabe";
+      stonebox = nixosConfigurations "senku";
     };
 
     # Standalone home-manager configuration entrypoint
     # Available through 'home-manager --flake .#your-username@your-hostname'
     homeConfigurations = {
-      
-      "okabe@fatima" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        inherit extraSpecialArgs;
-        modules = [
-          # > Our main home-manager configuration file <
-          ./common/home-manager/home.nix
-          ./okabe/home-manager/home.nix
-        ];
-      };
-
-      "senku@stonebox" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        inherit extraSpecialArgs;
-        modules = [
-          # > Our main home-manager configuration file <
-          ./common/home-manager/home.nix
-          ./senku/home-manager/home.nix
-        ];
-      };
-
+      "okabe@fatima" = homeConfigurations "okabe";
+      "senku@stonebox" = homeConfigurations "senku";
     };
   };
 }
