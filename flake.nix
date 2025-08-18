@@ -40,9 +40,9 @@
     inherit (self) outputs;
 
     system = "x86_64-linux";
-    extraSpecialArgs = { inherit system inputs; nixpkgs-unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;};  # <- passing inputs to the attribute set for home-manager
+    extraSpecialArgs = { inherit system inputs outputs; nixpkgs-unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;};  # <- passing inputs to the attribute set for home-manager
 
-    specialArgs = { inherit system inputs; nixpkgs-unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;};  # <- passing inputs to the attribute set for configuration
+    specialArgs = { inherit system inputs outputs; nixpkgs-unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;};  # <- passing inputs to the attribute set for configuration
 
 
     nixosConfigurations = user: (nixpkgs.lib.nixosSystem {
@@ -66,6 +66,9 @@
     # Your custom packages
     # Accessible through 'nix build', 'nix shell', etc
     packages = import ./misc/pkgs nixpkgs.legacyPackages.${system};
+
+    # Your custom packages and modifications, exported as overlays
+    overlays = import ./misc/overlays {inherit inputs;};
 
     # Reusable nixos modules you might want to export
     # These are usually stuff you would upstream into nixpkgs
