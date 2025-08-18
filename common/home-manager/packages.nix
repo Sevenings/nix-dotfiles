@@ -2,8 +2,9 @@
 
 {
   home.packages = with pkgs; [
-      freecad-wayland
-      rustc
-      cargo
+    freecad-wayland
+    rustc
+    cargo
+    foliate
   ];
 }
