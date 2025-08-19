@@ -3,4 +3,5 @@
 pkgs: {
   # example = pkgs.callPackage ./example { };
   horario_ponto = pkgs.callPackage ./horario_ponto {};
+  musicnow = pkgs.callPackage ./musicnow {};
 }

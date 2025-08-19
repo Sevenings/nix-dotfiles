@@ -88,14 +88,5 @@ in
       phases = [ "installPhase" ];
       installPhase = installPhase "workspace";
     })
-
-    # musicNow
-    (stdenv.mkDerivation {
-      pname = "musicnow";
-      version = "1.2.1";
-      src = ./musicnow.sh;
-      phases = [ "installPhase" ];
-      installPhase = installPhase "musicnow";
-    })
   ];
 }
