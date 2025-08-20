@@ -14,9 +14,6 @@ workspace=$2
 
 # Workspaces por monitor
 workspacesPerMonitor=9
-if [[ -z $3 ]]; then
-    workspacePerMonitor=$3
-fi
 
 
 # Encontrar monitor que esta focado
@@ -26,9 +23,9 @@ focusedMonitor=$(hyprctl monitors -j | jq "(.[] | select(.activeWorkspace.id == 
 
 # Realizar a troca de workspace baseada em cada monitor
 if [[ $focusedMonitor == 1 ]]; then
-    hyprctl dispatch $action $workspace
+    hyprctl dispatch "$action" "$workspace"
 elif [[ $focusedMonitor == 0 ]]; then
-    hyprctl dispatch $action $(($workspace + $workspacesPerMonitor))
+    hyprctl dispatch "$action" $(("$workspace" + "$workspacesPerMonitor"))
 else
     echo "Focused Monitor $focusedMonitor is not listed"
 fi
