@@ -7,7 +7,7 @@
     musicnow
     python_calculator
     switchlayout
-    togglecaps
+    togglecapslock
     workspace
     freecad-wayland
     rustc

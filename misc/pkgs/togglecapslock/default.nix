@@ -1,7 +1,7 @@
 { pkgs ? import <nixpkgs> {} }:
 
 (pkgs.writeShellApplication {
-  name = "togglecaps";
+  name = "togglecapslock";
   runtimeInputs = with pkgs; [];
   text = builtins.readFile ./toggleCapsLock.sh;
 })
