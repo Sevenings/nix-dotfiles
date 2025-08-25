@@ -2,7 +2,7 @@
 
 (pkgs.writeShellApplication {
   name = "babel";
-  runtimeInputs = with pkgs; [ babel ];
+  runtimeInputs = with pkgs; [];
   text = builtins.readFile ./babel.sh;
 })
 
