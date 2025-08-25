@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 COLOR=$(hyprpicker)
-if [ $COLOR ]; then
-    wl-copy $COLOR
+if [ "$COLOR" ]; then
+    wl-copy "$COLOR"
     notify-send "Hyprpicker Color" "Cor $COLOR enviada para o CTRL-C"
 fi
 

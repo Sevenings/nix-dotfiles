@@ -2,7 +2,7 @@
 
 (pkgs.writeShellApplication {
   name = "colorpicker";
-  runtimeInputs = with pkgs; [ babel ];
+  runtimeInputs = with pkgs; [];
   text = builtins.readFile ./colorPicker.sh;
 })
 
