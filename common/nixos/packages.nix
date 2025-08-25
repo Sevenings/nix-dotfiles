@@ -3,33 +3,32 @@
 {
     environment.systemPackages = with pkgs; [
       yt-dlp
-      webtorrent_desktop
-      torrential
-      cura-appimage
+      # webtorrent_desktop
+      # torrential
       lua5_3_compat
       jq
       socat
       fd
       eww
-      nautilus
+      # nautilus
       unar
-      udisks
+      # udisks
       usbutils
-      usb-blaster-udev-rules
-      dbeaver-bin
+      # usb-blaster-udev-rules
+      # dbeaver-bin
       sqlite
-      wireshark-qt
+      # wireshark-qt
       hyprpolkitagent
-      kdePackages.partitionmanager
+      # kdePackages.partitionmanager
       clipcat
       eog
-      filezilla
+      # filezilla
       pnpm
       bash
       xorg.xauth
       xorg.xhost
       yq
-      gimp
+      # gimp
       hyprpicker
       exiftool
       killall
@@ -38,16 +37,15 @@
       firefox
       inputs.zen-browser.packages."${system}".default
       undollar
-      cargo
       nodePackages.live-server
       postman
       wiki-tui
       direnv
       obsidian
       mpv
-      mosquitto
+      # mosquitto
       libreoffice-qt6-fresh
-      mqttui
+      # mqttui
       neovim 
       wget
       gh
@@ -72,7 +70,7 @@
       nodejs
       bluez
       bluez-tools
-      ani-cli
+      # ani-cli
       htop-vim
       xdragon
       gnumake

@@ -2,7 +2,9 @@
 
 {
   home.packages = with pkgs; [
-    foliate
+    # foliate
     kdePackages.kdenlive
+    # inkscape
+    # tuxguitar
   ];
 }

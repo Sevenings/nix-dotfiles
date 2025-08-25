@@ -5,7 +5,5 @@
   # $ nix search wget
     environment.systemPackages = with pkgs; [
       prismlauncher
-      inkscape
-      tuxguitar
     ];
 }
