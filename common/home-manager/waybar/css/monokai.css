@@ -243,8 +243,6 @@ window#waybar.hidden {
 #custom-horario_ponto {
     color: @ponto-color;
     border-bottom: 2px solid @ponto-color;
-
-    font-size: 12px;
 }
 
 #mpd {
