@@ -12,6 +12,6 @@
     freecad-wayland
     rustc
     cargo
-    foliate
+    # foliate
   ];
 }

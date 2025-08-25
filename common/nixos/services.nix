@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   services = {
@@ -16,6 +16,8 @@
     udisks2.enable = true;
 
     dbus.enable = true;
+
+    udev.packages = [ pkgs.libmtp ];
 
   };
 }
