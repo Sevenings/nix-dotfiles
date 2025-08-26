@@ -40,32 +40,18 @@
     inherit (self) outputs;
 
     system = "x86_64-linux";
-    extraSpecialArgs = { inherit system inputs outputs; nixpkgs-unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;};  # <- passing inputs to the attribute set for home-manager
+    pkgs = nixpkgs.legacyPackages.${system};
+    extraSpecialArgs = { inherit system inputs outputs; nixpkgs-unstable = nixpkgs-unstable.legacyPackages.${system};};  # <- passing inputs to the attribute set for home-manager
+    specialArgs = { inherit system inputs outputs; nixpkgs-unstable = nixpkgs-unstable.legacyPackages.${system};};  # <- passing inputs to the attribute set for configuration
 
-    specialArgs = { inherit system inputs outputs; nixpkgs-unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;};  # <- passing inputs to the attribute set for configuration
+    auxiliar = import ./misc/auxiliar { inherit nixpkgs home-manager specialArgs extraSpecialArgs; };
+    nixosConfigurations = auxiliar.nixosConfigurations;
+    homeConfigurations = auxiliar.homeConfigurations;
 
-
-    nixosConfigurations = user: (nixpkgs.lib.nixosSystem {
-        inherit specialArgs;
-        modules = [
-          ./common/nixos/configuration.nix
-          ./${user}/nixos/configuration.nix
-        ];
-      });
-
-    homeConfigurations = user: (home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux; # Home-manager requires 'pkgs' instance
-        inherit extraSpecialArgs;
-        modules = [
-          # > Our main home-manager configuration file <
-          ./common/home-manager/home.nix
-          ./${user}/home-manager/home.nix
-        ];
-      });
   in {
     # Your custom packages
     # Accessible through 'nix build', 'nix shell', etc
-    packages = import ./misc/pkgs nixpkgs.legacyPackages.${system};
+    packages = import ./misc/pkgs pkgs;
 
     # Your custom packages and modifications, exported as overlays
     overlays = import ./misc/overlays {inherit inputs;};
@@ -81,15 +67,15 @@
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
-      fatima = nixosConfigurations "okabe";
-      stonebox = nixosConfigurations "senku";
+      fatima = nixosConfigurations { user = "okabe"; };
+      stonebox = nixosConfigurations { user = "senku"; };
     };
 
     # Standalone home-manager configuration entrypoint
     # Available through 'home-manager --flake .#your-username@your-hostname'
     homeConfigurations = {
-      "okabe@fatima" = homeConfigurations "okabe";
-      "senku@stonebox" = homeConfigurations "senku";
+      "okabe@fatima" = homeConfigurations { user = "okabe"; };
+      "senku@stonebox" = homeConfigurations { user = "senku"; };
     };
   };
 }
