@@ -23,6 +23,7 @@
         { name = "Imagens"; text = ""; }
         { name = "Jogos"; text = "󰮂"; }
         { name = "Musicas"; text = ""; }
+        { name = "Objetos"; text = "󰆧"; }
         { name = "Playground"; text = "󱊈"; }
         { name = "Projetos"; text = ""; }
         { name = "server"; text = "󰒋"; }
