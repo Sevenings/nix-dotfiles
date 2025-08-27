@@ -3,7 +3,7 @@
 {
   programs.kitty = {
     enable = true;
-    font.name = "JetBrainsMono Nerd Font Propo";
+    font.name = "VictorMono Nerd Font";
     themeFile = "Monokai_Pro";
     settings = {
       background = "#0d0f18";
