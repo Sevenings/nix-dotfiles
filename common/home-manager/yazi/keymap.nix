@@ -184,8 +184,13 @@
         { on = [ "c" "t" ];       run = "plugin load-template";  desc = "Load Template"; }
 
         # Zip and Unzip
-        { on = [ "z" "z" ];       run = '' shell --confirm 'zip -r "$1".zip "$1"' '';    desc = "Zip folder"; }
-        { on = [ "z" "u" ];       run = '' shell --confirm 'unzip "$1"' '';    desc = "Unzip file"; }
+        { on = [ "z" "z" ];       run = '' shell --confirm 'zip -r "$1".zip "$1"' '';     desc = "Zip folder"; }
+        { on = [ "z" "u" ];       run = '' shell --confirm 'unzip "$1"' '';               desc = "Unzip file"; }
+        { on = [ "z" "a" "a" ];   run = "plugin compress";                  desc = "Compress archives"; }
+        { on = [ "z" "a" "p" ];   run = "plugin compress -p";               desc = "Compress archives (password)"; }
+        { on = [ "z" "a" "h" ];   run = "plugin compress -ph";              desc = "Compress archives (password + header)"; }
+        { on = [ "z" "a" "l" ];   run = "plugin compress -l";               desc = "Compress archives (compression level)"; }
+        { on = [ "z" "a" "u" ];   run = "plugin compress -phl";             desc = "Compress archives (password + header + level)"; }
 
         # Trash can 
         #{ on = [ "T", "r" ],       run = "shell '~/.config/yazi/scripts/trash-restore.sh' --confirm",    desc = "Restore"; }

@@ -10,6 +10,7 @@
     initLua = ./init.lua;
 
     plugins = {
+      compress = ./plugins/compress.yazi;
       full-border = ./plugins/full-border.yazi;
       git = ./plugins/git.yazi;
       lazygit = ./plugins/lazygit.yazi;
