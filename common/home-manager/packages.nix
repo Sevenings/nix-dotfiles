@@ -2,6 +2,7 @@
 
 {
   home.packages = with pkgs; [
+    vscode
     babel
     colorpicker
     musicnow
@@ -14,4 +15,5 @@
     cargo
     # foliate
   ];
+  nixpkgs.config.allowUnfree = true;
 }
