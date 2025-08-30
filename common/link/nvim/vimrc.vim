@@ -86,8 +86,11 @@ map <leader><F5>p :!rifle -w python %<CR>
 
 
 " Abrir Terminal ah lá VSCode
-map <Leader>tt :sp<CR><c-w>w:term<CR>:resize 8<CR>
-map <Leader>T :tabnew<CR>:term<CR>
+"map <Leader>tt :sp<CR><c-w>w:term<CR>:resize 8<CR>
+"map <Leader>T :tabnew<CR>:term<CR>
+map <Leader>tt :ToggleTerm direction=horizontal<CR>
+map <Leader>a :ToggleTerm<CR>
+map <Leader>T :ToggleTerm direction=float<CR>
 
 " Terminal ESC goes to normal mode
 tnoremap <Esc> <C-\><C-n>
