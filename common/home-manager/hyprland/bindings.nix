@@ -35,7 +35,7 @@
       ", XF86Keyboard, exec, togglecapslock"
       "$mainMod, O, centerwindow"
       "$mainMod CTRL, S, pin"
-      "$mainMod, C, exec, openCalendar"
+      "$mainMod, C, exec, morgen"
       "Ctrl, XF86Calculator, exec, kitty -e nvim"
       "$mainMod, N, exec, obsidian"
       "$mainMod, F1, exec, kitty --class=\"miniTerminal\" -e nvim '$HOME/Anotações/Todo/todo atual.md'"

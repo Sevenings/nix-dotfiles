@@ -2,6 +2,7 @@
 
 {
   home.packages = with pkgs; [
+    morgen
     vscode
     babel
     colorpicker
