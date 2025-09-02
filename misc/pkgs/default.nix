@@ -8,6 +8,7 @@ pkgs: {
   musicnow = pkgs.callPackage ./musicnow {};
   openCalendar = pkgs.callPackage ./openCalendar {};
   python_calculator = pkgs.callPackage ./python_calculator {};
+  se_expediente = pkgs.callPackage ./se_expediente {};
   switchlayout = pkgs.callPackage ./switchlayout {};
   togglecapslock = pkgs.callPackage ./togglecapslock {};
   workspace = pkgs.callPackage ./workspace {};
