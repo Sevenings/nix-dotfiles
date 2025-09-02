@@ -12,7 +12,7 @@
     plugins = {
       compress = ./plugins/compress.yazi;
       full-border = ./plugins/full-border.yazi;
-      git = ./plugins/git.yazi;
+      git = pkgs.yaziPlugins.git;
       lazygit = ./plugins/lazygit.yazi;
       load-template = ./plugins/load-template.yazi;
       mount = ./plugins/mount.yazi;
