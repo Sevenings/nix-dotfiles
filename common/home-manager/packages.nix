@@ -2,6 +2,8 @@
 
 {
   home.packages = with pkgs; [
+    fzf
+    zoxide
     morgen
     vscode
     babel

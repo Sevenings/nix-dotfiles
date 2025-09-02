@@ -71,6 +71,7 @@ alias todo="nvim ~/todo.txt"
 alias rebuild="nixos-rebuild switch --use-remote-sudo --upgrade"
 alias confone="bluetoothctl connect 68:59:32:F7:D3:89"
 alias lg="lazygit"
+alias cd="z"
 
 export EDITOR='nvim'
 export VISUAL='nvim'
@@ -80,7 +81,7 @@ export RANGER_LOAD_DEFAULT_RC=false
 export FZF_DEFAULT_COMMAND='find .'
 
 eval "$(direnv hook zsh)"
-
+eval "$(zoxide init zsh)"
 
 clear
 fastfetch
