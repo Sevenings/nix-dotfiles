@@ -1,9 +1,48 @@
-from datetime import datetime, timedelta
+import json
+from dataclasses import asdict, dataclass
+from datetime import datetime, time, timedelta, date
 from pathlib import Path
 from bs4 import BeautifulSoup
 import requests
 import sys
 import os
+
+CACHE_PATH = Path.home() / '.local/share/horario_ponto/cache.json'
+
+@dataclass
+class Cache:
+    horario_entrada: str | None
+    ultima_alteracao: date | None
+    
+    @staticmethod
+    def load():
+        if not Path(CACHE_PATH).exists():
+            Path(CACHE_PATH).parent.mkdir(parents=True, exist_ok=True)
+            Path(CACHE_PATH).write_text("{}")
+            return Cache(horario_entrada=None, ultima_alteracao=None)
+        with open(CACHE_PATH) as f:
+            data = json.load(f)
+
+            ultima_alteracao = data.get("ultima_alteracao")
+            if ultima_alteracao:
+                ultima_alteracao = date.fromisoformat(ultima_alteracao)
+
+            cache = Cache(
+                    horario_entrada=data.get("horario_entrada", None),
+                    ultima_alteracao=ultima_alteracao
+                    )
+        return cache
+
+    def save(self):
+        with open(CACHE_PATH, 'w') as f:
+            content = dict(
+                    horario_entrada=self.horario_entrada,
+                    ultima_alteracao=self.ultima_alteracao.isoformat() if self.ultima_alteracao else None
+                    )
+            json.dump(content, f)
+        
+
+
 
 COOKIE_PATH = Path.home() / ".local/share/horario_ponto/cookie.txt"
 COOKIE_TYPE = "_password_tcego_gpweb_new_session_novo"
@@ -96,19 +135,41 @@ def calcular_saida(hora_entrada_str: str, horas_jornada: int = 5) -> str:
     return hora_saida.strftime("%H:%M")
 
 
-def main():
+def buscar_horario_na_internet():
+    # Se não, busque!
     cookie = obter_cookie()
     dia_hoje = obter_dia_hoje_formatado()
     params = obter_parametros_data_atual()
     html = buscar_html(cookie, params)
-    entrada = extrair_horario_entrada(html, dia_hoje)
+    return extrair_horario_entrada(html, dia_hoje)
 
-    if entrada:
-        saida = calcular_saida(entrada)
-        print(f"{entrada} - {saida}")
+
+def obter_horario_entrada():
+    cache = Cache.load()
+    # Se cache atualizado, receba!
+    if cache and cache.ultima_alteracao == date.today():
+        return cache.horario_entrada
+
+    horario_entrada = buscar_horario_na_internet()
+
+    # Se encontrou, atualize e receba!
+    if horario_entrada:
+        cache.horario_entrada = horario_entrada
+        cache.ultima_alteracao = date.today()
+        cache.save()
+
+    return horario_entrada
+
+
+def main():
+    horario_entrada = obter_horario_entrada()
+
+    if horario_entrada:
+        saida = calcular_saida(horario_entrada)
+        print(f"{horario_entrada} - {saida}")
         sys.exit(0)
     else:
-        print(f"Horário de entrada não encontrado para {dia_hoje}.")
+        print(f"Horário de entrada não encontrado.")
         sys.exit(3)
 
 
