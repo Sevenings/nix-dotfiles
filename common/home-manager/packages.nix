@@ -2,6 +2,7 @@
 
 {
   home.packages = with pkgs; [
+    trash-cli
     fzf
     zoxide
     morgen

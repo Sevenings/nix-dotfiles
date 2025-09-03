@@ -146,6 +146,9 @@
         { on = [ "{" ]; run = "tab_swap -1"; desc = "Swap the current tab with the previous tab"; }
         { on = [ "}" ]; run = "tab_swap 1";  desc = "Swap the current tab with the next tab"; }
 
+        # Tasks
+        { on = [ "w" ]; run = "tasks:show"; desc = "Show the tasks manager"; }
+
         # Goto
         { on = [ "g" "<Space>" ];  run = "cd --interactive";                       desc = "Go to a directory interactively"; }
         { on = [ "g" "h" ];        run = "cd ~";                                   desc = "Go to home"; }
@@ -188,8 +191,10 @@
         { on = [ "c" "l" ];       run = "plugin compress -l";               desc = "Compress archives (compression level)"; }
         { on = [ "c" "u" ];       run = "plugin compress -phl";             desc = "Compress archives (password + header + level)"; }
 
-        # Trash can 
-        #{ on = [ "T", "r" ],       run = "shell '~/.config/yazi/scripts/trash-restore.sh' --confirm",    desc = "Restore"; }
+        # Undo trash
+        { on = "u";               run = "plugin restore";                   desc = "Restore last deleted files/folders"; }
+        { on = "U";               run = "plugin restore -- --interactive";  desc = "Restore last deleted files/folders (Interactive)"; }
+        #{ on = [ "T", "r" ],     run = "shell '~/.config/yazi/scripts/trash-restore.sh' --confirm",    desc = "Restore"; }
 
         # Help
         { on = [ "g" "?" ]; run = "help"; desc = "Open help"; }
