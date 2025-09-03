@@ -33,6 +33,9 @@ set nosplitright
 set noshowmode
 
 
+" Startup do asyncrun
+let g:asyncrun_open = 6
+
 " =========
 " FUNCTIONS
 " =========
@@ -80,6 +83,10 @@ map <C-s> :w<CR>
 map <F7> :!make test<CR>
 map <F6> :w<CR>:!clear<CR>:!make compile<CR>
 map <F5> :!make run<CR>
+
+map <leader>rr :AsyncTask project-run<CR>
+map <leader>rb :AsyncTask project-build<CR>
+map <leader>rm :AsyncTask project-monitor<CR>
 
 " Executar arquivo com python
 map <leader><F5>p :!rifle -w python %<CR>
