@@ -43,6 +43,8 @@
         { mime = "*/javascript"; use = [ "edit" "reveal" ]; }
 
         { mime = "*"; use = [ "open" "edit" "reveal" ]; }
+
+        { mime = "application/pdf"; use = [ "send_to_babel" ]; }
       ];
     };
 
@@ -74,6 +76,9 @@
       ];
       edit_image = [
         { run = ''gimp "$@"''; orphan = true; desc = "Edit"; for = "linux"; }
+      ];
+      send_to_babel = [
+        { run = ''mv "$@" ~/Documentos/biblioteca\ de\ babel'';   desc="Send to Babel";   for = "linux"; }
       ];
     };
 
