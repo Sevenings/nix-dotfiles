@@ -147,7 +147,7 @@
         { on = [ "}" ]; run = "tab_swap 1";  desc = "Swap the current tab with the next tab"; }
 
         # Tasks
-        { on = [ "w" ]; run = "tasks_show"; desc = "Show the tasks manager"; }
+        { on = [ "w" ]; run = "tasks:show"; desc = "Show the tasks manager"; }
 
         # Goto
         { on = [ "g" "<Space>" ];  run = "cd --interactive";                       desc = "Go to a directory interactively"; }
