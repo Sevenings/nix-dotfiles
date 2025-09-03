@@ -64,13 +64,13 @@
         { on = [ "l" ];         run = "open";                       desc = "Open the selected files"; }
         { on = [ "y" "y" ];     run = [ "shell -- for path in \"$@\"; do echo \"file://$path\"; done | wl-copy -t text/uri-list" "yank" ];  desc = "Copy the selected files"; }
         { on = [ "Y" ];         run = "unyank";                     desc = "Cancel the yank status of files"; }
-        { on = [ "d" "d" ];    run = "yank --cut";                  desc = "Cut the selected files"; }
+        { on = [ "d" "d" ];     run = "yank --cut";                 desc = "Cut the selected files"; }
         { on = [ "p" ];         run = "paste";                      desc = "Paste the files"; }
         { on = [ "P" ];         run = "paste --force";              desc = "Paste the files (overwrite if the destination exists)"; }
         { on = [ "-" ];         run = "link";                       desc = "Symlink the absolute path of files"; }
         { on = [ "_" ];         run = "link --relative";            desc = "Symlink the relative path of files"; }
-        { on = [ "d" "D" ];    run = "remove";                      desc = "Move the files to the trash"; }
-        { on = [ "D" "D" ];    run = "remove --permanently";        desc = "Permanently delete the files"; }
+        { on = [ "d" "D" ];     run = "remove";                     desc = "Move the files to the trash"; }
+        { on = [ "D" "D" ];     run = "remove --permanently";       desc = "Permanently delete the files"; }
         { on = [ "a" ];         run = "create";                     desc = "Create a file or directory (ends with / for directories)"; }
         { on = [ "A" ];         run = "create --dir";               desc = "Create a directory"; }
         { on = [ "<F7>" ];      run = "create --dir";               desc = "Create a directory"; }
@@ -146,9 +146,6 @@
         { on = [ "{" ]; run = "tab_swap -1"; desc = "Swap the current tab with the previous tab"; }
         { on = [ "}" ]; run = "tab_swap 1";  desc = "Swap the current tab with the next tab"; }
 
-        # Tasks
-        { on = [ "w" ]; run = "tasks_show"; desc = "Show the tasks manager"; }
-
         # Goto
         { on = [ "g" "<Space>" ];  run = "cd --interactive";                       desc = "Go to a directory interactively"; }
         { on = [ "g" "h" ];        run = "cd ~";                                   desc = "Go to home"; }
@@ -202,10 +199,13 @@
 
         # Mount
         { on = [ "M" ]; run = "plugin mount"; desc = "Mount Menu"; }
+
+        { on = [ "<A-s>" ]; run = "plugin local-shell -abs -c --show"; desc = "Teste Local Shell"; }
       ];
 
       tasks = {
         keymap = [
+          { on = [ "w" ];     run = "show";  desc = "Show the tasks manager"; }
           { on = [ "<Esc>" ]; run = "close"; desc = "Hide the task manager"; }
           { on = [ "<C-[>" ]; run = "close"; desc = "Hide the task manager"; }
           { on = [ "<C-q>" ]; run = "close"; desc = "Hide the task manager"; }

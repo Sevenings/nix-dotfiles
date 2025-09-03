@@ -4,8 +4,8 @@
   programs.yazi = {
     enable = true;
     package = inputs.yazi.packages.${pkgs.system}.default;
-    enableZshIntegration = true;
-		shellWrapperName = "y";
+		# enableZshIntegration = true;
+		# shellWrapperName = "y";
 
     initLua = ./init.lua;
 
@@ -15,6 +15,7 @@
       git = pkgs.yaziPlugins.git;
       lazygit = ./plugins/lazygit.yazi;
       load-template = ./plugins/load-template.yazi;
+      local-shell = ./plugins/local-shell.yazi;
       mount = ./plugins/mount.yazi;
       smart-enter = ./plugins/smart-enter.yazi;
       smart-filter = inputs.smart-filter-yazi.packages.${system}.default;
