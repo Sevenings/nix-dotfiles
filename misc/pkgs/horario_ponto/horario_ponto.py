@@ -161,7 +161,22 @@ def obter_horario_entrada():
     return horario_entrada
 
 
+def limpar_cache():
+    if Path(CACHE_PATH).exists():
+        os.remove(CACHE_PATH)
+        print("Removido cache com sucesso")
+
+
 def main():
+    mode = sys.argv[1] if len(sys.argv) > 1 else None
+    if mode and mode == "cache":
+        operation = sys.argv[2] if len(sys.argv) > 2 else None
+        if operation and operation == "clear":
+            limpar_cache()
+            sys.exit(0)
+        print("Erro de sintaxe")
+        sys.exit(1)
+
     horario_entrada = obter_horario_entrada()
 
     if horario_entrada:
