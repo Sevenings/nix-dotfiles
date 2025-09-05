@@ -1,7 +1,7 @@
 { pkgs ? import <nixpkgs> {} }:
 pkgs.python312Packages.buildPythonApplication {
   pname = "horario-ponto";
-  version = "0.1.0";
+  version = "0.2.0";
   format = "pyproject";
   src = ./.;
 
