@@ -190,7 +190,7 @@
         "tooltip": true,
         "tooltip-format": "Horário do ponto",
         "exec": "horario_ponto",
-        "exec-if": "se_expediente",
+        "exec-if": "se_expediente --silent",
         "interval": 60
     }
 }
