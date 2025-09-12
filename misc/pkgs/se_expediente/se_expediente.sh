@@ -1,11 +1,21 @@
 #!/usr/bin/env bash
 
-# Obtém o SSID atual
-ssid=$(nmcli -t -f active,ssid dev wifi | grep "^sim" | cut -d: -f2)
-
-if [[ "$ssid" == "TCEGO-PUBLIC" ]]; then
-    echo "Está no estágio"
-    exit 0
+silent=false
+if [[ "${1:-}" == "--silent" ]]; then
+  silent=true
 fi
-echo "Não está no estágio"
-exit 1
+
+# Obtém o SSID atual (LANG=C garante "yes" em vez de "sim")
+ssid=$(
+  LANG=C nmcli -t -f ACTIVE,SSID dev wifi \
+  | awk -F: '$1=="yes"{print $2; exit}'
+)
+
+if [[ "${ssid:-}" == "TCEGO-PUBLIC" ]]; then
+  $silent || printf 'Está no estágio\n'
+  exit 0
+else
+  $silent || printf 'Não está no estágio\n'
+  exit 1
+fi
+
