@@ -1,6 +1,8 @@
 { pkgs, outputs, ... }:
 {
   home.packages = with pkgs; [
+    tesseract
+    ocrmypdf
     projectlibre
     kicad
     se_expediente

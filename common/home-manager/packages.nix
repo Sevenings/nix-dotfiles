@@ -2,6 +2,7 @@
 
 {
   home.packages = with pkgs; [
+    inkscape
     trash-cli
     fzf
     zoxide
