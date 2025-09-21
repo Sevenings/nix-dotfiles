@@ -15,6 +15,7 @@
             "QT_QPA_PLATFORM, xcb"
             "SDL_VIDEODRIVER, wayland"
             "CLUTTER_BACKEND, wayland"
+            "WLR_RENDERER, vulkan"
             "EDITOR, nvim"
             "VISUAL, nvim"
         ];
