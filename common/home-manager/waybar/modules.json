@@ -120,7 +120,7 @@
         "format": "<span color='#2d2a2e' bgcolor='#ff6188'> ⏻ </span>",
         "tooltip": true,
         "tooltip-format": "Power Profile",
-        "on-click": "$(globals.sh logoutMenu)"
+        "on-click": "wlogout --buttons-per-row 4"
     },
 
     "custom/toggle_wallpaper_theme": {
