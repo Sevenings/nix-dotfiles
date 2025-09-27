@@ -23,6 +23,14 @@
   };
 
 
+  home.sessionVariables = {
+    WLR_RENDERER = "vulkan";
+    SDL_VIDEODRIVER = "wayland";
+    XDG_SESSION_TYPE = "wayland";
+    WLR_NO_HARDWARE_CURSORS = "1";
+  };
+
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }

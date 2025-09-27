@@ -2,6 +2,7 @@
 
 {
   home.packages = with pkgs; [
+    gimp
     inkscape
     trash-cli
     fzf
