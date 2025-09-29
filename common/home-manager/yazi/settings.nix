@@ -101,7 +101,7 @@
         # PDF
         { mime = "application/pdf"; run = "pdf"; }
       ];
-      previewers = [
+      prepend_previewers = [
         { name = "*/"; run = "folder"; sync = true; }
         # Code
         { mime = "text/*"; run = "code"; }
