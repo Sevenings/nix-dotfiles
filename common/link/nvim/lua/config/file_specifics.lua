@@ -8,7 +8,9 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
--- vim.api.nvim_create_autocmd('TextYankPost', {
---   callback = function() vim.hl.on_yank() end,
---   desc = "Briefly highlight yanked text"
--- })
+vim.filetype.add({
+  extension = {
+    launch = "xml",
+  },
+})
+

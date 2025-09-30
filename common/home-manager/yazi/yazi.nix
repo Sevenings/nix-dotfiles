@@ -18,7 +18,7 @@
       local-shell = ./plugins/local-shell.yazi;
       mount = ./plugins/mount.yazi;
       restore = ./plugins/restore.yazi;
-      smart-enter = ./plugins/smart-enter.yazi;
+      smart-enter = pkgs.yaziPlugins.smart-enter;
       smart-filter = inputs.smart-filter-yazi.packages.${system}.default;
       sudo = ./plugins/sudo.yazi;
     };
