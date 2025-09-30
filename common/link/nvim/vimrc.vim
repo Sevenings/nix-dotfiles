@@ -162,6 +162,8 @@ map <Leader>df :!dragon-drop %<CR>
 " Beautifier
 map <F9> :Neoformat<CR>
 
+map <Leader>i :ClaudeCode<CR>
+
 " Vimtex plugin configuration test
 "
 "
