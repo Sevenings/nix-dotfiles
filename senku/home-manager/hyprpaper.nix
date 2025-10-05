@@ -5,8 +5,8 @@
 
     services.hyprpaper.settings = {
         
-        "$imagePath" = "/home/senku/Imagens/Wallpapers/wake_up_neo.jpg";
-        "$secondMonitorPath" = "/home/senku/Imagens/Wallpapers/i_have_no_enemies.png";
+        "$imagePath" = "$XDG_STATE_HOME/wallpaper/left_monitor";
+        "$secondMonitorPath" = "$XDG_STATE_HOME/wallpaper/right_monitor";
 
         preload = [
             "$imagePath"

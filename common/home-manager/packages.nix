@@ -2,6 +2,7 @@
 
 {
   home.packages = with pkgs; [
+    reload_wallpaper
     claude-code
     gimp
     inkscape
