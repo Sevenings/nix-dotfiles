@@ -1,6 +1,8 @@
 { pkgs, outputs, ... }:
 {
   home.packages = with pkgs; [
+    zapdos
+    openfortivpn
     tesseract
     ocrmypdf
     projectlibre

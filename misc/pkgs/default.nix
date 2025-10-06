@@ -14,4 +14,5 @@ pkgs: {
   switchlayout = pkgs.callPackage ./switchlayout {};
   togglecapslock = pkgs.callPackage ./togglecapslock {};
   workspace = pkgs.callPackage ./workspace {};
+  zapdos = pkgs.callPackage ./zapdos {};
 }
