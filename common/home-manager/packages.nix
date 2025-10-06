@@ -2,6 +2,7 @@
 
 {
   home.packages = with pkgs; [
+    reload_waybar
     reload_wallpaper
     claude-code
     gimp
