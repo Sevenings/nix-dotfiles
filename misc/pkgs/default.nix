@@ -9,6 +9,7 @@ pkgs: {
   openCalendar = pkgs.callPackage ./openCalendar {};
   python_calculator = pkgs.callPackage ./python_calculator {};
   reload_wallpaper = pkgs.callPackage ./reload_wallpaper {};
+  reload_waybar = pkgs.callPackage ./reload_waybar {};
   se_expediente = pkgs.callPackage ./se_expediente {};
   switchlayout = pkgs.callPackage ./switchlayout {};
   togglecapslock = pkgs.callPackage ./togglecapslock {};
