@@ -2,6 +2,8 @@
 
 {
   home.packages = with pkgs; [
+    actions
+    nix-gc
     reload_waybar
     reload_wallpaper
     claude-code
