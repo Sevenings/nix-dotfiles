@@ -5,8 +5,8 @@
 
     services.hyprpaper.settings = {
         
-        "$imagePath" = "/home/okabe/Imagens/Wallpapers/wallhaven-rq75r7_1920x1080.png";
-        "$secondMonitorPath" = "/home/okabe/Imagens/Wallpapers/wallhaven-rq75r7_1920x1080.png";
+        "$imagePath" = "$XDG_STATE_HOME/wallpaper/main";
+        "$secondMonitorPath" = "$XDG_STATE_HOME/wallpaper/up";
 
         preload = [
             "$imagePath"
