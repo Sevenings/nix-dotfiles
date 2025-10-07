@@ -11,7 +11,7 @@ ssid=$(
   | awk -F: '$1=="yes"{print $2; exit}'
 )
 
-if [[ "${ssid:-}" == "TCEGO-PUBLIC" ]]; then
+if [[ "${ssid:-}" == TCEGO* ]]; then
   $silent || printf 'Está no estágio\n'
   exit 0
 else
