@@ -10,7 +10,7 @@ selected=$(echo "$options" | rofi -dmenu -p "Actions" -config "$config_file")
 
 case $selected in
     "Nix Collect Garbage")
-        kitty --title "Nix Garbage Collect" -e nix-gc ;;
+        kitty --title "Nix Garbage Collect" --class="floatingTerminal" -e nix-gc ;;
 
     *)
         exit 0 ;;
