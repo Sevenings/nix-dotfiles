@@ -189,6 +189,7 @@
         "format": "[{}]",
         "tooltip": true,
         "tooltip-format": "Horário do ponto",
+        "on-click": "zen https://egesp.tce.go.gov.br/portal/frequencia/espelho_ponto/index_meu_espelho",
         "exec": "horario_ponto",
         "exec-if": "se_expediente --silent",
         "interval": 60
