@@ -10,7 +10,17 @@
 
   # Plugins Settings
   wayland.windowManager.hyprland.settings.plugin = {
+    dynamic-cursors = {
+      shake.enabled = false;
 
-  };
+      mode = "stretch";
+      stretch = {
+        function = "quadratic";
+        limit = 500;
+      };
+
+    };
+
+};
 
 }
