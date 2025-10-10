@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   # Configurações comuns do hyprland
@@ -54,10 +54,9 @@
       #new_is_master = false
     };
 
-    gestures = {
-      workspace_swipe = true;
-      workspace_swipe_cancel_ratio = 0.10;
-    };
+    gesture = [
+      "3, horizontal, workspace"
+    ];
 
     misc = {
       force_default_wallpaper = 0; # Set to 0 to disable the anime mascot wallpapers

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   programs = {
@@ -29,6 +29,7 @@
       enable = true;
       withUWSM = true;
       xwayland.enable = true;
+      package = inputs.hyprland.packages.${pkgs.system}.hyprland;
     };
 
     nix-ld.enable = true;
