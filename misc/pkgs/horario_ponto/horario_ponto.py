@@ -184,8 +184,8 @@ def main():
         print(f"{horario_entrada} - {saida}")
         sys.exit(0)
     else:
-        print(f"Horário de entrada não encontrado.")
-        sys.exit(3)
+        print(f"Bateu o ponto?")
+        sys.exit(0)
 
 
 if __name__ == "__main__":
