@@ -4,7 +4,8 @@
 
   # Installed Plugins
   wayland.windowManager.hyprland.plugins = [
-	  pkgs.hyprlandPlugins.hyprbars
+    inputs.hyprland-plugins.packages.${pkgs.system}.hyprbars
+    inputs.hyprland-plugins.packages.${pkgs.system}.hyprtrails
   ];
 
   # Plugins Settings

@@ -11,5 +11,9 @@
       "workspaces, 1, 3, default, slidefadevert 10%"
     ];
 
+    plugin.hyprtrail = {
+      color = "rgba(ffaa00ff)";
+    };
+
   };
 }

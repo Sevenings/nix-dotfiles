@@ -7,6 +7,7 @@
     ./env_vars.nix
     ./monitors.nix
     ./plugins.nix
+    ./window_rules.nix
     ./workspaces.nix
   ];
 
