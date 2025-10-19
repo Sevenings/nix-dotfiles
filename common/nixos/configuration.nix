@@ -9,7 +9,7 @@
       ./docker.nix
       ./fonts.nix
       ./packages.nix
-      # ./printing.nix
+      ./printing.nix
       ./programs.nix
       ./python_packages.nix
       ./services.nix
