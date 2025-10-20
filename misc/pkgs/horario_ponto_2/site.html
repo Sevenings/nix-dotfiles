@@ -1,0 +1,1958 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="since" content="09/10/2025 08:38:54">
+  <title>Tribunal de Contas do Estado de Goiás</title>
+  <link rel="shortcut icon" type="image/x-icon" href="/portal/assets/favicon-93bd4d970b966fa791a1dc67c8acd95a72ba2b9cd2a0c6c89e500af164e13f1b.ico" />
+
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="BAivF4Dh2Wiek3CQQmDoEiqNjOPBJZJBCgiLXUdT00y1yKxaYISgFZZ1aSpQTwfhUC4AIoKOYZBGQ8zgwUGzoQ==" />
+  
+  <!-- Include style per-controller - vendor plugins -->
+  <!-- Main css styles -->
+  <link rel="stylesheet" media="all" href="/portal/assets/application-c838667f429d0d26b1d7be659b1bdf53ae639d406129020ddd1b7e6e36614c49.css" data-turbolinks-track="true" />
+
+  <!-- Main javascript files -->
+  <script src="/portal/assets/application-b021aed25adcb16b414bf0cb89a4a393f01ea0a15639ec4060a22e34a89d5c38.js" data-turbolinks-track="true"></script>
+  <meta name="action-cable-url" content="/cable" />
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="MqYVE3p3K1ExUj4U9dO8G7yvTUOIpE/yzef3jZBTyZODZhZemhJSLDm0J67n/FPoxgzBgssPvCOBrLAwFkGpfg==" />
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.11/summernote.css" rel="stylesheet">
+</head>
+
+<body class="pace-done skin-1 ">
+<!-- Wrapper-->
+<div id="wrapper" class="frequencia/tbespelho_pontos.index_meu_espelho">
+
+  <!-- Navigation -->
+  <nav class="navbar-default navbar-static-side" role="navigation">
+  <div class="sidebar-collapse">
+    <ul class="nav metismenu" id="side-menu">
+
+      <li class="nav-header">
+        <div class="dropdown profile-element">
+  <span>
+    <img class="img-circle lazy" lazy="true" src="/portal/recursos_humanos/tb_cad_pessoals/view_foto_social?id=22413" width="42" height="42" />
+  </span>
+  <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+      <span class="clear">
+          <span class="block m-t-xs">
+              <strong class="font-bold">Lucas Assis</strong>
+          </span>
+        <span class="text-muted text-xs block">ESTAGIARIO - IEL/CIEE&nbsp;<b class="caret"></b></span>
+      </span>
+  </a>
+  <ul style="z-index: 1;" class="dropdown-menu animated fadeInRight m-t-xs">
+
+    <!--    <li>-->
+    <!--      
+        <i class="mdi mdi-account-convert"> </i> Acessar outro Funcional-->
+    <!--    </li>-->
+
+
+    <li class="divider"></li>
+    <li>
+      <a rel="nofollow" data-method="delete" href="/portal/users/sign_out">
+        <i class="mdi mdi-logout"> </i> Sair
+</a>    </li>
+  </ul>
+</div>
+
+<div class="modal fade" id="permissoesPerfil" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+      </li>
+
+      <li title="Pesquisar menu">
+        <input type="text" name="menu-search" id="menu-search" class="menu-search" onkeyup="myFunction()" placeholder="Digite aqui sua pesquisa..." />
+
+      </li>
+
+      <li class="li_menu" title="Inicio">
+        <a class="menu-raiz" href="/portal/">
+          <i class="fa fa-home"></i>
+          <span class="title">Início</span>
+          <span class="selected"></span>
+</a>      </li>
+      
+  <li class="li_menu">
+    <a href="javascript:;" class="menu-raiz" title="Financeiro">
+      <i class="fa fa-usd"></i>
+      <span class="nav-label">Financeiro</span>
+      <span class="fa arrow"></span>
+    </a>
+
+    <ul class="nav nav-second-level collapse">
+
+        <li title="Financeiro - URV">
+          <a class="menu-raiz" href="/portal/financeiro/valores_urv">
+            <i class="fa fa-dollar"></i>
+            URV
+</a>        </li>
+
+
+
+
+
+
+    </ul>
+  </li>
+
+      
+        <li class="li_menu" title="Frequência">
+    <a href="#" class="menu-raiz">
+      <i class="fa fa-clock-o"></i>
+      <span class="nav-label">Frequência</span>
+      <span class="fa arrow"></span>
+    </a>
+
+    <ul class="nav nav-second-level ul_menu">
+      <li class="li_menu" title="Frequência - Principal">
+        <a class="menu-raiz" href="/portal/frequencia/index">
+          <i class="fa fa-list"></i>Principal
+</a>      </li>
+        <li class="li_menu" title="Frequência - Meu Ponto">
+    <a href="javascript:;">
+      <i class="fa fa-book"></i>Meu Ponto
+      <span class="fa arrow"></span>
+    </a>
+    <ul class="nav nav-third-level ul_sub_menu">
+
+            <li class="li_menu" title="Frequência - Meu Ponto - Todas as Ocorrências">
+              <a class="menu-raiz" href="/portal/frequencia/espelho_ponto/index_meu_espelho">
+                <i class="fa fa-bell"></i>Espelho de Ponto
+</a>            </li>
+
+        <li class="li_menu" title="Frequência - Meu Ponto - Afastamentos">
+          <a class="menu-raiz" href="/portal/frequencia/espelho_ponto/meus_afastamentos">
+            <i class="fa fa-list"></i>Afastamentos
+</a>        </li>
+
+
+        
+              <li class="li_menu" title="Frequência - Meu Ponto - Marcações de Ponto">
+                <a class="menu-raiz" href="/portal/frequencia/marcacoes_ponto">
+                  <i class="fa fa-list"></i>Marcações
+</a>              </li>
+        
+
+
+        <li class="li_menu" title="Frequência - Meu Ponto - Banco de Horas">
+          <a class="menu-raiz" href="/portal/frequencia/meu_ponto/saldo_banco_de_horas">
+            <i class="fa fa-list"></i>Banco de Horas
+</a>        </li>
+
+        <li class="li_menu" title="Frequência - Meu Ponto - Banco de Dias">
+          <a class="menu-raiz" href="/portal/frequencia/meu_ponto/saldo_banco_de_dias">
+            <i class="fa fa-list"></i>Banco de Dias
+</a>        </li>
+
+        <li class="li_menu" title="Frequência - Meu Ponto - Reposições de Faltas">
+          <a class="menu-raiz" href="/portal/frequencia/meu_ponto/reposicoes_de_faltas">
+            <i class="fa fa-list"></i>Reposições de Faltas
+</a>        </li>
+
+      <li class="li_menu" title="Frequência - Meu Ponto - Alteração de Horário">
+        <a class="menu-raiz" href="/portal/frequencia/meu_ponto/tb_solic_alteracao_horario">
+          <i class="fa fa-list"></i>Alteração de Horário
+</a>      </li>
+
+      <!--            <li id="menu_li_nao_justificadas">-->
+      <!--                <i class="fa fa-edit"></i>-->
+      <!--                <span class="title">Não Justificadas</span>-->
+      <!--            </li>-->
+      <!--            <li>-->
+      <!--                <i class="fa fa-hourglass-half"></i>-->
+      <!--                <span class="title">Horas Excedentes</span>-->
+      <!--            </li>-->
+      <!--            <li>-->
+      <!--                <i class="fa fa-hourglass-end"></i>-->
+      <!--                <span class="title" title="Atrasos ou Saída Antecipada">Atrasos</span>-->
+      <!--            </li>-->
+      <!--            <li>-->
+      <!--                <i class="fa fa-user-times"></i>-->
+      <!--                <span class="title">Falta Marcação</span>-->
+      <!--            </li>-->
+      <!--            <li>-->
+      <!--                <i class="fa fa-hourglass-o"></i>-->
+      <!--                <span class="title">Faltas</span>-->
+      <!--            </li>-->
+
+      <!--            <li>-->
+      <!--                <i class="fa fa-hand-paper-o"></i>-->
+      <!--                <span class="title">Aguardando Confirmação</span>-->
+      <!--            </li>-->
+      <!--        </ul>-->
+      <!--      </li>-->
+
+
+    </ul>
+
+    <!--    <ul class="nav nav-third-level ul_sub_menu">-->
+    <!--      <li class="li_menu" title="Frequência - Ocorrências">-->
+    <!--        <a href="javascript:;">-->
+    <!--          <i class="fa fa-clock-o"></i>Horário de Trabalho-->
+    <!--          <span class="fa arrow"></span>-->
+    <!--        </a>-->
+    <!--        <ul class="nav nav-third-level ul_sub_menu">-->
+    <!--          <li>-->
+    <!--              <i class="fa fa-clock-o"></i>-->
+    <!--              <span class="title">Autorizados</span>-->
+    <!--          </li>-->
+
+    <!--          <li>-->
+    <!--              <i class="fa fa-clock-o"></i>-->
+    <!--              <span class="title">Requisitados</span>-->
+    <!--          </li>-->
+    <!--        </ul>-->
+    <!--      </li>-->
+    <!--    </ul>-->
+  </li>
+
+      
+      
+      
+
+      
+      
+      
+    </ul>
+  </li>
+
+        <li class="li_menu" title="Formulários e Requerimentos">
+    <a href="#" class="menu-raiz">
+      <i class="fa fa-file-text"></i>
+      <span class="nav-label">Formulários e Requerimentos</span>
+      <span class="fa arrow"></span>
+      <span id="count_formularios_requerimentos_total"></span>
+    </a>
+
+    <ul class="nav nav-second-level ul_menu">
+      <li class="li_menu" title="Formulários e Requerimentos - Solicitar">
+        <a href="/portal/formularios_requerimentos/protocolos/tipo">
+          <i class="fa fa-user"></i>
+          Solicitar
+</a>      </li>
+      <li class="li_menu" title="Formulários e Requerimentos - Minhas Solicitações">
+        <a href="/portal/formularios_requerimentos/protocolos">
+          <i class="mdi mdi-format-list-bulleted"></i>
+          Minhas Solicitações
+</a>      </li>
+
+
+
+
+
+
+      <!-- Cadastros Basicos -->
+    </ul>
+  </li>
+
+        <li class="li_menu">
+    <a href="javascript:;" class="menu-raiz">
+      <i class="mdi mdi-content-duplicate"></i>
+      <span class="nav-label">Licenças/Afastamentos</span>
+      <span class="fa arrow"></span>
+      <span id="count_afastamentos"></span>
+    </a>
+
+    <ul class="nav nav-second-level collapse">
+      <li>
+        <a href="/portal/afastamentos/solic_lic_afasts/tipo">
+          <i class="mdi mdi-plus-box"> </i> Solicitar
+</a>      </li>
+
+      <li>
+        <a href="/portal/afastamentos/protocolos/minhas_solicitacoes">
+          <i class="mdi mdi-format-list-bulleted"></i> Minhas Solicitações
+          <span id="count_afastamentos_minhas_solicitacoes"></span>
+</a>      </li>
+
+
+        <!-- Para o TJRO-->
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- Para o TJRO-->
+      
+
+
+
+    </ul>
+  </li>
+
+      
+      
+      
+      
+      
+      
+      
+      
+        <li class="li_menu">
+    <a href="javascript:;" class="menu-raiz">
+      <i class="mdi mdi-book"></i>
+      <span class="nav-label">Ações de Treinamento</span>
+      <span class="fa arrow"></span>
+      <span id="count_aqf_total"></span>
+    </a>
+
+    <ul class="nav nav-second-level collapse">
+      <li>
+        <a href="/portal/adicional_qualificacao/acoes_treinamento">
+          <i class="mdi mdi-calendar"> </i> Minhas Ações de Treinamento
+          <span id="count_aqf_minhas_acoes_treinamento"></span>
+</a>      </li>
+
+      <li>
+        <a href="/portal/adicional_qualificacao/minhas_solicitacoes">
+          <i class="mdi mdi-calendar"> </i> Minhas Solicitações
+          <span id="count_aqf_minhas_solicitacoes"></span>
+</a>      </li>
+
+
+
+    </ul>
+  </li>
+
+        <li>
+    <a href="javascript:;" class="menu-raiz">
+      <i class="fa fa-comments-o"></i>
+      <span class="nav-label">Pesquisas e votações</span>
+      <span class="fa arrow"></span>
+      <span id="count_mural_eventos_total"></span>
+    </a>
+    <ul class="nav nav-second-level collapse">
+      <!-- Meu -->
+      <!-- pesquisa_votacao -->
+<li class="li_menu" title="Pesquisas e votações - Minhas Pesquisas / Votação">
+  <a data-no-turbolink="true" style="margin-left: 0px;" href="/portal/pesquisas_e_votacoes/pesquisas/minhas_pesquisas_e_votacoes">
+    <i class="fa fa-envelope"> </i> Minhas Pesquisas / Votação
+    <span id="count_mural_eventos_avaliacoes"></span>
+</a></li>
+
+
+<!-- resultados -->
+  <li class="li_menu" title="Pesquisas e votações - Resultados">
+    <a data-no-turbolink="true" style="margin-left: 0px;" href="/portal/pesquisas_e_votacoes/resultados">
+      <i class="fa fa-bar-chart"> </i> Resultados
+</a>  </li>
+
+<!-- resultado indice Favorabilidade -->
+
+
+      <!-- Gerencia -->
+      
+      <!-- Cadastros Básicos -->
+      
+      <!-- Relatórios -->
+      
+    </ul>
+  </li>
+
+      
+      
+      
+      
+      
+      
+        <li class="li_menu">
+    <a href="javascript:;" class="menu-raiz">
+      <i class="mdi mdi-shield-home" aria-hidden="true"></i>
+      <span class="nav-label">Segurança</span>
+      <span class="fa arrow"></span>
+    </a>
+
+    <ul class="nav nav-second-level collapse">
+
+    </ul>
+  </li>
+
+      
+      
+      
+      
+      
+      
+      
+    </ul>
+  </div>
+</nav>
+
+
+  <!-- Page wraper -->
+  <div id="page-wrapper" class="gray-bg padding-bottom-50">
+
+    <!-- Page wrapper -->
+    <style>
+  .navbar-static-top .nav > li > a {
+    color: #5b636d;
+  }
+</style>
+
+<div class="row border-bottom">
+  <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0;">
+    <div class="navbar-header">
+      <a class="navbar-minimalize minimalize-styl-2 btn btn-primary" onclick="esconde_barra_lateral()" href="#"><i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <div id="aviso_nav " style="display: none;">
+      <span class="label label-danger navbar-minimalize minimalize-styl-2" style="padding-top: 11px;  padding-bottom: 11px;">
+        Suporte eGesp recomenda o uso do Google Chrome, para melhor funcionamento do sistema.
+      </span>
+    </div>
+
+    <ul class="nav navbar-top-links navbar-right pull-right">
+      <li class="hidden-sm">
+        <a title="Notificar erros ou inconsistências no sistema" href="/portal/gpweb/notificacoes">
+          <i class="mdi mdi-contacts"> </i> Minhas Notificações
+</a>      </li>
+      <!--      <li class="hidden-sm">-->
+      <!--          <i class="mdi mdi-account-multiple"> </i> Portal da Gestão de Pessoas-->
+      <!--      </li>-->
+      <!--      <li class="hidden-sm">-->
+      <!--          <i class="mdi mdi-contacts"> </i> Agenda-->
+      <!--      </li>-->
+      <li class="hidden-sm">
+        <!--            <i class="fa fa-file-text-o"> </i> Manuais-->
+      </li>
+
+
+      <li class="dropdown alert-notify-mural">
+  <a class="dropdown-toggle count-info bell-notify" data-toggle="dropdown" href="#">
+    <i class="bell-notify-icon fa fa-bell-o"></i>
+  </a>
+  <ul class="dropdown-menu dropdown-alerts">
+    <div class="sidebar-container scroller-alert no-margins">
+    </div>
+    <li class="divider"></li>
+    <li>
+      <div class="row">
+        <div class="col-md-6 text-center link-block">
+          <a title="Solicitar Alteração" data-toggle="modal" role="menuitem" data-remote="true" href="/portal/gestao_pessoas/mural_aviso/limpar_todos">
+            <i class="fa fa-times"></i>&nbsp;
+            <strong>Limpar Todos</strong>
+</a>        </div>
+        <div class="col-md-6 text-center link-block">
+          <a href="/portal/gestao_pessoas/mural_aviso/all" class="no-padding no-padding-right">
+            <i class="fa fa-eye"></i>
+            <strong>Visualizar Todos</strong>
+          </a>
+        </div>
+      </div>
+    </li>
+  </ul>
+</li>
+
+
+<script type="text/javascript" charset="utf-8">
+    var scroller_alert = $('.scroller-alert').slimScroll({
+        height: '300px',
+        railVisible: true,
+        alwaysVisible: true,
+        wrapperClass: 'slimScrollDiv padding-right-15 padding-top-15'
+    });
+    scroller_alert.bind("mouseenter", function (b) {
+        $(document).on('click', '.dropdown-menu', function (e) {
+            e.stopPropagation();
+        });
+    });
+    $(document).ready(function () {
+        $('.alert-notify-mural').on('click', function () {
+            if (!$(this).hasClass('open')) {
+                $('.alert-notify-mural .scroller-alert').children().remove();
+                $('.alert-notify-mural .scroller-alert').append("<li class='text-center'><img src='/portal/assets/loading.gif'/></li>");
+                $('.alert-notify-mural .scroller-alert').load('/portal/load_notify/alerta_mural_list');
+            }
+        });
+    });
+
+    $(window).on('load', function () {
+        $.ajax({
+            url: "/portal/load_notify/alerta_mural_count.js",
+            cache: false
+        });
+    });
+</script>
+
+
+      
+      <li>
+        <a rel="nofollow" data-method="delete" href="/portal/users/sign_out">
+            <span>
+              <i class="fa fa-sign-out"></i>
+              Deslogar
+            </span>
+</a>      </li>
+    </ul>
+
+  </nav>
+</div>
+
+<script>
+    function esconde_barra_lateral() {
+        var c = getCookie("menu_lateral");
+        if (c == null || c == '')
+            setCookie("menu_lateral", '');
+        else
+            setCookie("menu_lateral", '');
+    }
+</script>
+
+    <div class="row wrapper border-bottom white-bg page-heading" style="">
+  <div class="col-lg-12 margin-top-10 hidden-xs title-page">
+    <h2>Espelho de Ponto</h2>
+    <ol class="breadcrumb show-text-1-lines" style="padding-top: 13px;">
+        <script>
+            var div_pai_bread_crumbs = null;
+        </script>
+
+        <li>
+          <a href="/portal/inicio">
+            Início
+</a>        </li>
+
+          <li class="">
+                <a href="#">
+                  <span>Frequência</span>
+</a>
+          </li>
+
+          <li class="">
+                <a href="#">
+                  <span>Meu Ponto</span>
+</a>
+          </li>
+
+          <li class="active">
+              <a href="/portal/frequencia/espelho_ponto/index_meu_espelho">
+                <strong>Espelho de Ponto</strong>
+</a>          </li>
+
+    </ol>
+  </div>
+</div>
+
+
+    <script>
+        if (div_pai_bread_crumbs != null) {
+            $(div_pai_bread_crumbs.find('li:contains("Frequência")')[0]).addClass("active");
+            div_pai_bread_crumbs = div_pai_bread_crumbs.find('li:contains("Frequência")');
+        }
+        else if ($('a.menu-raiz:contains("Frequência")').length != 0) {
+            $($('a.menu-raiz:contains("Frequência")')[0].parentElement).addClass("active");
+            div_pai_bread_crumbs = $($('a.menu-raiz:contains("Frequência")')[0].parentElement);
+        }
+    </script>
+    <script>
+        if (div_pai_bread_crumbs != null) {
+            $(div_pai_bread_crumbs.find('li:contains("Meu Ponto")')[0]).addClass("active");
+            div_pai_bread_crumbs = div_pai_bread_crumbs.find('li:contains("Meu Ponto")');
+        }
+        else if ($('a.menu-raiz:contains("Meu Ponto")').length != 0) {
+            $($('a.menu-raiz:contains("Meu Ponto")')[0].parentElement).addClass("active");
+            div_pai_bread_crumbs = $($('a.menu-raiz:contains("Meu Ponto")')[0].parentElement);
+        }
+    </script>
+    <script>
+        if (div_pai_bread_crumbs != null) {
+            $(div_pai_bread_crumbs.find('li:contains("Espelho de Ponto")')[0]).addClass("active");
+            div_pai_bread_crumbs = div_pai_bread_crumbs.find('li:contains("Espelho de Ponto")');
+        }
+        else if ($('a.menu-raiz:contains("Espelho de Ponto")').length != 0) {
+            $($('a.menu-raiz:contains("Espelho de Ponto")')[0].parentElement).addClass("active");
+            div_pai_bread_crumbs = $($('a.menu-raiz:contains("Espelho de Ponto")')[0].parentElement);
+        }
+    </script>
+
+
+    <!-- Main view  -->
+    <div class="row">
+      <div id="content_wrapper" class="wrapper wrapper-content animated fadeInRight">
+        
+<div id="alerts_container">
+</div>
+
+        <div class="ibox float-e-margins">
+  <div class="ibox float-e-margins border-bottom">
+
+    <div class="ibox-title">
+              <h5>Espelho de Ponto</h5>
+              <div class="pull-right">   </div>
+           </div>
+
+    <div id="div_content_meu_ponto" class="ibox-content" style="padding-left: 15px;padding-right: 15px;">
+
+
+        
+  <div class="wrapper animated fadeInRight">
+    <div class="row m-b-lg m-t-lg">
+      <div class="col-md-5">
+        <div class="profile-image text-center">
+          <img class="img-circle circle-border margin-bottom-10 lazy" lazy="true" src="/portal/recursos_humanos/tb_cad_pessoals/view_foto_social?id=22413" width="42" height="42" />
+        </div>
+        <div class="profile-info">
+          <div class="">
+            <div>
+              <h2 class="no-margins">
+                LUCAS VINICIUS DE LIMA ASSIS
+              </h2>
+              <p>Matrícula: <strong>22413
+                - 0</strong> &nbsp; &nbsp; &nbsp; &nbsp; Funcional:
+                <strong>0</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <small>Dados Funcionais</small>
+        <table class="table small m-b-xs">
+          <tbody>
+          <tr>
+            <td>
+              Local de Atuação:
+              <strong></strong>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="col-md-3">
+        <small>Situação Funcional</small>
+        <h2 class="no-margins">ESTAGIARIO - IEL/CIEE</h2>
+        <br/>
+        <small>Status do Vínculo: <strong>Ativo</strong></small>
+        <br/>
+        <small>Data de Ingresso: <strong>18/12/2023</strong></small>
+      </div>
+    </div>
+  </div>
+
+
+        <div id="div_body_espelho_ponto">
+
+          
+  <div>
+    
+
+
+
+
+
+<div class="row" style="background: #f3f3f4;">
+
+  <div class="col-md-8" style="padding-left: 10px;padding-right: 10px;margin-top: 5px;">
+    <div class="ibox" style="margin-bottom: 5px;">
+  <div class="ibox-title">
+    <div class="row">
+      <div class="col-md-12" title="Referência da Folha: Outubro/2025">
+        <h5>Pesquisar </h5>
+        <div class="pull-right">
+          <div class="btn-group" role="group">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ibox-content" id="div_content_pesquisa" style="min-height: 205px">
+    <form class="form-inline form-inline" id="new_frequencia_tbespelho_ponto" role="form" action="/portal/frequencia/espelho_ponto/index_meu_espelho" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
+      <input type="hidden" name="tipo_relatorio" id="tipo_relatorio" />
+      <div class="row">
+        <div class="col-md-12">
+            <button name="button" type="submit" class="btn btn-info" onclick="referencia_anterior()" data-disable-with="&lt;i class=&quot;fa fa-spin fa-spinner&quot;&gt;&lt;/i&gt;" title="Mês Anterior">
+              <i class='fa fa-chevron-left'></i>
+</button>          <select name="mes" id="mes" label="Mês" class="form-control" style="margin-bottom: 5px;" onchange="autosubmit()"><option value="1">Janeiro</option>
+<option value="2">Fevereiro</option>
+<option value="3">Março</option>
+<option value="4">Abril</option>
+<option value="5">Maio</option>
+<option value="6">Junho</option>
+<option value="7">Julho</option>
+<option value="8">Agosto</option>
+<option value="9">Setembro</option>
+<option selected="selected" value="10">Outubro</option>
+<option value="11">Novembro</option>
+<option value="12">Dezembro</option></select>
+
+          <select name="ano" id="ano" label="Ano" style="margin-bottom: 5px;" class="form-control" onchange="autosubmit()"><option selected="selected" value="2025">2025</option>
+<option value="2024">2024</option></select>&nbsp;
+
+            <button name="button" type="submit" class="btn btn-info" onclick="proxima_referencia()" data-disable-with="&lt;i class=&quot;fa fa-spin fa-spinner&quot;&gt;&lt;/i&gt;" title="Ano Anterior">
+              <i class='fa fa-chevron-right'></i>
+</button>          <button name="button" type="submit" class="btn btn-info" title="Buscar">
+            <i class='fa fa-search'></i> Buscar
+</button>            <a class="btn btn-info" target="_blank" data-original-title="Imprimir Espelho de Ponto" data-placement="top" data-rel="tooltip" href="/portal/frequencia/imprimir_espelho_pontos.pdf?cdg_ordem=plj0sj8s3l4lz55jr10gg8068qZ1sxpbtxAnrxqb7dbttlsphfdl7&amp;ref_anomes=202510">
+              <span class='fa fa-file-pdf-o'></span>&nbsp;Imprimir
+</a>        </div>
+
+        <div class="col-md-12">
+          <div class="form-group">
+
+              <!--<span class='fa fa-file-pdf-o'></span>&nbsp;Imprimir Espelho-->
+          </div>
+        </div>
+        <div class="col-md-12" style="padding-top: 10px;">
+          <p><b>Status da Frequência:</b>
+              Frequencia não analisada
+          </p>
+        </div>
+      </div>
+</form>  </div>
+</div>
+
+  </div>
+
+  <div id="div_dados_cabecalho_resumos_22413">
+    
+  <div class="col-md-4" style="padding-left: 10px;padding-right: 10px;margin-top: 5px;">
+    <div style="padding: 0px">
+        <div class="ibox" style="margin-bottom: 5px;">
+    <div class="ibox-title">
+      <div class="row">
+        <div class="col-md-12">
+          <h4>Banco de Horas</h4>
+        </div>
+      </div>
+    </div>
+
+    <div class="ibox-content" id="div_content_resumo" style="min-height: 205px">
+      <div class="table table-responsive">
+        <table class="table table-responsive table-hover table-condensed" style="margin-bottom: 0px">
+          <tr>
+            <td>BH de compensação acumulado no mês:</td>
+            <td width="5%" colspan="2" align="right" style="padding-right: 10px;font-weight: bold;">00:00</td>
+          </tr>
+
+          <tr>
+            <td>Saldo de compensação utilizado no mês:</td>
+            <td width="5%" colspan="2" align="right" style="padding-right: 10px;font-weight: bold;">00:00</td>
+          </tr>
+
+          <tr>
+            <td>Saldo final no mês:</td>
+            <td width="5%" colspan="2" align="right" style="padding-right: 10px;font-weight: bold;">00:00</td>
+          </tr>
+
+          <tfoot>
+          <tr class="active">
+            <th style="text-align: left;">Saldo atual disponivel:</th>
+            <th colspan="2" align="right" style="padding-right: 10px;text-align: right;">
+              00:00
+            </th>
+          </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+
+    </div>
+  </div>
+
+<script>
+    $('#div_content_pesquisa').height($('#div_content_resumo').height())
+</script>
+
+  </div>
+</div>
+
+  </div>
+
+
+    <div id="div_dados_cabecalho_afastamentos_22413" style="padding-top: 0px;">
+      <div class="row" style="background: #f3f3f4;">
+  <div class="col-md-8" style="background: #f3f3f4;padding-left: 10px;padding-right: 10px;">
+      <div style="padding-top: 0px;">
+        <div class="ibox" style="margin-bottom: 5px;">
+  <div class="ibox-title">
+    <div class="row">
+      <div class="col-md-12">
+        <h5>Afastamentos do Período</h5>
+        <div class="pull-right">
+          <div class="btn-group" role="group">
+              <div class="pull-right action-buttons">
+                <div class="btn-group" role="group">
+                    <a class="btn btn-info btn-xs" title="Clique aqui caso queira Solicitar Reposição de Falta" style="margin-right: 5px !important;" data-remote="true" href="/portal/frequencia/meu_ponto/reposicoes_de_faltas/new?cdg_funcional=0&amp;cdg_ordem=22413&amp;cdg_orgao=869&amp;ref_anomes_selecionada=202510&amp;t=737j6bccfk0y5frzn1A213x5q2Zbsldwmjy37f5x75y25phf08Af2cjxhwzmlrm33jjn1q5dAkl2krq">
+                      <span class='fa fa-clock-o'></span>&nbsp;Solicitar Reposição de Falta
+</a>                    <a class="btn btn-info btn-xs" style="margin-right: 5px !important;" title="Clique aqui caso queira Informar Ocorrência de Frequência" data-remote="true" href="/portal/frequencia/meu_ponto/cria_ocorrencias_individuais/new?cdg_funcional=0&amp;cdg_ordem=22413&amp;cdg_orgao=869&amp;ref_anomes_selecionada=202510&amp;t=mtvmqvlm0gj60hz9Almx4wkd22Zqdzby8j38jj26c5zhgb72fnvwchl01mmA15xkwn4101ws11vmycq">
+                      <span class='fa fa-clock-o'></span>&nbsp;Informar Ocorrência de Frequência
+</a>                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ibox-content" style="padding-top: 0px;padding-top: 5px;min-height: 266px;">
+    <div class="table-responsive">
+      <div class="table-wrapper-scroll-y my-custom-scrollbar" id="div_afastamento_mensal">
+          <h3>Nenhum afastamento encontrado</h3>
+
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+  </div>
+    <div class="col-md-4" style="background: #f3f3f4;padding-left: 10px;padding-right: 10px;">
+      <div class="ibox" style="margin-bottom: 5px;">
+  <div class="ibox-title">
+    <div class="row">
+      <div class="col-md-12">
+        <h5>Banco de Dias</h5>
+        <div class="pull-right">
+          <div class="centralizado">
+            <a style="color: #FFF; float: none;" title="Visualizar histórico de compensação de banco de dias" data-disable-with="&lt;i class=&quot;fa fa-spin fa-spinner&quot;&gt;&lt;/i&gt; fechando..." class="btn btn-primary btn-xs" href="/portal/frequencia/meu_ponto/saldo_banco_de_dias">
+              Ver Detalhes
+</a>          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ibox-content" style="padding-top: 0px;padding-top: 5px;margin-bottom: 0px;min-height: 266px;">
+    <table class="table table-hover table-striped mb-0">
+      <thead>
+      <tr align="left">
+        <th style="text-align: left;">
+          <strong class="centralizado">Nome da Ocorrência</strong>
+        </th>
+        <th style="text-align: center;" width="10%">
+          <strong class="centralizado">Dia(s)</strong>
+        </th>
+        <th style="text-align: center;" style="width: 22px">
+          <strong class="centralizado">Ação</strong>
+        </th>
+      </tr>
+      </thead>
+      <tbody id="div_banco_dias">
+      
+
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+    </div>
+</div>
+    </div>
+
+    <hr/>
+
+    <div id="grid_espelho_ponto_22413">
+      
+
+
+
+
+  <div class="table-responsive">
+      <table class="table table-striped table-advance table-hover fonte_espelho_ponto_bold" style="margin-top: 6px;font-size: 14px;color: #000000;">
+        <thead>
+        <tr align="left">
+            <th style="text-align: center;" width="10%">
+              <label class="fonte_espelho_ponto_bold" style="font-weight: bold;text-align: center;">Ação</label>
+            </th>
+          <th style="text-align: center;" width="6%">
+            <label class="fonte_espelho_ponto_bold" style="font-weight: bold;text-align: center;">Dia</label>
+          </th>
+          <th width="65%">
+            <label class="fonte_espelho_ponto_bold" style="font-weight: bold;font-size: 16px;" for="acessos">Registros / Ocorrências</label>
+          </th>
+
+            <th style="text-align: center;width: 80px;">
+              <label class="fonte_espelho_ponto_bold" style="font-weight: bold;text-align: center;">Jornada de
+                Trabalho</label>
+            </th>
+
+            <th style="text-align: center;width: 80px;">
+              <label class="fonte_espelho_ponto_bold" style="font-weight: bold;text-align: center;">Horas
+                Trabalhadas</label>
+            </th>
+
+            <th style="text-align: center;width: 80px;">
+              <label class="fonte_espelho_ponto_bold" style="font-weight: bold;text-align: center;">Saldo</label>
+            </th>
+
+            <th style="text-align: center;width: 80px;">
+              <label class="fonte_espelho_ponto_bold" style="font-weight: bold;text-align: center;">Abono</label>
+            </th>
+
+
+
+
+
+        </tr>
+        </thead>
+        <tbody>
+
+          
+  <tr align="left">
+        <td width="50" style="vertical-align: middle;">
+    <div class="row pull-center" style="vertical-align: middle; text-align: center;">
+      <div class="pull-center" style="padding-right: 10px;">
+          <div id='btn-acoes-0-div' class="btn-group">
+            <button id="btn-acoes-0" data-toggle="dropdown" class="btn btn-primary btn-xs dropdown-toggle">Ações</button>
+            <ul id='list-btn-acoes-0' aria-labelledby="btn-acoes-0" class="dropdown-menu">
+                  <li>
+  <a style="float: none;" title="Visualizar Marcações" data-remote="true" href="/portal/frequencia/marcacoes_ponto/abrir_marcacoes_do_dia?cdg_ordem=s1vcj8k36br8d721vnzc45yf61Zsyqnhn2A8x4xk65m8yx1vtxy0y&amp;cdg_orgao=8x0r84dcf4j3dg0zbgff6cbq5mZg79bf2n122wb4jq2nhk2p8f5ty&amp;dta_ocorrencia=2025-10-01&amp;tela_origem=8zb9g518jhfAq5k7w3x0tf6gf3Zpl67d3l6ydxgf94tfhdfmj1f47">
+    <span>Visualizar Marcações</span>
+</a></li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </td>
+
+
+    <td style="vertical-align: middle;text-align: center">
+        <span class="popovers" data-original-title="Informações"
+              data-trigger="hover" data-html="true"
+              data-container="body" data-placement="top"
+              data-content="<strong>Chefe(s) do Dia</strong><p>6424 - PEDRO HENRIQUE MOTA EMILIANO </p><p><strong>Horário de Trabalho:</strong> ESTAGIÁRIOS MATUTINO 7 ÀS 12H - PORTARIA Nº 316/2023</p><p><strong>Tipo de Horário:</strong> BATE PONTO</p>">
+          01-Qua
+        </span>
+    </td>
+
+    <td style="vertical-align: middle;padding-bottom: 5px">
+
+        <p style="margin-bottom: 5px;padding-bottom: 5px;">
+          <span class="horarios_espelho_ponto" style="padding-left: 0px;background-color: transparent;color:#4e4c4c;width: 100%;text-align: left;font-weight: bold;">
+              ESTAGIÁRIOS MATUTINO 7 ÀS 12H - PORTARIA Nº 316/2023 (07:00 às 12:00)
+        </span>
+        </p>
+            <span class='horarios_espelho_ponto info'>07:29(E)</span>
+            <span class='horarios_espelho_ponto info'>12:43(S)</span>
+    </td>
+
+    <!--    JORNADA DE TRABALHO - EX: 06:00-->
+      <td style="vertical-align: middle;" class="centralizado">05:00</td>
+
+    <!--    HORAS TRABALHADAS - EX: 06:00-->
+      <td style="vertical-align: middle;" class="centralizado">
+        <span class='horarios_espelho_ponto '>05:00</span>
+      </td>
+
+    <!--    SALDO (HORAS EXCEDIDAS OU DEVIDAS) - EX: 02:00 OU -01:00-->
+      <td style="vertical-align: middle;" class="centralizado">
+          
+      </td>
+
+    <!--    HORAS ABONADAS - TEM OCORRENCIA INDIVIDUAL ABONADA - TIPO - ABONO DE OCORRÊNCIA-->
+      <td style="vertical-align: middle;" class="centralizado">
+        
+      </td>
+
+    <!--    SALDO ACUMULADO-->
+
+    <!--    SALDO COMPENSADO OU ACUMULADO-->
+
+
+  </tr>
+  <tr align="left">
+        <td width="50" style="vertical-align: middle;">
+    <div class="row pull-center" style="vertical-align: middle; text-align: center;">
+      <div class="pull-center" style="padding-right: 10px;">
+          <div id='btn-acoes-1-div' class="btn-group">
+            <button id="btn-acoes-1" data-toggle="dropdown" class="btn btn-primary btn-xs dropdown-toggle">Ações</button>
+            <ul id='list-btn-acoes-1' aria-labelledby="btn-acoes-1" class="dropdown-menu">
+                  <li>
+  <a style="float: none;" title="Visualizar Marcações" data-remote="true" href="/portal/frequencia/marcacoes_ponto/abrir_marcacoes_do_dia?cdg_ordem=4p30g9ntAzzx47gjgm11h4nlk1Zw3x8l6z528rm41c7jnpAc5qk52&amp;cdg_orgao=083d31vg0dhhmr3d2ns29j8bpqZ8nj1twtmq5hjcjk29t3tmbntg2&amp;dta_ocorrencia=2025-10-02&amp;tela_origem=zt9A42fbqp17gAb6rdbp6sqApyZ0zwAzc5b0336nA927d3q5qj6j3">
+    <span>Visualizar Marcações</span>
+</a></li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </td>
+
+
+    <td style="vertical-align: middle;text-align: center">
+        <span class="popovers" data-original-title="Informações"
+              data-trigger="hover" data-html="true"
+              data-container="body" data-placement="top"
+              data-content="<strong>Chefe(s) do Dia</strong><p>6424 - PEDRO HENRIQUE MOTA EMILIANO </p><p><strong>Horário de Trabalho:</strong> ESTAGIÁRIOS MATUTINO 7 ÀS 12H - PORTARIA Nº 316/2023</p><p><strong>Tipo de Horário:</strong> BATE PONTO</p>">
+          02-Qui
+        </span>
+    </td>
+
+    <td style="vertical-align: middle;padding-bottom: 5px">
+
+        <p style="margin-bottom: 5px;padding-bottom: 5px;">
+          <span class="horarios_espelho_ponto" style="padding-left: 0px;background-color: transparent;color:#4e4c4c;width: 100%;text-align: left;font-weight: bold;">
+              ESTAGIÁRIOS MATUTINO 7 ÀS 12H - PORTARIA Nº 316/2023 (07:00 às 12:00)
+        </span>
+        </p>
+            <span class='horarios_espelho_ponto info'>07:30(E)</span>
+            <span class='horarios_espelho_ponto info'>12:53(S)</span>
+    </td>
+
+    <!--    JORNADA DE TRABALHO - EX: 06:00-->
+      <td style="vertical-align: middle;" class="centralizado">05:00</td>
+
+    <!--    HORAS TRABALHADAS - EX: 06:00-->
+      <td style="vertical-align: middle;" class="centralizado">
+        <span class='horarios_espelho_ponto '>05:00</span>
+      </td>
+
+    <!--    SALDO (HORAS EXCEDIDAS OU DEVIDAS) - EX: 02:00 OU -01:00-->
+      <td style="vertical-align: middle;" class="centralizado">
+          
+      </td>
+
+    <!--    HORAS ABONADAS - TEM OCORRENCIA INDIVIDUAL ABONADA - TIPO - ABONO DE OCORRÊNCIA-->
+      <td style="vertical-align: middle;" class="centralizado">
+        
+      </td>
+
+    <!--    SALDO ACUMULADO-->
+
+    <!--    SALDO COMPENSADO OU ACUMULADO-->
+
+
+  </tr>
+  <tr align="left">
+        <td width="50" style="vertical-align: middle;">
+    <div class="row pull-center" style="vertical-align: middle; text-align: center;">
+      <div class="pull-center" style="padding-right: 10px;">
+          <div id='btn-acoes-2-div' class="btn-group">
+            <button id="btn-acoes-2" data-toggle="dropdown" class="btn btn-primary btn-xs dropdown-toggle">Ações</button>
+            <ul id='list-btn-acoes-2' aria-labelledby="btn-acoes-2" class="dropdown-menu">
+                  <li>
+  <a style="float: none;" title="Visualizar Marcações" data-remote="true" href="/portal/frequencia/marcacoes_ponto/abrir_marcacoes_do_dia?cdg_ordem=wnfgyxmy2616xzgwxp3h7fl023Zxjhf6xz9kl6dz1x18b64z6c7g1&amp;cdg_orgao=z14rl6n9zfx35rvyjdAdj7dpA1ZtAfmm2p84vgfktplfbn5b4b4s2&amp;dta_ocorrencia=2025-10-03&amp;tela_origem=tjsjzrzgf1ph7yn9pkg222fpnyZ3763mlrpzwxd0vkn8hgp5957yA">
+    <span>Visualizar Marcações</span>
+</a></li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </td>
+
+
+    <td style="vertical-align: middle;text-align: center">
+        <span class="popovers" data-original-title="Informações"
+              data-trigger="hover" data-html="true"
+              data-container="body" data-placement="top"
+              data-content="<strong>Chefe(s) do Dia</strong><p>6424 - PEDRO HENRIQUE MOTA EMILIANO </p><p><strong>Horário de Trabalho:</strong> ESTAGIÁRIOS MATUTINO 7 ÀS 12H - PORTARIA Nº 316/2023</p><p><strong>Tipo de Horário:</strong> BATE PONTO</p>">
+          03-Sex
+        </span>
+    </td>
+
+    <td style="vertical-align: middle;padding-bottom: 5px">
+
+        <p style="margin-bottom: 5px;padding-bottom: 5px;">
+          <span class="horarios_espelho_ponto" style="padding-left: 0px;background-color: transparent;color:#4e4c4c;width: 100%;text-align: left;font-weight: bold;">
+              ESTAGIÁRIOS MATUTINO 7 ÀS 12H - PORTARIA Nº 316/2023 (07:00 às 12:00)
+        </span>
+        </p>
+            <span class='horarios_espelho_ponto info'>07:29(E)</span>
+            <span class='horarios_espelho_ponto info'>12:54(S)</span>
+    </td>
+
+    <!--    JORNADA DE TRABALHO - EX: 06:00-->
+      <td style="vertical-align: middle;" class="centralizado">05:00</td>
+
+    <!--    HORAS TRABALHADAS - EX: 06:00-->
+      <td style="vertical-align: middle;" class="centralizado">
+        <span class='horarios_espelho_ponto '>05:00</span>
+      </td>
+
+    <!--    SALDO (HORAS EXCEDIDAS OU DEVIDAS) - EX: 02:00 OU -01:00-->
+      <td style="vertical-align: middle;" class="centralizado">
+          
+      </td>
+
+    <!--    HORAS ABONADAS - TEM OCORRENCIA INDIVIDUAL ABONADA - TIPO - ABONO DE OCORRÊNCIA-->
+      <td style="vertical-align: middle;" class="centralizado">
+        
+      </td>
+
+    <!--    SALDO ACUMULADO-->
+
+    <!--    SALDO COMPENSADO OU ACUMULADO-->
+
+
+  </tr>
+  <tr align="left">
+        <td width="50" style="vertical-align: middle;">
+    <div class="row pull-center" style="vertical-align: middle; text-align: center;">
+      <div class="pull-center" style="padding-right: 10px;">
+      </div>
+    </div>
+  </td>
+
+
+    <td style="vertical-align: middle;text-align: center">
+        <span class="popovers" data-original-title="Informações"
+              data-trigger="hover" data-html="true"
+              data-container="body" data-placement="top"
+              data-content="<strong>Chefe(s) do Dia</strong><p>6424 - PEDRO HENRIQUE MOTA EMILIANO </p>">
+          04-Sáb
+        </span>
+    </td>
+
+    <td style="vertical-align: middle;padding-bottom: 5px">
+            <span class='horarios_espelho_ponto info'>Final de Semana</span>
+    </td>
+
+    <!--    JORNADA DE TRABALHO - EX: 06:00-->
+      <td style="vertical-align: middle;" class="centralizado"></td>
+
+    <!--    HORAS TRABALHADAS - EX: 06:00-->
+      <td style="vertical-align: middle;" class="centralizado">
+        
+      </td>
+
+    <!--    SALDO (HORAS EXCEDIDAS OU DEVIDAS) - EX: 02:00 OU -01:00-->
+      <td style="vertical-align: middle;" class="centralizado">
+          
+      </td>
+
+    <!--    HORAS ABONADAS - TEM OCORRENCIA INDIVIDUAL ABONADA - TIPO - ABONO DE OCORRÊNCIA-->
+      <td style="vertical-align: middle;" class="centralizado">
+        
+      </td>
+
+    <!--    SALDO ACUMULADO-->
+
+    <!--    SALDO COMPENSADO OU ACUMULADO-->
+
+
+  </tr>
+  <tr align="left">
+        <td width="50" style="vertical-align: middle;">
+    <div class="row pull-center" style="vertical-align: middle; text-align: center;">
+      <div class="pull-center" style="padding-right: 10px;">
+      </div>
+    </div>
+  </td>
+
+
+    <td style="vertical-align: middle;text-align: center">
+        <span class="popovers" data-original-title="Informações"
+              data-trigger="hover" data-html="true"
+              data-container="body" data-placement="top"
+              data-content="<strong>Chefe(s) do Dia</strong><p>6424 - PEDRO HENRIQUE MOTA EMILIANO </p>">
+          05-Dom
+        </span>
+    </td>
+
+    <td style="vertical-align: middle;padding-bottom: 5px">
+            <span class='horarios_espelho_ponto info'>Final de Semana</span>
+    </td>
+
+    <!--    JORNADA DE TRABALHO - EX: 06:00-->
+      <td style="vertical-align: middle;" class="centralizado"></td>
+
+    <!--    HORAS TRABALHADAS - EX: 06:00-->
+      <td style="vertical-align: middle;" class="centralizado">
+        
+      </td>
+
+    <!--    SALDO (HORAS EXCEDIDAS OU DEVIDAS) - EX: 02:00 OU -01:00-->
+      <td style="vertical-align: middle;" class="centralizado">
+          
+      </td>
+
+    <!--    HORAS ABONADAS - TEM OCORRENCIA INDIVIDUAL ABONADA - TIPO - ABONO DE OCORRÊNCIA-->
+      <td style="vertical-align: middle;" class="centralizado">
+        
+      </td>
+
+    <!--    SALDO ACUMULADO-->
+
+    <!--    SALDO COMPENSADO OU ACUMULADO-->
+
+
+  </tr>
+  <tr align="left">
+        <td width="50" style="vertical-align: middle;">
+    <div class="row pull-center" style="vertical-align: middle; text-align: center;">
+      <div class="pull-center" style="padding-right: 10px;">
+          <div id='btn-acoes-5-div' class="btn-group">
+            <button id="btn-acoes-5" data-toggle="dropdown" class="btn btn-primary btn-xs dropdown-toggle">Ações</button>
+            <ul id='list-btn-acoes-5' aria-labelledby="btn-acoes-5" class="dropdown-menu">
+                  <li>
+  <a style="float: none;" title="Visualizar Marcações" data-remote="true" href="/portal/frequencia/marcacoes_ponto/abrir_marcacoes_do_dia?cdg_ordem=80y5dr94vr9522rmnq7k99bfb7Z7v652kwrky4s3kdrn94h6tk72y&amp;cdg_orgao=j3dpkkAAd53z58g8yc7drs6x7AZ5tx47wdmw5f0y8zyy64lng2m53&amp;dta_ocorrencia=2025-10-06&amp;tela_origem=30txlqnd7r7877gtyvn7n60291Z1jmjszA55zxlsckcm15r5m5vk1">
+    <span>Visualizar Marcações</span>
+</a></li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </td>
+
+
+    <td style="vertical-align: middle;text-align: center">
+        <span class="popovers" data-original-title="Informações"
+              data-trigger="hover" data-html="true"
+              data-container="body" data-placement="top"
+              data-content="<strong>Chefe(s) do Dia</strong><p>6424 - PEDRO HENRIQUE MOTA EMILIANO </p><p><strong>Horário de Trabalho:</strong> ESTAGIÁRIOS MATUTINO 7 ÀS 12H - PORTARIA Nº 316/2023</p><p><strong>Tipo de Horário:</strong> BATE PONTO</p>">
+          06-Seg
+        </span>
+    </td>
+
+    <td style="vertical-align: middle;padding-bottom: 5px">
+
+        <p style="margin-bottom: 5px;padding-bottom: 5px;">
+          <span class="horarios_espelho_ponto" style="padding-left: 0px;background-color: transparent;color:#4e4c4c;width: 100%;text-align: left;font-weight: bold;">
+              ESTAGIÁRIOS MATUTINO 7 ÀS 12H - PORTARIA Nº 316/2023 (07:00 às 12:00)
+        </span>
+        </p>
+            <span class='horarios_espelho_ponto info'>07:29(E)</span>
+            <span class='horarios_espelho_ponto info'>12:33(S)</span>
+    </td>
+
+    <!--    JORNADA DE TRABALHO - EX: 06:00-->
+      <td style="vertical-align: middle;" class="centralizado">05:00</td>
+
+    <!--    HORAS TRABALHADAS - EX: 06:00-->
+      <td style="vertical-align: middle;" class="centralizado">
+        <span class='horarios_espelho_ponto '>05:00</span>
+      </td>
+
+    <!--    SALDO (HORAS EXCEDIDAS OU DEVIDAS) - EX: 02:00 OU -01:00-->
+      <td style="vertical-align: middle;" class="centralizado">
+          
+      </td>
+
+    <!--    HORAS ABONADAS - TEM OCORRENCIA INDIVIDUAL ABONADA - TIPO - ABONO DE OCORRÊNCIA-->
+      <td style="vertical-align: middle;" class="centralizado">
+        
+      </td>
+
+    <!--    SALDO ACUMULADO-->
+
+    <!--    SALDO COMPENSADO OU ACUMULADO-->
+
+
+  </tr>
+  <tr align="left">
+        <td width="50" style="vertical-align: middle;">
+    <div class="row pull-center" style="vertical-align: middle; text-align: center;">
+      <div class="pull-center" style="padding-right: 10px;">
+          <div id='btn-acoes-6-div' class="btn-group">
+            <button id="btn-acoes-6" data-toggle="dropdown" class="btn btn-primary btn-xs dropdown-toggle">Ações</button>
+            <ul id='list-btn-acoes-6' aria-labelledby="btn-acoes-6" class="dropdown-menu">
+                  <li>
+  <a style="float: none;" title="Visualizar Marcações" data-remote="true" href="/portal/frequencia/marcacoes_ponto/abrir_marcacoes_do_dia?cdg_ordem=fj791vp7tn92Arkp5bl6yr4nhqZfAdg6z127klgyt24m27ybyh6c3&amp;cdg_orgao=8k3zg2r71kpddgmgcrAvmhlpqAZtbhA9vqtjqzpvqbhplxg41mlh7&amp;dta_ocorrencia=2025-10-07&amp;tela_origem=t5mkc343A57h74nzzty638hjp2Z6wpknx0rfwtnsqs78ll8v0wgjq">
+    <span>Visualizar Marcações</span>
+</a></li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </td>
+
+
+    <td style="vertical-align: middle;text-align: center">
+        <span class="popovers" data-original-title="Informações"
+              data-trigger="hover" data-html="true"
+              data-container="body" data-placement="top"
+              data-content="<strong>Chefe(s) do Dia</strong><p>6424 - PEDRO HENRIQUE MOTA EMILIANO </p><p><strong>Horário de Trabalho:</strong> ESTAGIÁRIOS MATUTINO 7 ÀS 12H - PORTARIA Nº 316/2023</p><p><strong>Tipo de Horário:</strong> BATE PONTO</p>">
+          07-Ter
+        </span>
+    </td>
+
+    <td style="vertical-align: middle;padding-bottom: 5px">
+
+        <p style="margin-bottom: 5px;padding-bottom: 5px;">
+          <span class="horarios_espelho_ponto" style="padding-left: 0px;background-color: transparent;color:#4e4c4c;width: 100%;text-align: left;font-weight: bold;">
+              ESTAGIÁRIOS MATUTINO 7 ÀS 12H - PORTARIA Nº 316/2023 (07:00 às 12:00)
+        </span>
+        </p>
+            <span class='horarios_espelho_ponto info'>07:24(E)</span>
+            <span class='horarios_espelho_ponto info'>12:34(S)</span>
+    </td>
+
+    <!--    JORNADA DE TRABALHO - EX: 06:00-->
+      <td style="vertical-align: middle;" class="centralizado">05:00</td>
+
+    <!--    HORAS TRABALHADAS - EX: 06:00-->
+      <td style="vertical-align: middle;" class="centralizado">
+        <span class='horarios_espelho_ponto '>05:00</span>
+      </td>
+
+    <!--    SALDO (HORAS EXCEDIDAS OU DEVIDAS) - EX: 02:00 OU -01:00-->
+      <td style="vertical-align: middle;" class="centralizado">
+          
+      </td>
+
+    <!--    HORAS ABONADAS - TEM OCORRENCIA INDIVIDUAL ABONADA - TIPO - ABONO DE OCORRÊNCIA-->
+      <td style="vertical-align: middle;" class="centralizado">
+        
+      </td>
+
+    <!--    SALDO ACUMULADO-->
+
+    <!--    SALDO COMPENSADO OU ACUMULADO-->
+
+
+  </tr>
+  <tr align="left">
+        <td width="50" style="vertical-align: middle;">
+    <div class="row pull-center" style="vertical-align: middle; text-align: center;">
+      <div class="pull-center" style="padding-right: 10px;">
+          <div id='btn-acoes-7-div' class="btn-group">
+            <button id="btn-acoes-7" data-toggle="dropdown" class="btn btn-primary btn-xs dropdown-toggle">Ações</button>
+            <ul id='list-btn-acoes-7' aria-labelledby="btn-acoes-7" class="dropdown-menu">
+                  <li>
+  <a style="float: none;" title="Visualizar Marcações" data-remote="true" href="/portal/frequencia/marcacoes_ponto/abrir_marcacoes_do_dia?cdg_ordem=bc2l5gnwrvgnz6p32kpwdd8fr1Zxxwhhkztj2brp53122cvchr9wq&amp;cdg_orgao=gmm4wgmjp0pbmywvb0r0vAqk6yZlf32z2wy84w9dt6g1x7xbr4dbq&amp;dta_ocorrencia=2025-10-08&amp;tela_origem=80btlA6c182z0zm65488h36h0mZbvwhcvAs9t6dvnfd093sm7kfb7">
+    <span>Visualizar Marcações</span>
+</a></li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </td>
+
+
+    <td style="vertical-align: middle;text-align: center">
+        <span class="popovers" data-original-title="Informações"
+              data-trigger="hover" data-html="true"
+              data-container="body" data-placement="top"
+              data-content="<strong>Chefe(s) do Dia</strong><p>6424 - PEDRO HENRIQUE MOTA EMILIANO </p><p><strong>Horário de Trabalho:</strong> ESTAGIÁRIOS MATUTINO 7 ÀS 12H - PORTARIA Nº 316/2023</p><p><strong>Tipo de Horário:</strong> BATE PONTO</p>">
+          08-Qua
+        </span>
+    </td>
+
+    <td style="vertical-align: middle;padding-bottom: 5px">
+
+        <p style="margin-bottom: 5px;padding-bottom: 5px;">
+          <span class="horarios_espelho_ponto" style="padding-left: 0px;background-color: transparent;color:#4e4c4c;width: 100%;text-align: left;font-weight: bold;">
+              ESTAGIÁRIOS MATUTINO 7 ÀS 12H - PORTARIA Nº 316/2023 (07:00 às 12:00)
+        </span>
+        </p>
+            <span class='horarios_espelho_ponto info'>07:21(E)</span>
+            <span class='horarios_espelho_ponto info'>13:09(S)</span>
+    </td>
+
+    <!--    JORNADA DE TRABALHO - EX: 06:00-->
+      <td style="vertical-align: middle;" class="centralizado">05:00</td>
+
+    <!--    HORAS TRABALHADAS - EX: 06:00-->
+      <td style="vertical-align: middle;" class="centralizado">
+        <span class='horarios_espelho_ponto '>05:00</span>
+      </td>
+
+    <!--    SALDO (HORAS EXCEDIDAS OU DEVIDAS) - EX: 02:00 OU -01:00-->
+      <td style="vertical-align: middle;" class="centralizado">
+          
+      </td>
+
+    <!--    HORAS ABONADAS - TEM OCORRENCIA INDIVIDUAL ABONADA - TIPO - ABONO DE OCORRÊNCIA-->
+      <td style="vertical-align: middle;" class="centralizado">
+        
+      </td>
+
+    <!--    SALDO ACUMULADO-->
+
+    <!--    SALDO COMPENSADO OU ACUMULADO-->
+
+
+  </tr>
+  <tr align="left">
+        <td width="50" style="vertical-align: middle;">
+    <div class="row pull-center" style="vertical-align: middle; text-align: center;">
+      <div class="pull-center" style="padding-right: 10px;">
+          <div id='btn-acoes-8-div' class="btn-group">
+            <button id="btn-acoes-8" data-toggle="dropdown" class="btn btn-primary btn-xs dropdown-toggle">Ações</button>
+            <ul id='list-btn-acoes-8' aria-labelledby="btn-acoes-8" class="dropdown-menu">
+                  <li>
+  <a style="float: none;" title="Visualizar Marcações" data-remote="true" href="/portal/frequencia/marcacoes_ponto/abrir_marcacoes_do_dia?cdg_ordem=0djt9sf4cAnnxrAgvA7s7z1chmZ3fn1bzp0pkf84tdb1xcrw5c142&amp;cdg_orgao=k06z5x2qx2xnd3b0dhfcb1x382Zbmlmhs5dnpxp7swh48A4n6A7w7&amp;dta_ocorrencia=2025-10-09&amp;tela_origem=69xzhnf527c7sty4nd9cntfy2yZ8zjymsprffmp776v74hs34kA61">
+    <span>Visualizar Marcações</span>
+</a></li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </td>
+
+
+    <td style="vertical-align: middle;text-align: center">
+        <span class="popovers" data-original-title="Informações"
+              data-trigger="hover" data-html="true"
+              data-container="body" data-placement="top"
+              data-content="<strong>Chefe(s) do Dia</strong><p>6424 - PEDRO HENRIQUE MOTA EMILIANO </p><p><strong>Horário de Trabalho:</strong> ESTAGIÁRIOS MATUTINO 7 ÀS 12H - PORTARIA Nº 316/2023</p><p><strong>Tipo de Horário:</strong> BATE PONTO</p>">
+          09-Qui
+        </span>
+    </td>
+
+    <td style="vertical-align: middle;padding-bottom: 5px">
+
+        <p style="margin-bottom: 5px;padding-bottom: 5px;">
+          <span class="horarios_espelho_ponto" style="padding-left: 0px;background-color: transparent;color:#4e4c4c;width: 100%;text-align: left;font-weight: bold;">
+              ESTAGIÁRIOS MATUTINO 7 ÀS 12H - PORTARIA Nº 316/2023 (07:00 às 12:00)
+        </span>
+        </p>
+            <span class='horarios_espelho_ponto info'>07:26(E)</span>
+            <span class='horarios_espelho_ponto info'>12:39(S)</span>
+    </td>
+
+    <!--    JORNADA DE TRABALHO - EX: 06:00-->
+      <td style="vertical-align: middle;" class="centralizado">05:00</td>
+
+    <!--    HORAS TRABALHADAS - EX: 06:00-->
+      <td style="vertical-align: middle;" class="centralizado">
+        <span class='horarios_espelho_ponto '>05:00</span>
+      </td>
+
+    <!--    SALDO (HORAS EXCEDIDAS OU DEVIDAS) - EX: 02:00 OU -01:00-->
+      <td style="vertical-align: middle;" class="centralizado">
+          
+      </td>
+
+    <!--    HORAS ABONADAS - TEM OCORRENCIA INDIVIDUAL ABONADA - TIPO - ABONO DE OCORRÊNCIA-->
+      <td style="vertical-align: middle;" class="centralizado">
+        
+      </td>
+
+    <!--    SALDO ACUMULADO-->
+
+    <!--    SALDO COMPENSADO OU ACUMULADO-->
+
+
+  </tr>
+  <tr align="left">
+        <td width="50" style="vertical-align: middle;">
+    <div class="row pull-center" style="vertical-align: middle; text-align: center;">
+      <div class="pull-center" style="padding-right: 10px;">
+          <div id='btn-acoes-9-div' class="btn-group">
+            <button id="btn-acoes-9" data-toggle="dropdown" class="btn btn-primary btn-xs dropdown-toggle">Ações</button>
+            <ul id='list-btn-acoes-9' aria-labelledby="btn-acoes-9" class="dropdown-menu">
+                  <li>
+  <a style="float: none;" title="Visualizar Marcações" data-remote="true" href="/portal/frequencia/marcacoes_ponto/abrir_marcacoes_do_dia?cdg_ordem=gzkdddbm9hzl4glhrprwpkrgr3ZmnyA14hl1z524c92bmgh8wc8zA&amp;cdg_orgao=l9f21wfr8nAjArjxy8v9kts0pqZ17Aypftrk8g1m7ggngl6djArz1&amp;dta_ocorrencia=2025-10-10&amp;tela_origem=hwpwcjAflqyn1b42dhs5wllkl3Zjnw597y5cy6bsq4mhcclb87rs3">
+    <span>Visualizar Marcações</span>
+</a></li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </td>
+
+
+    <td style="vertical-align: middle;text-align: center">
+        <span class="popovers" data-original-title="Informações"
+              data-trigger="hover" data-html="true"
+              data-container="body" data-placement="top"
+              data-content="<strong>Chefe(s) do Dia</strong><p>6424 - PEDRO HENRIQUE MOTA EMILIANO </p><p><strong>Horário de Trabalho:</strong> ESTAGIÁRIOS MATUTINO 7 ÀS 12H - PORTARIA Nº 316/2023</p><p><strong>Tipo de Horário:</strong> BATE PONTO</p>">
+          10-Sex
+        </span>
+    </td>
+
+    <td style="vertical-align: middle;padding-bottom: 5px">
+
+        <p style="margin-bottom: 5px;padding-bottom: 5px;">
+          <span class="horarios_espelho_ponto" style="padding-left: 0px;background-color: transparent;color:#4e4c4c;width: 100%;text-align: left;font-weight: bold;">
+              ESTAGIÁRIOS MATUTINO 7 ÀS 12H - PORTARIA Nº 316/2023 (07:00 às 12:00)
+        </span>
+        </p>
+            <span class='horarios_espelho_ponto info'>07:22(E)</span>
+            <span class='horarios_espelho_ponto info'>12:29(S)</span>
+    </td>
+
+    <!--    JORNADA DE TRABALHO - EX: 06:00-->
+      <td style="vertical-align: middle;" class="centralizado">05:00</td>
+
+    <!--    HORAS TRABALHADAS - EX: 06:00-->
+      <td style="vertical-align: middle;" class="centralizado">
+        <span class='horarios_espelho_ponto '>05:00</span>
+      </td>
+
+    <!--    SALDO (HORAS EXCEDIDAS OU DEVIDAS) - EX: 02:00 OU -01:00-->
+      <td style="vertical-align: middle;" class="centralizado">
+          
+      </td>
+
+    <!--    HORAS ABONADAS - TEM OCORRENCIA INDIVIDUAL ABONADA - TIPO - ABONO DE OCORRÊNCIA-->
+      <td style="vertical-align: middle;" class="centralizado">
+        
+      </td>
+
+    <!--    SALDO ACUMULADO-->
+
+    <!--    SALDO COMPENSADO OU ACUMULADO-->
+
+
+  </tr>
+
+
+
+
+        </tbody>
+      </table>
+    
+  </div>
+
+    <div id="div_fechamento_ponto">
+      <div id="observacao_espelho_ponto" style="padding-left: 0px;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;">
+</div>
+
+    </div>
+
+  
+
+
+<!-- Modal -->
+<div class="modal fade" id="modal-justificativa" tabindex="-1" role="dialog" aria-labelledby="modal-justificativa-label" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content animated fadeInDown">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          <span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title text-center">Horas trabalhadas</h4>
+      </div>
+      <div class="modal-body">
+        <p id="texto">Para dia em que exista ocorrência as <b>horas trabalhadas</b> serão desconsideradas,
+          exceto se o cadastro da ocorrência possuir a opção Tipo da Justificativa marcada como
+          <b>"Abono Trabalho".</b>
+        </p>
+        <p>Para realizar esta alteração acesse: Início >> Frequência >> Cadastros Básicos >> Tipos de
+          Justificativas >>
+          Editar</p>
+        <p>A imagem abaixo exemplifica este cadastro</p>
+        <img src="/portal/assets/justificativa-7390f910d21c21c0af2705bafb52cd637d90d172c9115bb74476519f05c2aca2.png" />
+        <br/>
+        <br/>
+        <br/>
+        <p>Caso o evento tenha origem em outro tipo de ocorrência configure em: Início >> Frequência >> Cadastros
+          Básicos >> Tipos de Ocorrências >> Editar</p>
+        <p>A imagem abaixo exemplifica este cadastro</p>
+        <img src="/portal/assets/justificativa1-8fc93e0c9dc6c3722f71f3fcecb77527895a03c8208a87bed3b74f204e13676f.png" />
+        <br/>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+    jQuery('.popovers').popover();
+</script>
+
+<script>
+    $('.i-checks').iCheck({
+        checkboxClass: 'icheckbox_square-green',
+        radioClass: 'iradio_square-green'
+    });
+
+    $(document).ready(function() {
+
+        /**
+         * Registra uma ocorrência de frequência.
+         *
+         * Esta função é um helper para registrar um evento ocorrido, seja de trabalho remoto ou presencial. A função
+         * utiliza a função nativa do jQuery, $.ajax, para fazer uma chamada POST para o servidor com as informações
+         * relevantes.
+         *
+         * Exemplo de uso: registrar(event, 'Registro de trabalho remoto gravado com sucesso');
+         *
+         * @param {Event} event - O objeto de evento do JavaScript que contém informações sobre o evento de clique.
+         * @param {string} message - A mensagem que será mostrada ao usuário após a ocorrência ser registrada com sucesso.
+         */
+        function registrar(event, message) {
+            var id = event.target.id;
+            var dta_ocorrencia = event.target.value;
+            var value = converterDataAnoMes(event.target.value);
+
+            var cdg_orgao = event.target.getAttribute('data-cdg_orgao');
+            var cdg_ordem = event.target.getAttribute('data-cdg_ordem');
+            var cdg_tip_ocorfreq = event.target.getAttribute('data-cdg_tip_ocorfreq');
+            var cdg_funcional = event.target.getAttribute('data-cdg_funcional');
+            var tela = event.target.getAttribute('data-tela');
+            var url = '/portal/frequencia/ocorrencias_individuais/registrar_ocorrencia';
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: {
+                    'id': id,
+                    'ref_anomes_selecionada': value,
+                    'cdg_orgao': cdg_orgao,
+                    'cdg_ordem': cdg_ordem,
+                    'cdg_funcional': cdg_funcional,
+                    'dta_ocorrencia': dta_ocorrencia,
+                    'cdg_tip_ocorfreq': cdg_tip_ocorfreq,
+                    't': tela
+                },
+                success: function (data) {
+                    toastr.options = {
+                        "closeButton": true,
+                        "debug": false,
+                        "progressBar": true,
+                        "preventDuplicates": false,
+                        "positionClass": "toast-top-right",
+                        "onclick": null,
+                        "showDuration": "500",
+                        "hideDuration": "1000",
+                        "timeOut": "7000",
+                        "extendedTimeOut": "1000",
+                        "showEasing": "swing",
+                        "hideEasing": "linear",
+                        "showMethod": "fadeIn",
+                        "hideMethod": "fadeOut"
+                    }
+                    toastr.success('', message);
+                },
+                error: function (jqxhr, status, errorThrown) {
+                    console.error('Error:', errorThrown);
+                    if (jqxhr != null && jqxhr.responseText != null) {
+                        swal("Atenção", jqxhr.responseText, "error");
+                    }
+                }
+            });
+        }
+
+        /**
+         * Registra uma ocorrência de trabalho.
+         *
+         * Esta função é um helper para registrar um evento ocorrido, seja de trabalho remoto ou presencial. Ela
+         * identifica o tipo do trabalho com base nos dados do evento e chama a função registrar com o evento e a
+         * mensagem apropriada.
+         *
+         * Exemplo de uso: registrarTrabalho(event);
+         *
+         * @param {Event} event - O objeto de evento do JavaScript que contém informações sobre o evento de clique.
+         */
+        function registrarTrabalho(event) {
+            var tipo = event.target.dataset.tipo;
+            var message = '';
+
+            console.log(tipo);
+
+            if (tipo == 'remoto') {
+                message = 'Registro de trabalho remoto gravado com sucesso';
+            } else if (tipo == 'presencial') {
+                message = 'Registro de trabalho presencial gravado com sucesso';
+            } else {
+                console.log("Tipo não identificado")
+                return;
+            }
+
+            registrar(event, message);
+        }
+
+        // Registrar o evento de clique para cada input
+        $('.i-checks').on('ifChecked', registrarTrabalho);
+    });
+
+
+    /**
+     * Converte uma data para o formato AAAAMM como um número inteiro.
+     *
+     * A função aceita uma data como argumento e a converte para o formato AAAAMM (ano e mês)
+     * como um número inteiro. Se nenhuma data for fornecida, ela usará a data atual.
+     *
+     * Exemplo de uso: converterDataAnoMes(new Date(2023, 05, 23));
+     * Saída: 202306
+     *
+     * @param {Date} data - A data que será convertida. Se não for fornecida, a data atual será usada.
+     * @return {number} - A data convertida para o formato AAAAMM como um número inteiro.
+     */
+    function converterDataAnoMes(data) {
+        // Se nenhuma data for fornecida, usa a data atual
+        if (!data) {
+            data = new Date();
+        }
+        var partesData = data.split('-');
+        var dataObj = new Date(partesData[0], partesData[1] - 1, partesData[2]);
+
+        // Obtém o ano da data
+        var ano = dataObj.getFullYear();
+        // Obtém o mês da data e garante que sempre tenha dois dígitos
+        var mes = ("0" + (dataObj.getMonth() + 1)).slice(-2); // getMonth() retorna valores de 0-11, então adicionamos 1
+        // Retorna a data convertida para o formato AAAAMM como um número inteiro
+        return parseInt(ano + mes, 10);
+    }
+
+</script>
+    </div>
+
+    <div id="div_resumo_saldo_utilizado_compensado_22413">
+      
+    </div>
+
+
+
+
+        </div>
+    </div>
+  </div>
+</div>
+
+        <!-- Usado no Engine Saúde -->
+        
+
+
+      </div>
+    </div>
+    <!-- Footer -->
+    <div class="footer fixed hidden-xs">
+
+  <div class="col-md-4 no-padding">
+    Versão do Sistema: <strong>0.0.2
+</strong>
+  </div>
+  <div class="col-md-4">
+    Meu Ip: <strong>10.42.0.141</strong> - Referência da Folha:
+    <strong>Outubro/2025</strong>
+  </div>
+  <div class="col-md-4">
+    <div class="pull-right">
+      Siedos - Sistemas e Resultados © 2025
+    </div>
+  </div>
+</div>
+
+
+  </div>
+  <!-- End page wrapper-->
+
+  <!-- Right sidebar -->
+
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        
+
+$.ajax({
+  url: "/portal/load_contadores.js",
+  cache: false,
+  async: true
+});
+
+        var qtd_params = 0;
+        window.location.search
+            .replace(/[?&]+([^=&]+)=([^&]*)/gi, function (str, key, value) {
+                    if (key !== 'utf8' && key !== 'commit' && key !== 'tipo_relatorio' && value.trim() !== '')
+                        qtd_params++;
+                }
+            );
+
+        if (qtd_params > 0) {
+            $(".ibox.float-e-margins > .ibox-title > .ibox-tools > .collapse-link > i").removeClass("fa-chevron-down").addClass("fa-chevron-up");
+            $(".ibox.float-e-margins").find("div[style='display: none;']").show();
+        }
+
+        var c = getCookie("menu_lateral");
+        if (c != null && c !== '' && c === '22413')
+            $('body').addClass('mini-navbar');
+        else
+            setCookie('menu_lateral', '');
+        $('.required').attr('required', true);
+        // show spinner on AJAX start
+        $(document).ajaxStart(function () {
+            $(".wrapper-content").addClass('sk-loading');
+        });
+
+        // hide spinner on AJAX stop
+        $(document).ajaxStop(function () {
+            $(".wrapper-content").removeClass('sk-loading');
+        });
+
+        jQuery(window).on('error', function (e) {
+            $(".wrapper-content").removeClass('sk-loading');
+        });
+
+        if(document.getElementById('infoOciosidadeCiclica')){
+            $('#infoOciosidadeCiclica').load('/portal/atualizacao_cadastral/gerenciar/parametrizacao/info-ociosidade')
+        }
+    });
+
+    function setCookie(cname, cvalue) {
+        document.cookie = cname + "=" + cvalue;
+    }
+
+    function getCookie(cname) {
+        var name = cname + "=";
+        var ca = document.cookie.split(';');
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) === ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) === 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+
+    function myFunction() {
+        var filter = $('#menu-search').val().toUpperCase();
+        $('.li_menu').each(function (i) {
+            var menu = $(this);
+
+            if (filter.length >= 3) {
+                if (menu.text().trim().toUpperCase().includes(filter)) {
+                    menu.removeClass('hidden');
+                } else {
+                    menu.addClass('hidden');
+                }
+            } else {
+                menu.removeClass('hidden');
+            }
+
+        });
+    }
+
+    // $(document).ajaxError(function(event,xhr,options,exc) {
+    //
+    //     var errors = JSON.parse(xhr.responseText);
+    //     var er ="<ul>";
+    //     for(var i = 0; i < errors.length; i++){
+    //         var list = errors[i];
+    //         er += "<li>"+list+"</li>"
+    //     }
+    //     er+="</ul>"
+    //     $("#error_explanation").html(er);
+    //
+    // });
+</script>
+<!-- End wrapper-->
+<!-- /.modal -->
+<div class="modal inmodal" id="modal_basic2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content animated bounceInRight" id="modal_content_basic2">
+        </div>
+    </div>
+</div>
+
+<div class="modal fade inmodal" id="static_modal" role="basic" aria-hidden="true">
+    <div class="modal-dialog ">
+        <div class="modal-content animated fadeIn" id="static_modal_content">
+            <div class='text-center'><img src='/portal/assets/loading.gif'/></div>
+        </div>
+    </div>
+</div>
+
+<div class="modal inmodal" id="modal_full">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content animated bounceInRight" id="modal_content_full">
+            <div class='text-center'><img src='/portal/assets/loading.gif'/></div>
+        </div>
+    </div>
+</div>
+
+<div class="modal inmodal" id="modal_xfull">
+  <div class="modal-dialog modal-lg modal-xlg">
+    <div class="modal-content animated bounceInRight" id="modal_content_xfull">
+      <div class='text-center'><img src='/portal/assets/loading.gif'/></div>
+    </div>
+  </div>
+</div>
+
+<div class="modal inmodal" id="modal_xfull_static" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-lg modal-xlg">
+        <div class="modal-content animated bounceInRight" id="modal_content_xfull_static">
+            <div class='text-center'><img src='/portal/assets/loading.gif'/></div>
+        </div>
+    </div>
+</div>
+
+<div class="modal inmodal" id="modal_full_static" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content animated bounceInRight" id="modal_content_full_static">
+            <div class='text-center'><img src='/portal/assets/loading.gif'/></div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal_wide" role="basic" aria-hidden="true">
+    <div class="modal-dialog modal-wide">
+        <div class="modal-content" id="modal_content_wide">
+            <div class='text-center'><img src='/portal/assets/loading.gif'/></div>
+        </div>
+    </div>
+</div>
+
+<div id="responsive" class="modal fade" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" id="modal_responsive">
+            <div class='text-center'><img src='/portal/assets/loading.gif'/></div>
+        </div>
+    </div>
+</div>
+
+<div class="modal inmodal" id="modal_basic" data-backdrop="static" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content animated bounceInRight" id="modal_content_basic">
+        </div>
+    </div>
+</div>
+
+<div class="modal fade"
+     id="dialog" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel"
+     aria-hidden="true"
+     data-backdrop="static"
+     data-keyboard="true">
+    <div class="modal-dialog">
+        <div class="modal-content animated bounceInRight">
+            <div class="modal-header">
+                <button type="button" class="close" id="btnFechar" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h3 class="modal-title"></h3>
+            </div>
+            <div id="content_body">
+            </div>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+    <script>
+        $("#btnFechar").click(function (e) {
+            $('#dialog').modal('hide');
+        });
+    </script>
+</div>
+
+
+<!-- /.modal -->
+
+</body>
+</html>

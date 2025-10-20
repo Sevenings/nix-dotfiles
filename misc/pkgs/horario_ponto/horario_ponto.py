@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 import requests
 import sys
 import os
+import argparse
 
 CACHE_PATH = Path.home() / '.local/share/horario_ponto/cache.json'
 
