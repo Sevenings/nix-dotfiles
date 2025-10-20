@@ -16,7 +16,7 @@
       mode = "stretch";
       stretch = {
         function = "quadratic";
-        limit = 500;
+        limit = 4500;
       };
 
     };
