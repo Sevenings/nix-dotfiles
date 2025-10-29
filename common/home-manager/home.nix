@@ -18,7 +18,7 @@
     ./scripts/scripts.nix
     ./waybar/waybar.nix
     ./wlogout/wlogout.nix
-    # ./xdg.nix
+    ./xdg.nix
     ./yazi/yazi.nix
     ./zathura.nix
     ./zsh/zsh.nix
