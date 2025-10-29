@@ -2,6 +2,7 @@
 
 {
   home.packages = with pkgs; [
+    openCalendar
     actions
     nix-gc
     reload_waybar
@@ -12,7 +13,6 @@
     trash-cli
     fzf
     zoxide
-    morgen
     vscode
     babel
     colorpicker

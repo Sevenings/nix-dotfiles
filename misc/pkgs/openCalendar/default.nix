@@ -1,8 +1,17 @@
 { stdenv, pkgs ? import <nixpkgs> {} }:
 
-(pkgs.writeShellApplication {
+stdenv.mkDerivation {
   name = "openCalendar";
-  runtimeInputs = with pkgs; [ kitty calcurse ];
-  text = builtins.readFile ./openCalendar.sh;
-})
+  src = ./.;
+  
+  buildInputs = with pkgs; [ kitty calcurse ];
+  
+  installPhase = ''
+    mkdir -p $out/bin
+    cp openCalendar.sh $out/bin/openCalendar
+    cp kitty.conf $out/bin/
+    cp divergencemeter.png $out/bin/
+    chmod +x $out/bin/openCalendar
+  '';
+}
 
