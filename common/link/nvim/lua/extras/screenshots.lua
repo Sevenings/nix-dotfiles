@@ -41,5 +41,4 @@ vim.api.nvim_create_user_command(
 
 
 
--- Map the visual mode selection to call the TakeScreenshotVisual command
-vim.api.nvim_set_keymap('v', '<Leader>s', ':<C-U>TakeScreenshotVisual<CR>', { noremap = true, silent = true })
+-- Map movido para mappings.lua

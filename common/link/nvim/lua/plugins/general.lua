@@ -4,7 +4,6 @@ return {
     {'tikhomirov/vim-glsl'},
     {'ryanoasis/vim-devicons'},
     {'DreamMaoMao/yazi.nvim'},
-    {'airblade/vim-rooter'},
     {'skywind3000/asynctasks.vim'},
     {'skywind3000/asyncrun.vim'},
     {
@@ -15,12 +14,7 @@ return {
     },
     {
       "folke/todo-comments.nvim",
-      dependencies = { "nvim-lua/plenary.nvim" },
-      opts = {
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
-      }
+      dependencies = { "nvim-lua/plenary.nvim" }
     },
     {"sbdchd/neoformat"},
 }
