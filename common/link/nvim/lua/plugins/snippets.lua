@@ -20,12 +20,7 @@ return {
             smap <silent><expr> <S-Tab> luasnip#jumpable(-1) ? '<Plug>luasnip-jump-prev' : '<S-Tab>'
             ]]
             
-            -- Keymaps
-            vim.keymap.set({"i", "s"}, "<c-n>", function()
-              if ls.choice_active() then
-                ls.change_choice(1)
-              end
-            end)
+            -- Keymaps movidos para mappings.lua
 
         end,
         init = function ()

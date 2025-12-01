@@ -37,15 +37,7 @@ return {
         }
       }
 
-      -- Função para alternar para buffers específicos
-      local function goto_buffer(num)
-        vim.cmd("BufferLineGoToBuffer " .. num)
-      end
-
-      -- Mapear Alt+1, Alt+2, ..., Alt+9
-      for i = 1, 9 do
-        vim.keymap.set("n", "<M-" .. i .. ">", function() goto_buffer(i) end, { desc = "Go to buffer " .. i })
-      end
+      -- Mappings movidos para mappings.lua
     end
   },
 }

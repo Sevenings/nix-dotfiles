@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ./packages.nix
       ./programs.nix
+      ./services.nix
     ];
 
   networking.hostName = "fatima"; # Define your hostname.
@@ -26,7 +27,9 @@
     ];
   };
 
-
+  # Habilitar suporte para dispositivos Logitech
+  hardware.logitech.wireless.enable = true;
+  hardware.logitech.wireless.enableGraphical = true; # Interface gráfica do Solaar
 
   users.defaultUserShell = pkgs.zsh;
 

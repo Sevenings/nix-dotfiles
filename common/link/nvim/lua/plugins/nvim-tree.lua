@@ -36,7 +36,6 @@ local swap_then_open_tab = function()
 	api.node.open.tab(node)
 end
 
-vim.keymap.set("n", "t", swap_then_open_tab)
 
 
 
@@ -84,9 +83,7 @@ vim.api.nvim_create_autocmd("WinClosed", {
 return {
     {
         'nvim-tree/nvim-tree.lua',
-        keys = {
-            { "<leader>w", ":NvimTreeToggle<CR>", desc = "Nvim Tree" },
-        },
+        keys = {},
         init = function()
             -- disable netrw at the very start of your init.lua
             vim.g.loaded_netrw = 1
