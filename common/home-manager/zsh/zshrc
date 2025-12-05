@@ -73,7 +73,8 @@ alias confone="bluetoothctl connect 68:59:32:F7:D3:89"
 alias lg="lazygit"
 alias cd="z"
 alias vpntce="sudo openfortivpn vpn.tce.go.gov.br:443 -u lvinicius"
-alias zapdos="s lucas@zapdos.tce.go.gov.br"
+alias lzapdos="s lucas@zapdos.tce.go.gov.br"
+alias zapdos="s zapdos@zapdos.tce.go.gov.br"
 
 export EDITOR='nvim'
 export VISUAL='nvim'
