@@ -2,6 +2,8 @@
 
 {
   home.packages = with pkgs; [
+    blender
+    bambu-studio
     openCalendar
     actions
     nix-gc
