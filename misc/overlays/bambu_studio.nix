@@ -13,6 +13,8 @@ self: super: {
     profile = ''
       export SSL_CERT_FILE="${super.cacert}/etc/ssl/certs/ca-bundle.crt"
       export GIO_MODULE_DIR="${super.glib-networking}/lib/gio/modules/"
+      export QT_QPA_PLATFORM=xcb
+      export XDG_SESSION_TYPE=x11
     '';
     
     extraPkgs = pkgs: with pkgs; [
@@ -23,6 +25,20 @@ self: super: {
       gst_all_1.gst-plugins-base
       gst_all_1.gst-plugins-good
       webkitgtk_4_1
+      qt5.qtwayland
+      libsForQt5.qt5.qtwayland
+    ];
+
+    desktopItems = [ 
+      (super.makeDesktopItem {
+        name = "bambu-studio";
+        exec = "bambu-studio";
+        icon = "bambu-studio";
+        desktopName = "Bambu Studio";
+        comment = "3D printer slicer for Bambu Lab printers";
+        categories = [ "Graphics" "3DGraphics" "Engineering" ];
+        mimeTypes = [ "application/sla" "model/stl" "application/vnd.ms-3mfdocument" ];
+      })
     ];
   };
 }
