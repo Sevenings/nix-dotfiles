@@ -3,7 +3,7 @@
 {
   services = {
 
-    services.syncthing = {
+    syncthing = {
       enable = true;
       user = "okabe";
       dataDir = "/home/okabe/Syncthing";
