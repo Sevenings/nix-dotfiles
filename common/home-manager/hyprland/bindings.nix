@@ -39,7 +39,7 @@
       "$mainMod, C, exec, openCalendar"
       "Ctrl, XF86Calculator, exec, kitty -e nvim"
       "$mainMod, N, exec, obsidian"
-      "$mainMod, F1, exec, kitty --class=\"miniTerminal\" -e nvim '$HOME/Anotações/Todo/todo atual.md'"
+      "$mainMod, F1, exec, kitty --class=\"miniTerminal\" -e nvim \"$HOME/Anotações/Pessoal/Diário/$(date +%Y-%m-%d).md\""
 
       # Seletor de emojis
       "$mainMod, period, exec, rofi -modi emoji -show emoji"
@@ -74,7 +74,8 @@
       "CTRL ALT, T, exec, kitty -e yazi ~/Estagio\ TCE"
       "CTRL ALT, M, exec, kitty -e yazi ~/Documentos/monitoria"
       "CTRL ALT, A, exec, kitty -e yazi ~/Documentos/atividades"
-      "CTRL ALT, B, exec, kitty -e yazi ~/Documentos/biblioteca\ de\ babel"
+      "CTRL ALT, B, exec, kitty -e yazi '~/Documentos/biblioteca\ de\ babel'"
+      "CTRL ALT, I, exec, kitty -e yazi '~/Projetos/Impressões 3D'"
       "CTRL ALT, S, exec, kitty -e yazi ~/.myScripts"
       "CTRL ALT, G, exec, kitty -e nvim ~/.config/globals/global_variables.sh"
       "$mainMod, F12, exec, kitty -e yazi ~/.dotfiles"
