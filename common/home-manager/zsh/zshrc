@@ -75,6 +75,7 @@ alias cd="z"
 alias vpntce="sudo openfortivpn vpn.tce.go.gov.br:443 -u lvinicius"
 alias lzapdos="s lucas@zapdos.tce.go.gov.br"
 alias zapdos="s zapdos@zapdos.tce.go.gov.br"
+alias emac="ssh -i \"reserve-emac.pem\" ec2-user@ec2-18-231-39-183.sa-east-1.compute.amazonaws.com"
 
 export EDITOR='nvim'
 export VISUAL='nvim'
