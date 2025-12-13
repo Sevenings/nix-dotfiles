@@ -4,7 +4,6 @@
     openfortivpn
     tesseract
     ocrmypdf
-    projectlibre
     kicad
     se_expediente
     horario_ponto
