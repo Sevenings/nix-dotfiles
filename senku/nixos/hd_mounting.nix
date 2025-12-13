@@ -50,6 +50,12 @@
     options = [ "bind" ];
   };
 
+  fileSystems."/home/senku/Objetos" = {
+    device = "/media/hd/Objetos";
+    fsType = "none";
+    options = [ "bind" ];
+  };
+
   fileSystems."/home/senku/Videos" = {
     device = "/media/hd/Videos";
     fsType = "none";
