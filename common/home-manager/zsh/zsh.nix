@@ -1,14 +1,12 @@
 { pkgs, ... }:
 
+let
+  theme = import ./robbyrussell-theme.nix;
+  integrations = import ./integrations.nix;
+in
 {
   programs.zsh = {
     enable = true;
-    
-    # oh-my-zsh = {
-    #   enable = true;
-    #   theme = "robbyrussell";
-    #   plugins = [ "git" ];
-    # };
     
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
@@ -60,55 +58,11 @@
     
     # Init scripts
     initContent = ''
-      # Optimized prompt similar to robbyrussell (using ANSI codes directly)
-      if [[ -n "$IN_NIX_SHELL" ]]; then
-        PS1='[nix-shell] %F{cyan}%c%f ➜ '
-      else
-        PS1='%F{cyan}%c%f ➜ '
-      fi
+      # Load robbyrussell-style theme (optimized)
+      ${theme.fullTheme}
       
-      # Add git branch to prompt (lightweight version)
-      autoload -Uz vcs_info
-      setopt prompt_subst
-      zstyle ':vcs_info:*' formats ' (%F{green}%b%f)'
-      zstyle ':vcs_info:*' actionformats ' (%F{green}%b%f|%F{red}%a%f)'
-      
-      precmd() {
-        vcs_info
-        if [[ -n "$IN_NIX_SHELL" ]]; then
-          PS1="[nix-shell] %F{cyan}%c%f\$vcs_info_msg_0_ ➜ "
-        else
-          PS1="%F{cyan}%c%f\$vcs_info_msg_0_ ➜ "
-        fi
-      }
-      
-      # Hook integrations
-      eval "$(direnv hook zsh)"
-      eval "$(zoxide init zsh)"
-      
-      # Load nix-shell plugin
-      if [ -f ~/.config/zsh/plugins/zsh-nix-shell/nix-shell.plugin.zsh ]; then
-        source ~/.config/zsh/plugins/zsh-nix-shell/nix-shell.plugin.zsh
-      fi
-      
-      # Load yazi wrapper (must be sync for immediate use)
-      if [ -f ~/.config/zsh/yazi.sh ]; then
-        source ~/.config/zsh/yazi.sh
-      fi
-      
-      # Startup commands
-      clear
-      fastfetch
-      calcurse -d 7
-      
-      # Load completions lazily in background after startup
-      {
-        autoload -U compinit
-        compinit -C
-        if [ -f ~/.zsh_arduino-completion.sh ]; then
-          source ~/.zsh_arduino-completion.sh
-        fi
-      } &!
+      # Load integrations, hooks, and plugins
+      ${integrations.fullIntegration}
     '';
   };
   
