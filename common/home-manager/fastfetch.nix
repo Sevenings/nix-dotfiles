@@ -18,7 +18,7 @@
         "wm"
         "terminal"
         "shell"
-        "packages"
+        # "packages" # Comentado pois é lento (enumera 7000+ pacotes)
         "memory"
         "disk"
         "uptime"
