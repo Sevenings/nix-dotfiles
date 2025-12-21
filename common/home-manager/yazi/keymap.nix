@@ -10,7 +10,7 @@
         { on = [ "<C-[>" ]; run = "escape";             desc = "Exit visual mode, clear selected, or cancel search"; }
         { on = [ "q" ];     run = "quit";               desc = "Exit the process"; }
         { on = [ "Q" ];     run = "quit --no-cwd-file"; desc = "Exit the process without writing cwd-file"; }
-        { on = [ "<C-q>" ]; run = "close";              desc = "Close the current tab, or quit if it is last tab"; }
+        { on = [ "<A-q>" ]; run = "close";              desc = "Close the current tab, or quit if it is last tab"; }
         { on = [ "<C-z>" ]; run = "suspend";            desc = "Suspend the process"; }
 
         # Navigation
