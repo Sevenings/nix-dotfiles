@@ -1,6 +1,7 @@
 { pkgs, outputs, ... }:
 {
   home.packages = with pkgs; [
+    foliate
     openfortivpn
     tesseract
     ocrmypdf
