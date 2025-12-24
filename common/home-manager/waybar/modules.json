@@ -69,7 +69,8 @@
         "tooltip": false,
         "tooltip-format": "<tt><big>{calendar}</big></tt>",
         "format": "<span color='#2d2a2e' bgcolor='#a9dc76' >  </span> {:L%d %B %Y  <span color='#403e41' bgcolor='#a9dc76' >  </span> %R}",
-        "on-click": "openCalendar"
+        "on-click": "openCalendar",
+        "on-click-right": "wl-copy $(date +%Y%m%d%H%M%S)"
     },
 
     "cpu": {
