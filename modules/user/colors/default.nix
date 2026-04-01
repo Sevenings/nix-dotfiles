@@ -1,11 +1,11 @@
 { config, lib, pkgs, inputs, ... }:
 
 let
-  cfg = config.userSettings.<module>;
+  cfg = config.userSettings.colors;
 in
 {
-  options.userSettings.<module> = {
-    enable = lib.mkEnableOption "Enable <module>";
+  options.userSettings.colors = {
+    enable = lib.mkEnableOption "Enable colors";
   };
 
   config = lib.mkIf cfg.enable {
@@ -26,14 +26,14 @@ in
     };
 
     # Kitty - Em desenvolvimento
-    programs.kitty = {
-      enable = true;
-      font.name = "VictorMono Nerd Font";
-      themeFile = "Monokai";
-      settings = {
-        background = "#0d0f18";
-        background_opacity = "0.75";
-      };
-    };
+    # programs.kitty = {
+    #   enable = true;
+    #   font.name = "VictorMono Nerd Font";
+    #   themeFile = "Monokai";
+    #   settings = {
+    #     background = "#0d0f18";
+    #     background_opacity = "0.75";
+    #   };
+    # };
   };
 }
