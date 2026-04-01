@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./caelestia
     ./clipcat.nix
     ./cruise
     ./colors
