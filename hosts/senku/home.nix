@@ -1,26 +1,10 @@
-{ config, ... }:
+{ config, lib, ... }:
 
+let
+  importDir = import ../../misc/auxiliar/importDir.nix {inherit lib;};
+in
 {
-  imports = [
-    ../../modules/user/bambu-studio
-    ../../modules/user/caelestia
-    ../../modules/user/clipcat
-    ../../modules/user/cruise
-    ../../modules/user/elixir
-    ../../modules/user/fastfetch
-    ../../modules/user/hyprland
-    ../../modules/user/kitty
-    ../../modules/user/kubernetes-local-cluster
-    ../../modules/user/kubernetes-utils
-    ../../modules/user/matrix
-    ../../modules/user/nvim
-    ../../modules/user/obsidian
-    ../../modules/user/python
-    ../../modules/user/vpntce
-    ../../modules/user/yazi
-    ../../modules/user/zathura
-    ../../modules/user/zsh
-  ];
+  imports = importDir ../../modules/user;
 
   config.userSettings = {
     bambu-studio.enable = true;
