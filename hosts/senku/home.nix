@@ -4,6 +4,7 @@
   imports = [
     ../../modules/user/caelestia
     ../../modules/user/clipcat
+    ../../modules/user/cruise
     ../../modules/user/hyprland
     ../../modules/user/nvim
     ../../modules/user/obsidian
@@ -13,6 +14,7 @@
   config.userSettings = {
     caelestia.enable = true;
     clipcat.enable = true;
+    cruise.enable = true;
     hyprland.enable = true;
     nvim.enable = true;
     obsidian.enable = true;

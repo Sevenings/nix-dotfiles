@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./cruise
     ./colors
     # ./hyprland
     ./elixir
