@@ -8,7 +8,7 @@
     # ./fastfetch.nix
     # ./git.nix
     # ./gtk.nix
-    ./mimetypes.nix
+    # ./mimetypes.nix
     # ./mpd.nix
     # ./nvim.nix
     # ./obsidian
