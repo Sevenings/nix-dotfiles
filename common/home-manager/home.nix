@@ -6,7 +6,7 @@
     # ./hyprland
     ./environment_variables.nix
     # ./fastfetch.nix
-    ./git.nix
+    # ./git.nix
     ./gtk.nix
     ./mimetypes.nix
     ./mpd.nix
