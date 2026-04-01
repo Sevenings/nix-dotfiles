@@ -1,7 +1,8 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, system, ... }:
 
 let
   cfg = config.userSettings.zen;
+  zen-wrapper = import ../../../misc/wrappers/zen.nix { inherit pkgs inputs system; };
 in
 {
   options.userSettings.zen = {
@@ -10,9 +11,6 @@ in
 
   config = lib.mkIf cfg.enable {
     # Configurações específicas do módulo
-    let
-      zen-wrapper = import ../../misc/wrappers/zen.nix { inherit pkgs inputs system; };
-    in
     home.packages = with pkgs; [
       zen-wrapper
     ];

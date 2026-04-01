@@ -10,6 +10,8 @@ in
 
   config = lib.mkIf cfg.enable {
     # Configurações específicas do módulo
-    qbittorrent
+    home.packages = with pkgs; [
+      qbittorrent
+    ];
   };
 }

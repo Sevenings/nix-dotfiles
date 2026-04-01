@@ -14,6 +14,7 @@ in
     caelestia.enable = true;
     claude.enable = true;
     clipcat.enable = true;
+    colors.enable = true;
     colorpicker.enable = true;
     cruise.enable = true;
     elixir.enable = true;
@@ -41,7 +42,6 @@ in
     qbittorrent.enable = true;
     rofi.enable = true;
     rust.enable = true;
-    scripts.enable = false;
     vpntce.enable = true;
     vscode.enable = false;
     xdg.enable = true;

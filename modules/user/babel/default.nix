@@ -1,11 +1,11 @@
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.userSettings.<module>;
+  cfg = config.userSettings.babel;
 in
 {
-  options.userSettings.<module> = {
-    enable = lib.mkEnableOption "Enable <module>";
+  options.userSettings.babel = {
+    enable = lib.mkEnableOption "Enable babel";
   };
 
   config = lib.mkIf cfg.enable {
