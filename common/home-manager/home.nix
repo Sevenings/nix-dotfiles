@@ -15,7 +15,6 @@
     ./packages.nix
     ./programs.nix
     ./scripts/scripts.nix
-    ./vpntce
     ./waybar/waybar.nix
     ./wlogout/wlogout.nix
     ./xdg.nix

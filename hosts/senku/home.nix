@@ -14,6 +14,7 @@
     ../../modules/user/nvim
     ../../modules/user/obsidian
     ../../modules/user/python
+    ../../modules/user/vpntce
     ../../modules/user/zathura
   ];
 
@@ -29,7 +30,8 @@
     matrix.enable = true;
     nvim.enable = true;
     obsidian.enable = true;
-    python.enable = true;
+    python.enable = false;
+    vpntce.enable = true;
     zathura.enable = true;
   };
 
