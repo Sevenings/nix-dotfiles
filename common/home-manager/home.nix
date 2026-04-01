@@ -17,7 +17,7 @@
     ./scripts/scripts.nix
     ./waybar/waybar.nix
     ./wlogout/wlogout.nix
-    ./xdg.nix
+    # ./xdg.nix
     # ./zathura.nix
     inputs.nix-colors.homeManagerModules.default
   ];
