@@ -13,6 +13,7 @@
     ../../modules/user/matrix
     ../../modules/user/nvim
     ../../modules/user/obsidian
+    ../../modules/user/python
     ../../modules/user/zathura
   ];
 
@@ -28,6 +29,7 @@
     matrix.enable = true;
     nvim.enable = true;
     obsidian.enable = true;
+    python.enable = true;
     zathura.enable = true;
   };
 
