@@ -18,6 +18,7 @@ in
     kubernetes-local-cluster.enable = true;
     kubernetes-utils.enable = true;
     matrix.enable = true;
+    mpd.enable = true;
     nvim.enable = true;
     obsidian.enable = true;
     python.enable = false;
