@@ -1,10 +1,10 @@
-{ config, nixpkgs-unstable, ... }:
+{ config, lib, nixpkgs-unstable, ... }:
 
 let
   cfg = config.userSettings.zathura;
 in
 {
-  options.userSettings.hyprland = {
+  options.userSettings.zathura = {
     enable = lib.mkEnableOption "Enable Zathura";
   };
 
