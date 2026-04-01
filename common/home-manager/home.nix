@@ -18,7 +18,6 @@
     ./waybar/waybar.nix
     ./wlogout/wlogout.nix
     ./xdg.nix
-    ./yazi/yazi.nix
     # ./zathura.nix
     ./zsh/zsh.nix
     inputs.nix-colors.homeManagerModules.default

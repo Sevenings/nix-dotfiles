@@ -15,6 +15,7 @@
     ../../modules/user/obsidian
     ../../modules/user/python
     ../../modules/user/vpntce
+    ../../modules/user/yazi
     ../../modules/user/zathura
   ];
 
@@ -32,6 +33,7 @@
     obsidian.enable = true;
     python.enable = false;
     vpntce.enable = true;
+    yazi.enable = true;
     zathura.enable = true;
   };
 
