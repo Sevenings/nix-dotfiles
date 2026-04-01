@@ -38,5 +38,11 @@ in
         sudo = ./plugins/sudo.yazi;
       };
     };
+
+    home.packages = with pkgs; [
+      trash-cli
+      fzf
+      zoxide
+    ];
   };
 }

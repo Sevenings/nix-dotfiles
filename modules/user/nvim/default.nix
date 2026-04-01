@@ -17,5 +17,9 @@ in
       EDITOR = "nvim";
     };
 
+    home.packages = with pkgs; [
+      tinty
+    ];
+
   };
 }

@@ -1,14 +1,17 @@
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.userSettings.<module>;
+  cfg = config.userSettings.colorpicker;
 in
 {
-  options.userSettings.<module> = {
-    enable = lib.mkEnableOption "Enable <module>";
+  options.userSettings.colorpicker = {
+    enable = lib.mkEnableOption "Enable colorpicker";
   };
 
   config = lib.mkIf cfg.enable {
     # Configurações específicas do módulo
+    home.packages = with pkgs; [
+      colorpicker
+    ];
   };
 }

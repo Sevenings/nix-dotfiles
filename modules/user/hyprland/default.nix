@@ -26,6 +26,12 @@ in
       systemd.enable = false;
     };
 
+    home.packages = with pkgs; [
+      playerctl
+      workspace
+      switchlayout
+      togglecapslock
+    ];
 
 
     wayland.windowManager.hyprland.extraConfig = ''

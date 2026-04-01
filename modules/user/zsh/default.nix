@@ -77,5 +77,9 @@ in
     home.file = {
       ".config/zsh".source = ./extensions;
     };
+
+    home.packages = with pkgs; [
+      zoxide
+    ];
   };
 }

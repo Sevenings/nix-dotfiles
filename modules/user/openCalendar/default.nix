@@ -1,14 +1,17 @@
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.userSettings.<module>;
+  cfg = config.userSettings.openCalendar;
 in
 {
-  options.userSettings.<module> = {
-    enable = lib.mkEnableOption "Enable <module>";
+  options.userSettings.openCalendar = {
+    enable = lib.mkEnableOption "Enable openCalendar";
   };
 
   config = lib.mkIf cfg.enable {
     # Configurações específicas do módulo
+    home.packages = with pkgs; [
+      openCalendar
+    ];
   };
 }

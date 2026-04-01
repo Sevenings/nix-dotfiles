@@ -1,14 +1,17 @@
 { config, lib, pkgs, ... }:
 
 let
-  cfg = config.userSettings.<module>;
+  cfg = config.userSettings.claude;
 in
 {
-  options.userSettings.<module> = {
-    enable = lib.mkEnableOption "Enable <module>";
+  options.userSettings.claude = {
+    enable = lib.mkEnableOption "Enable claude";
   };
 
   config = lib.mkIf cfg.enable {
     # Configurações específicas do módulo
+    home.packages = with pkgs; [
+      claude-code
+    ];
   };
 }
