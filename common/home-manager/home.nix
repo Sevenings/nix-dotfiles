@@ -6,7 +6,7 @@
     ./clipcat.nix
     ./cruise
     ./colors
-    ./hyprland
+    # ./hyprland
     ./elixir
     ./environment_variables.nix
     ./fastfetch.nix

@@ -97,12 +97,12 @@
         inherit extraSpecialArgs;
         modules = [
           # > Our main home-manager configuration file <
-          caelestia-shell.homeManagerModules.default
+          inputs.caelestia-shell.homeManagerModules.default
           ./common/home-manager/home.nix # Retrocompatibilidade
           ./senku/home-manager/home.nix  # Retrocompatibilidade
           ./hosts/senku/home.nix # Importa a home nova
-        ] ++ extraModules;
-      });
+        ];
+      };
 
     };
   };
