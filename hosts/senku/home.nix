@@ -17,6 +17,7 @@
     ../../modules/user/vpntce
     ../../modules/user/yazi
     ../../modules/user/zathura
+    ../../modules/user/zsh
   ];
 
   config.userSettings = {
@@ -35,6 +36,7 @@
     vpntce.enable = true;
     yazi.enable = true;
     zathura.enable = true;
+    zsh.enable = true;
   };
 
 }
