@@ -6,6 +6,7 @@
     ../../modules/user/clipcat
     ../../modules/user/cruise
     ../../modules/user/elixir
+    ../../modules/user/fastfetch
     ../../modules/user/hyprland
     ../../modules/user/kitty
     ../../modules/user/kubernetes-local-cluster
@@ -25,6 +26,7 @@
     clipcat.enable = true;
     cruise.enable = true;
     elixir.enable = true;
+    fastfetch.enable = true;
     hyprland.enable = true;
     kitty.enable = true;
     kubernetes-local-cluster.enable = true;
