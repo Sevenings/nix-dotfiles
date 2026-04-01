@@ -8,7 +8,6 @@
     ./fastfetch.nix
     ./git.nix
     ./gtk.nix
-    ./matrix
     ./mimetypes.nix
     ./mpd.nix
     # ./nvim.nix

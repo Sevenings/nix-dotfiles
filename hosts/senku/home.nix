@@ -10,6 +10,7 @@
     ../../modules/user/kitty
     ../../modules/user/kubernetes-local-cluster
     ../../modules/user/kubernetes-utils
+    ../../modules/user/matrix
     ../../modules/user/nvim
     ../../modules/user/obsidian
     ../../modules/user/zathura
@@ -24,6 +25,7 @@
     kitty.enable = true;
     kubernetes-local-cluster.enable = true;
     kubernetes-utils.enable = true;
+    matrix.enable = true;
     nvim.enable = true;
     obsidian.enable = true;
     zathura.enable = true;
