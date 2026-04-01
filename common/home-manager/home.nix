@@ -7,7 +7,7 @@
     ./environment_variables.nix
     # ./fastfetch.nix
     # ./git.nix
-    ./gtk.nix
+    # ./gtk.nix
     ./mimetypes.nix
     ./mpd.nix
     # ./nvim.nix
