@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ../../modules/user/bambu-studio
     ../../modules/user/caelestia
     ../../modules/user/clipcat
     ../../modules/user/cruise
@@ -22,6 +23,7 @@
   ];
 
   config.userSettings = {
+    bambu-studio.enable = true;
     caelestia.enable = true;
     clipcat.enable = true;
     cruise.enable = true;

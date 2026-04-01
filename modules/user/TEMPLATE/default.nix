@@ -5,7 +5,7 @@ let
 in
 {
   options.userSettings.<module> = {
-    enable = lib.mkEnableOption "Enable <Module>";
+    enable = lib.mkEnableOption "Enable <module>";
   };
 
   config = lib.mkIf cfg.enable {

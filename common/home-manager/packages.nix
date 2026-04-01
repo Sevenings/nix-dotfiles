@@ -10,7 +10,6 @@ in
     tinty
     qbittorrent
     blender
-    bambu-studio
     openCalendar
     actions
     nix-gc
