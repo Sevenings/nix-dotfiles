@@ -19,7 +19,7 @@
     ./mimetypes.nix
     ./mpd.nix
     ./nvim.nix
-    ./obsidian
+    # ./obsidian
     ./packages.nix
     ./programs.nix
     ./scripts/scripts.nix
