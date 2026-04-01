@@ -9,7 +9,7 @@
     # ./git.nix
     # ./gtk.nix
     ./mimetypes.nix
-    ./mpd.nix
+    # ./mpd.nix
     # ./nvim.nix
     # ./obsidian
     ./packages.nix
