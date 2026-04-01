@@ -1,11 +1,19 @@
-{ pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
+let
+  cfg = config.userSettings.obsidian;
+in
 {
-  home.packages = with pkgs; [ obsidian ];
+  options.userSettings.obsidian = {
+    enable = lib.mkEnableOption "Enable Obsidian";
+  };
 
-  # Fix: Corrige o problema de clipboard do Web Clipper
-  wayland.windowManager.hyprland.settings.windowrule = [ "match:class ^(obsidian)$, focus_on_activate on" ];
+  config = lib.mkIf cfg.enable {
 
+    # Configurações específicas do módulo
+    home.packages = with pkgs; [ obsidian ];
 
-
+    # Fix: Corrige o problema de clipboard do Web Clipper
+    wayland.windowManager.hyprland.settings.windowrule = [ "match:class ^(obsidian)$, focus_on_activate on" ];
+  };
 }
