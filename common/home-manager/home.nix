@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ./clipcat.nix
     ./cruise
     ./colors
     # ./hyprland
