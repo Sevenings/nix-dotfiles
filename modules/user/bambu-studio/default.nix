@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ config, lib, pkgs, ... }:
 
 let
   cfg = config.userSettings.bambu-studio;
@@ -12,7 +12,7 @@ in
     # Configurações específicas do módulo
     home.packages = with pkgs; [
       bambu-studio
-    ]
+    ];
 
   };
 }
