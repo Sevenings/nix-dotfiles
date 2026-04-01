@@ -8,7 +8,6 @@
     ./fastfetch.nix
     ./git.nix
     ./gtk.nix
-    ./kitty.nix
     ./kubernetes-utils
     ./kubernetes-local-cluster
     ./matrix

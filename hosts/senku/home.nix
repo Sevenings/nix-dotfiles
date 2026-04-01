@@ -7,6 +7,7 @@
     ../../modules/user/cruise
     ../../modules/user/elixir
     ../../modules/user/hyprland
+    ../../modules/user/kitty
     ../../modules/user/nvim
     ../../modules/user/obsidian
     ../../modules/user/zathura
@@ -18,6 +19,7 @@
     cruise.enable = true;
     elixir.enable = true;
     hyprland.enable = true;
+    kitty.enable = true;
     nvim.enable = true;
     obsidian.enable = true;
     zathura.enable = true;
