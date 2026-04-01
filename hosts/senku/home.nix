@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ../../modules/user/caelestia
     ../../modules/user/hyprland
     ../../modules/user/nvim
     ../../modules/user/obsidian
@@ -9,8 +10,10 @@
   ];
 
   config.userSettings = {
-    nvim.enable = true;
+    caelestia.enable = true;
     hyprland.enable = true;
+    nvim.enable = true;
+    obsidian.enable = true;
     zathura.enable = true;
   };
 
