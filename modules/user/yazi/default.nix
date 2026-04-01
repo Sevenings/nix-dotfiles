@@ -8,6 +8,12 @@ in
     enable = lib.mkEnableOption "Enable Yazi";
   };
 
+  imports = [
+    ./settings.nix
+    ./keymap.nix
+    ./theme.nix
+  ];
+
   config = lib.mkIf cfg.enable {
     # Configurações específicas do módulo
     programs.yazi = {
@@ -32,11 +38,5 @@ in
         sudo = ./plugins/sudo.yazi;
       };
     };
-
-    imports = [
-      ./settings.nix
-      ./keymap.nix
-      ./theme.nix
-    ];
   };
 }
