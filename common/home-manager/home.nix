@@ -9,7 +9,6 @@
     ./git.nix
     ./gtk.nix
     ./kubernetes-utils
-    ./kubernetes-local-cluster
     ./matrix
     ./mimetypes.nix
     ./mpd.nix
