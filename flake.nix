@@ -91,7 +91,19 @@
     # Available through 'home-manager --flake .#your-username@your-hostname'
     homeConfigurations = {
       "okabe@fatima" = homeConfigurations { user = "okabe"; };
-      "senku@stonebox" = homeConfigurations { user = "senku"; };
+
+      "senku@stonebox" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.${system}; # Home-manager requires 'pkgs' instance
+        inherit extraSpecialArgs;
+        modules = [
+          # > Our main home-manager configuration file <
+          caelestia-shell.homeManagerModules.default
+          ./common/home-manager/home.nix # Retrocompatibilidade
+          ./senku/home-manager/home.nix  # Retrocompatibilidade
+          ./hosts/senku/home.nix # Importa a home nova
+        ] ++ extraModules;
+      });
+
     };
   };
 }
