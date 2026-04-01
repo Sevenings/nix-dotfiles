@@ -13,5 +13,9 @@ in
     # Configurações do módulo
     home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink /home/senku/.dotfiles/common/link/nvim;
 
+    home.sessionVariables = {
+      EDITOR = "nvim";
+    };
+
   };
 }

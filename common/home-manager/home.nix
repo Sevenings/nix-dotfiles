@@ -4,7 +4,7 @@
   imports = [
     ./colors
     # ./hyprland
-    ./environment_variables.nix
+    # ./environment_variables.nix
     # ./fastfetch.nix
     # ./git.nix
     # ./gtk.nix
@@ -13,10 +13,10 @@
     # ./nvim.nix
     # ./obsidian
     ./packages.nix
-    ./programs.nix
-    ./scripts/scripts.nix
-    ./waybar/waybar.nix
-    ./wlogout/wlogout.nix
+    # ./programs.nix
+    # ./scripts/scripts.nix
+    # ./waybar/waybar.nix
+    # ./wlogout/wlogout.nix
     # ./xdg.nix
     # ./zathura.nix
     inputs.nix-colors.homeManagerModules.default

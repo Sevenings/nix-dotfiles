@@ -21,6 +21,7 @@ in
     nvim.enable = true;
     obsidian.enable = true;
     python.enable = false;
+    rofi.enable = true;
     vpntce.enable = true;
     yazi.enable = true;
     zathura.enable = true;
