@@ -5,6 +5,7 @@
     ../../modules/user/caelestia
     ../../modules/user/clipcat
     ../../modules/user/cruise
+    ../../modules/user/elixir
     ../../modules/user/hyprland
     ../../modules/user/nvim
     ../../modules/user/obsidian
@@ -15,6 +16,7 @@
     caelestia.enable = true;
     clipcat.enable = true;
     cruise.enable = true;
+    elixir.enable = true;
     hyprland.enable = true;
     nvim.enable = true;
     obsidian.enable = true;
