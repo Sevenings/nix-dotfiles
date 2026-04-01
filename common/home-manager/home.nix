@@ -8,7 +8,6 @@
     ./fastfetch.nix
     ./git.nix
     ./gtk.nix
-    ./kubernetes-utils
     ./matrix
     ./mimetypes.nix
     ./mpd.nix
