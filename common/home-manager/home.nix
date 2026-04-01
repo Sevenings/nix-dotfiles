@@ -28,7 +28,7 @@
     ./wlogout/wlogout.nix
     ./xdg.nix
     ./yazi/yazi.nix
-    ./zathura.nix
+    # ./zathura.nix
     ./zsh/zsh.nix
     inputs.nix-colors.homeManagerModules.default
   ];

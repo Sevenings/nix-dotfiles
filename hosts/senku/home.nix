@@ -4,14 +4,12 @@
   imports = [
     ../../modules/user/hyprland
     ../../modules/user/obsidian
+    ../../modules/user/zathura
   ];
 
-  options = {
-   
-  };
-
-  config = {
-
+  config.userSettings = {
+    hyprland.enable = true;
+    zathura.enable = true;
   };
 
 }
