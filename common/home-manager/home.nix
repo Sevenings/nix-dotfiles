@@ -5,7 +5,7 @@
     ./colors
     # ./hyprland
     ./environment_variables.nix
-    ./fastfetch.nix
+    # ./fastfetch.nix
     ./git.nix
     ./gtk.nix
     ./mimetypes.nix
