@@ -6,7 +6,10 @@ in
 {
   imports = importDir ../../modules/user;
 
+
   config.userSettings = {
+    username = "senku";
+
     actions.enable = true;
     babel.enable = true;
     bambu-studio.enable = true;
@@ -50,5 +53,21 @@ in
     zen.enable = true;
     zsh.enable = true;
   };
+
+  # Home Manager needs a bit of information about you and the paths it should manage.
+  home = {
+    username = config.userSettings.username;
+    homeDirectory = "/home/${config.userSettings.username}";
+    stateVersion = "24.11"; # Do not change
+  };
+
+  home.sessionVariables = {
+    WLR_NO_HARDWARE_CURSORS = "1";
+    GTK_THEME = "Catppuccin-Mocha-Standard-Blue-Dark";
+  };
+
+  # Let Home Manager install and manage itself.
+  programs.home-manager.enable = true;
+  manual.html.enable = true;
 
 }
