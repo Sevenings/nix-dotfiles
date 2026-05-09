@@ -10,6 +10,7 @@
     ./elixir
     ./environment_variables.nix
     ./fastfetch.nix
+    ./general
     ./git.nix
     ./gtk.nix
     ./kitty.nix
