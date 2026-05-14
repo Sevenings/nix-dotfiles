@@ -2,6 +2,10 @@
 
 {
   services = {
+    
+    tailscale = {
+      enable = true;
+    };
 
     qbittorrent = {
       enable = true;
