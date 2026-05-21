@@ -12,6 +12,7 @@
     ./fastfetch.nix
     ./general
     ./git.nix
+    ./go
     ./gtk.nix
     ./kitty.nix
     ./kubernetes-utils
