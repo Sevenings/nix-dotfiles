@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./aseprite
     ./caelestia
     ./clipcat.nix
     ./cruise
