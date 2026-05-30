@@ -3,6 +3,10 @@
 {
   services = {
 
+    tailscale = {
+      enable = true;
+    };
+
     qbittorrent = {
       enable = true;
       webuiPort = null;
