@@ -45,7 +45,7 @@
       # mosquitto
       libreoffice-qt6-fresh
       # mqttui
-      neovim 
+      nixpkgs-unstable.neovim 
       wget
       gh
       kitty
