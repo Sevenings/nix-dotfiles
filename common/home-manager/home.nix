@@ -21,6 +21,7 @@
     ./matrix
     ./mimetypes.nix
     ./mpd.nix
+    ./nextcloud-client
     ./nvim.nix
     ./obsidian
     ./packages.nix
