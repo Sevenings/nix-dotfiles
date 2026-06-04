@@ -55,6 +55,11 @@
     if [ -f ~/.config/zsh/yazi.sh ]; then
       source ~/.config/zsh/yazi.sh
     fi
+
+    # Get Music Function
+    function get-music {
+      yt-dlp -x --audio-format mp3 $1
+    }
     
     # Startup commands
     clear
