@@ -16,7 +16,6 @@ in
     nix-gc
     reload_waybar
     reload_wallpaper
-    claude-code
     gimp
     inkscape
     trash-cli

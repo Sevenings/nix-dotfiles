@@ -10,6 +10,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    # Claude Code
+    nix-claude-code.url = "github:ryoppippi/nix-claude-code";
+
     # Nix-Colors
     nix-colors.url = "github:misterio77/nix-colors";
 
@@ -60,7 +63,7 @@
     extraSpecialArgs = { inherit system inputs outputs; nixpkgs-unstable = nixpkgs-unstable.legacyPackages.${system};};  # <- passing inputs to the attribute set for home-manager
     specialArgs = { inherit system inputs outputs; nixpkgs-unstable = nixpkgs-unstable.legacyPackages.${system};};  # <- passing inputs to the attribute set for configuration
 
-    auxiliar = import ./misc/auxiliar { inherit nixpkgs home-manager specialArgs extraSpecialArgs; caelestia-shell = inputs.caelestia-shell; };
+    auxiliar = import ./misc/auxiliar { inherit nixpkgs home-manager specialArgs extraSpecialArgs inputs; };
     nixosConfigurations = auxiliar.nixosConfigurations;
     homeConfigurations = auxiliar.homeConfigurations;
 

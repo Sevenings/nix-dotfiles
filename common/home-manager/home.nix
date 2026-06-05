@@ -4,6 +4,7 @@
   imports = [
     ./aseprite
     ./caelestia
+    ./claude-code
     ./clipcat.nix
     ./cruise
     ./colors
