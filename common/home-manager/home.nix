@@ -22,7 +22,7 @@
     ./matrix
     ./mimetypes.nix
     ./mpd.nix
-    ./nextcloud-client
+    # ./nextcloud-client
     ./nvim.nix
     ./obsidian
     ./packages.nix
