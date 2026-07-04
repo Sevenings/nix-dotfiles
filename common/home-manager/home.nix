@@ -28,6 +28,7 @@
     ./packages.nix
     ./programs.nix
     ./scripts/scripts.nix
+    ./taskwarrior
     ./tce
     ./tinty
     ./waybar/waybar.nix
