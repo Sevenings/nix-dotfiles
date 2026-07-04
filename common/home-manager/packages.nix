@@ -31,7 +31,6 @@ in
     freecad-wayland
     rustc
     cargo
-    node
     # foliate
     zen-wrapper
   ];
