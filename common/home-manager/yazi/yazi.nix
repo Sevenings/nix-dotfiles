@@ -9,10 +9,11 @@
     initLua = ./init.lua;
 
     plugins = {
-      compress = ./plugins/compress.yazi;
-      full-border = ./plugins/full-border.yazi;
+      compress = pkgs.yaziPlugins.compress;
+      full-border = pkgs.yaziPlugins.full-border;
       git = pkgs.yaziPlugins.git;
-      lazygit = ./plugins/lazygit.yazi;
+      githead = pkgs.yaziPlugins.githead;
+      lazygit = pkgs.yaziPlugins.lazygit;
       load-template = ./plugins/load-template.yazi;
       local-shell = ./plugins/local-shell.yazi;
       mount = ./plugins/mount.yazi;
