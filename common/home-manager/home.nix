@@ -3,7 +3,7 @@
 {
   imports = [
     ./aseprite
-    # ./caelestia
+    ./caelestia
     ./claude-code
     ./clipcat.nix
     ./cruise

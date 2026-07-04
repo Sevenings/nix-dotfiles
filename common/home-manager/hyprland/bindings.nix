@@ -20,7 +20,7 @@
         "$mainMod, Escape, global, caelestia:session"
         "$mainMod, E, exec, $openFileManager"
         "$mainMod SHIFT, E, exec, $openMiniFileManager"
-        "$mainMod, V, togglesplit, "
+        # "$mainMod, V, togglesplit, "
         "$mainMod, X, exec, actions"
         "$mainMod, D, global, caelestia:launcher"
         "$mainMod, F, togglefloating, "
