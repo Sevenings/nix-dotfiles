@@ -7,7 +7,6 @@ in
   home.packages = with pkgs; [
     playerctl
     keepassxc
-    tinty
     qbittorrent
     blender
     bambu-studio

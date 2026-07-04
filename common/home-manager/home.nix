@@ -28,7 +28,9 @@
     ./packages.nix
     ./programs.nix
     ./scripts/scripts.nix
+    ./taskwarrior
     ./tce
+    ./tinty
     ./waybar/waybar.nix
     ./wlogout/wlogout.nix
     ./xdg.nix
