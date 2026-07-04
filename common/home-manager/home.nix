@@ -29,6 +29,7 @@
     ./programs.nix
     ./scripts/scripts.nix
     ./tce
+    ./tinty
     ./waybar/waybar.nix
     ./wlogout/wlogout.nix
     ./xdg.nix
