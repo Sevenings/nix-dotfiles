@@ -6,6 +6,7 @@
       ./arduino.nix
       ./devices.nix
       ./display_manager.nix
+      # ./dms
       ./docker.nix
       ./fonts.nix
       ./packages.nix

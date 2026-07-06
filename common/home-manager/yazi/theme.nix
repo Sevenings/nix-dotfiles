@@ -11,7 +11,7 @@
   programs.yazi.theme = {
 
     flavor = {
-      dark = "monokai-pro";
+      dark = "tinted-scheme";
     };
 
 
