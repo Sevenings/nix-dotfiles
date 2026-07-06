@@ -33,6 +33,27 @@
       };
     };
 
+    utilities = {
+      vpn = {
+        enabled = true;
+        provider = [
+          {
+            name = "Tailscale";
+            interface = "tailscale0";
+            displayName = "Tailscale";
+            enabled = true;
+          } 
+        ];
+      };
+
+      quickToggles = [
+        {
+          id = "vpn";
+          enabled = true;
+        }
+      ];
+    };
+
     paths.wallpaperDir = "~/Imagens/Wallpapers";
   };
 }
