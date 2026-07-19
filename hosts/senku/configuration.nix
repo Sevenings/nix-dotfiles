@@ -21,6 +21,7 @@ in
     modo-tablet.enable = false;
     nvidia.enable = true;
     ollama.enable = false;
+    opentabletdriver.enable = true;
     openrgb.enable = true;
     packages.enable = true;
     power-management.enable = false;
