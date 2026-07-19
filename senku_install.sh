@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Copia o novo hardware-configuration
-cp /etc/nixos/hardware-configuration.nix ~/.dotfiles/senku/nixos/hardware-configuration.nix
+cp /etc/nixos/hardware-configuration.nix ~/.dotfiles/hosts/senku/hardware-configuration.nix
 
 # Install Home-manager
 nix-channel --add https://github.com/nix-community/home-manager/archive/release-24.11.tar.gz home-manager

@@ -11,7 +11,7 @@ in
   config = lib.mkIf cfg.enable {
     # Configurações específicas do módulo
     programs.waybar = {
-      enable = false;
+      enable = true;
       style = ./css/monokai.css;
       settings = {
         mainBar = builtins.fromJSON ( builtins.readFile ./modules.json );

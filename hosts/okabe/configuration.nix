@@ -6,47 +6,58 @@ in
 {
   imports = importDir ../../modules/system ++ [
     ./hardware-configuration.nix
-    ./hd_mounting.nix
   ];
 
   systemSettings = {
-    username = "senku";
+    username = "okabe";
 
-    arduino.enable = true;
+    arduino.enable = false;
     devices.enable = true;
     display-manager.enable = true;
     dms.enable = false;
     docker.enable = true;
     fonts.enable = true;
-    modo-tablet.enable = false;
-    nvidia.enable = true;
-    ollama.enable = false;
-    openrgb.enable = true;
+    modo-tablet.enable = true;
+    nvidia.enable = false;
+    ollama.enable = true;
+    openrgb.enable = false;
     packages.enable = true;
-    power-management.enable = false;
+    power-management.enable = true;
     printing.enable = true;
     programs.enable = true;
     python-packages.enable = true;
     services.enable = true;
     session-variables.enable = true;
-    steam.enable = true;
+    steam.enable = false;
     syncthing.enable = true;
     tailscale.enable = true;
   };
 
-  networking.hostName = "stonebox"; # Define your hostname.
+  networking.hostName = "fatima"; # Define your hostname.
+
+  # Enable touchpad support (enabled default in most desktopManager).
+  services.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with 'passwd'.
-  users.users.senku = {
+  users.users.okabe = {
     isNormalUser = true;
-    extraGroups = [ "networkmanager" "wheel" "docker" "dialout" "adbusers" "input" ]; # Enable 'sudo' for the user.
-    description = "Ishigami Senku";
+    extraGroups = [ "networkmanager" "wheel" "docker" "dialout" "video" ]; # Enable 'sudo' for the user.
+    packages = with pkgs; [
+      tree
+    ];
   };
+
+  # Mouse bolinha
+  # Habilitar suporte para dispositivos Logitech
+  hardware.logitech.wireless.enable = true;
+  hardware.logitech.wireless.enableGraphical = true; # Interface gráfica do Solaar
+
   users.defaultUserShell = pkgs.zsh;
 
-  systemd.settings.Manager = {
-    DefaultTimeoutStopSec = 10;
-    DefaultTimeoutAbortSec = 10;
+  programs.zsh.ohMyZsh = {
+    enable = true;
+    plugins = [ "git" ];
+    theme = "robbyrussell";
   };
 
   # This option defines the first version of NixOS you have installed on this particular machine,

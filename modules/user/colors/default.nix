@@ -8,32 +8,33 @@ in
     enable = lib.mkEnableOption "Enable colors";
   };
 
-  config = lib.mkIf cfg.enable {
-    # Configurações específicas do módulo
-    colorscheme = inputs.nix-colors.colorschemes.ayu-dark;
+  config = lib.mkMerge [
+    (lib.mkIf cfg.enable {
+      # Configurações específicas do módulo
+      colorscheme = inputs.nix-colors.colorschemes.ayu-dark;
+
+      # Kitty - Em desenvolvimento
+      # programs.kitty = {
+      #   enable = true;
+      #   font.name = "VictorMono Nerd Font";
+      #   themeFile = "Monokai";
+      #   settings = {
+      #     background = "#0d0f18";
+      #     background_opacity = "0.75";
+      #   };
+      # };
+    })
 
     # Hyprland
-    wayland.windowManager.hyprland = {
-      settings = {
+    (lib.mkIf (cfg.enable && config.userSettings.hyprland.enable) {
+      wayland.windowManager.hyprland.settings = {
         source = ["~/.config/hypr/scheme/current.conf"];
 
         general = {
           "col.active_border" = "rgb($overlay2)";
           "col.inactive_border" = "rgba($cruste0)";
         };
-
       };
-    };
-
-    # Kitty - Em desenvolvimento
-    # programs.kitty = {
-    #   enable = true;
-    #   font.name = "VictorMono Nerd Font";
-    #   themeFile = "Monokai";
-    #   settings = {
-    #     background = "#0d0f18";
-    #     background_opacity = "0.75";
-    #   };
-    # };
-  };
+    })
+  ];
 }

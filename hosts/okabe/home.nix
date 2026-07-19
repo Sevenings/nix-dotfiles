@@ -8,7 +8,7 @@ in
 
 
   userSettings = {
-    username = "senku";
+    username = "okabe";
 
     actions.enable = true;
     aseprite.enable = false;
@@ -23,8 +23,8 @@ in
     cruise.enable = false;
     elixir.enable = false;
     fastfetch.enable = true;
-    foliate.enable = false;
-    freecad.enable = false;
+    foliate.enable = true;
+    freecad.enable = true;
     general.enable = true;
     gimp.enable = true;
     git.enable = true;
@@ -67,7 +67,6 @@ in
   };
 
   home.sessionVariables = {
-    WLR_NO_HARDWARE_CURSORS = "1";
     GTK_THEME = "Catppuccin-Mocha-Standard-Blue-Dark";
   };
 
