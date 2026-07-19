@@ -48,7 +48,6 @@ in
         "vpntce" = "sudo openfortivpn vpn.tce.go.gov.br:443 -u lvinicius";
         "lzapdos" = "s lucas@zapdos.tce.go.gov.br";
         "zapdos" = "s zapdos@zapdos.tce.go.gov.br";
-        "emac" = "ssh -i \"reserve-emac.pem\" ec2-user@ec2-18-231-39-183.sa-east-1.compute.amazonaws.com";
       };
 
       # Environment variables

@@ -24,6 +24,7 @@ in
       enable = true;
       package = inputs.hyprland.packages.${pkgs.system}.hyprland;
       systemd.enable = false;
+      configType = "hyprlang";
     };
 
     home.packages = with pkgs; [
@@ -66,7 +67,6 @@ in
 
       # Layout
       dwindle = {
-        pseudotile = true; # master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
         preserve_split = true; # you probably want this
       };
 

@@ -2,11 +2,14 @@
 
 {
   services = {
-
-    qbittorrent = {
+    tailscale = {
       enable = true;
-      webuiPort = null;
     };
+
+    # qbittorrent = {
+    #   enable = true;
+    #   webuiPort = null;
+    # };
 
     clipcat.enable = true;
 

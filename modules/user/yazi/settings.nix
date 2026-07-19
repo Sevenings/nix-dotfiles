@@ -102,7 +102,7 @@
         { mime = "application/pdf"; run = "pdf"; }
       ];
       prepend_previewers = [
-        { name = "*/"; run = "folder"; sync = true; }
+        { url = "*/"; run = "folder"; sync = true; }
         # Code
         { mime = "text/*"; run = "code"; }
         { mime = "*/{xml,javascript,x-wine-extension-ini}"; run = "code"; }
@@ -119,7 +119,7 @@
         { mime = "application/*zip"; run = "archive"; }
         { mime = "application/x-{tar,bzip*,7z-compressed,xz,rar}"; run = "archive"; }
         # Fallback
-        { name = "*"; run = "file"; }
+        { url = "*"; run = "file"; }
       ];
     };
 

@@ -13,6 +13,7 @@ in
     home.packages = with pkgs; [
       actions
       nix-gc
+      reload_wallpaper
     ];
   };
 }

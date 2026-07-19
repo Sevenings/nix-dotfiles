@@ -4,12 +4,12 @@
   imports = [
     ./caelestia
     ./hyprland/hyprland.nix
-    ./hyprpaper.nix
+    # ./hyprpaper.nix
     ./hypridle.nix
     ./packages.nix
-    ./swaylock.nix
+    # ./swaylock.nix
     ./kitty.nix
-    ./waybar/waybar.nix
+    # ./waybar/waybar.nix
     ./legacy/legacy.nix
   ];
 }

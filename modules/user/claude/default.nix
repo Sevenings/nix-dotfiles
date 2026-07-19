@@ -10,8 +10,9 @@ in
 
   config = lib.mkIf cfg.enable {
     # Configurações específicas do módulo
-    home.packages = with pkgs; [
-      claude-code
-    ];
+    programs.claude-code = {
+      enable = true;
+      package = pkgs.claude-code;
+    };
   };
 }

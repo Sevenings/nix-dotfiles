@@ -4,7 +4,7 @@
 
   # Installed Plugins
   wayland.windowManager.hyprland.plugins = [
-    inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
+    # inputs.hypr-dynamic-cursors.packages.${pkgs.system}.hypr-dynamic-cursors
   ];
 
   # Plugins Settings

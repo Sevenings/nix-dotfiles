@@ -7,13 +7,14 @@ in
   imports = importDir ../../modules/user;
 
 
-  config.userSettings = {
+  userSettings = {
     username = "senku";
 
     actions.enable = true;
+    aseprite.enable = true;
     babel.enable = true;
-    bambu-studio.enable = true;
-    blender.enable = true;
+    bambu-studio.enable = false;
+    blender.enable = false;
     caelestia.enable = true;
     claude.enable = true;
     clipcat.enable = true;
@@ -23,12 +24,14 @@ in
     elixir.enable = true;
     fastfetch.enable = true;
     foliate.enable = false;
-    freecad.enable = true;
+    freecad.enable = false;
+    general.enable = true;
     gimp.enable = true;
     git.enable = true;
+    go.enable = true;
     gtk.enable = true;
     hyprland.enable = true;
-    inkscape.enable = true;
+    inkscape.enable = false;
     keepass.enable = true;
     kitty.enable = true;
     kubernetes-local-cluster.enable = true;
@@ -39,13 +42,15 @@ in
     musicnow.enable = true;
     nvim.enable = true;
     obsidian.enable = true;
-    openCalendar.enable = true;
+    openCalendar.enable = false;
     python.enable = false;
-    python_calculator.enable = true;
-    qbittorrent.enable = true;
+    python_calculator.enable = false;
+    qbittorrent.enable = false;
     rofi.enable = true;
     rust.enable = true;
-    vpntce.enable = true;
+    taskwarrior.enable = true;
+    tce.enable = true;
+    tinty.enable = true;
     vscode.enable = false;
     xdg.enable = true;
     yazi.enable = true;

@@ -4,7 +4,7 @@
   specialArgs,
   extraSpecialArgs,
   system ? "x86_64-linux",
-  caelestia-shell,
+  inputs,
 }:
 {
   nixosConfigurations = {user, extraModules ? [] }@args: (nixpkgs.lib.nixosSystem {
@@ -16,11 +16,16 @@
     });
 
   homeConfigurations = { user, extraModules ? [] }@args: (home-manager.lib.homeManagerConfiguration {
-      pkgs = nixpkgs.legacyPackages.${system}; # Home-manager requires 'pkgs' instance
+
+      pkgs = import nixpkgs {
+        system = "x86_64-linux";
+        config.allowUnfreePredicate = pkg: builtins.elem (nixpkgs.lib.getName pkg) [ "claude" ];
+        overlays = [ inputs.nix-claude-code.overlays.default ];
+      };
       inherit extraSpecialArgs;
       modules = [
         # > Our main home-manager configuration file <
-        caelestia-shell.homeManagerModules.default
+        inputs.caelestia-shell.homeManagerModules.default
         ../../common/home-manager/home.nix
         ../../${user}/home-manager/home.nix
       ] ++ extraModules;
