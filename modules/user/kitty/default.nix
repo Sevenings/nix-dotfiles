@@ -6,6 +6,12 @@ in
 {
   options.userSettings.kitty = {
     enable = lib.mkEnableOption "Enable Kitty";
+
+    fontSize = lib.mkOption {
+      type = lib.types.number;
+      default = 11.0;
+      description = "Tamanho da fonte do kitty";
+    };
   };
 
   config = lib.mkIf cfg.enable {
@@ -13,6 +19,7 @@ in
     programs.kitty = {
       enable = true;
       font.name = "VictorMono Nerd Font";
+      font.size = cfg.fontSize;
       themeFile = "Monokai";
       settings = {
         background = "#0d0f18";

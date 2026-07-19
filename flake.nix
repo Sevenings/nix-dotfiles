@@ -97,11 +97,8 @@
         pkgs = nixpkgs.legacyPackages.${system}; # Home-manager requires 'pkgs' instance
         inherit extraSpecialArgs;
         modules = [
-          # > Our main home-manager configuration file <
           inputs.caelestia-shell.homeManagerModules.default
-          ./common/home-manager/home.nix # Retrocompatibilidade
-          ./okabe/home-manager/home.nix  # Retrocompatibilidade
-          ./hosts/okabe/home.nix # Importa a home nova
+          ./hosts/okabe/home.nix
         ];
       };
 
@@ -109,11 +106,8 @@
         pkgs = nixpkgs.legacyPackages.${system}; # Home-manager requires 'pkgs' instance
         inherit extraSpecialArgs;
         modules = [
-          # > Our main home-manager configuration file <
           inputs.caelestia-shell.homeManagerModules.default
-          ./common/home-manager/home.nix # Retrocompatibilidade
-          ./senku/home-manager/home.nix  # Retrocompatibilidade
-          ./hosts/senku/home.nix # Importa a home nova
+          ./hosts/senku/home.nix
         ];
       };
 
