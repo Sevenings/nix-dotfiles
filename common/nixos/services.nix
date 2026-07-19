@@ -6,10 +6,10 @@
       enable = true;
     };
 
-    qbittorrent = {
-      enable = true;
-      webuiPort = null;
-    };
+    # qbittorrent = {
+    #   enable = true;
+    #   webuiPort = null;
+    # };
 
     clipcat.enable = true;
 

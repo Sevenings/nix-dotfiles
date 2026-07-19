@@ -2,14 +2,14 @@
 
 {
   imports = [
-    ./aseprite
+    # ./aseprite
     ./caelestia
     ./claude-code
     ./clipcat.nix
-    ./cruise
+    # ./cruise
     ./colors
     ./hyprland
-    ./elixir
+    # ./elixir
     ./environment_variables.nix
     ./fastfetch.nix
     ./general

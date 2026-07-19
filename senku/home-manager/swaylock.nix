@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-    programs.swaylock.enable = true;
+    programs.swaylock.enable = false;
     
     # security.pam.services.swaylock = {};
 

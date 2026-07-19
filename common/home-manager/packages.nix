@@ -7,28 +7,27 @@ in
   home.packages = with pkgs; [
     playerctl
     keepassxc
-    qbittorrent
-    blender
-    bambu-studio
-    openCalendar
+    # blender
+    # bambu-studio
+    # openCalendar
     actions
     nix-gc
     reload_waybar
     reload_wallpaper
     gimp
-    inkscape
+    # inkscape
     trash-cli
     fzf
     zoxide
-    vscode
+    # vscode
     babel
     colorpicker
     musicnow
-    python_calculator
+    # python_calculator
     switchlayout
     togglecapslock
     workspace
-    freecad-wayland
+    # freecad-wayland
     rustc
     cargo
     # foliate
