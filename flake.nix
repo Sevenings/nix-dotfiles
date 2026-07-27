@@ -93,8 +93,24 @@
     # Standalone home-manager configuration entrypoint
     # Available through 'home-manager --flake .#your-username@your-hostname'
     homeConfigurations = {
-      "okabe@fatima" = homeConfigurations { user = "okabe"; };
-      "senku@stonebox" = homeConfigurations { user = "senku"; };
+      "okabe@fatima" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.${system}; # Home-manager requires 'pkgs' instance
+        inherit extraSpecialArgs;
+        modules = [
+          inputs.caelestia-shell.homeManagerModules.default
+          ./hosts/okabe/home.nix
+        ];
+      };
+
+      "senku@stonebox" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.${system}; # Home-manager requires 'pkgs' instance
+        inherit extraSpecialArgs;
+        modules = [
+          inputs.caelestia-shell.homeManagerModules.default
+          ./hosts/senku/home.nix
+        ];
+      };
+
     };
   };
 }

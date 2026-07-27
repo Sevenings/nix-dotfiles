@@ -1,0 +1,41 @@
+{ config, lib, pkgs, ... }:
+
+let
+  cfg = config.systemSettings.steam;
+in
+{
+  options.systemSettings.steam = {
+    enable = lib.mkEnableOption "Enable steam";
+  };
+
+  config = lib.mkIf cfg.enable {
+    boot.kernelPackages = pkgs.linuxPackages; # (this is the default) some amdgpu issues on 6.10
+
+    programs = {
+      steam = {
+        enable = true;
+        remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+        dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+        localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+        gamescopeSession.enable = false;
+      };
+
+      gamescope.enable = true;
+      gamemode.enable = true;
+    };
+
+    environment.systemPackages = with pkgs; [
+      mangohud
+      protontricks
+      protonup-qt
+      prismlauncher
+    ];
+
+    xdg.portal = {
+      enable = true;
+      extraPortals = with pkgs; [ ];
+    };
+
+    hardware.steam-hardware.enable = true;
+  };
+}

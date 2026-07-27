@@ -10,8 +10,7 @@
   nixosConfigurations = {user, extraModules ? [] }@args: (nixpkgs.lib.nixosSystem {
       inherit specialArgs;
       modules = [
-        ../../common/nixos/configuration.nix
-        ../../${user}/nixos/configuration.nix
+        ../../hosts/${user}/configuration.nix
       ] ++ extraModules;
     });
 
