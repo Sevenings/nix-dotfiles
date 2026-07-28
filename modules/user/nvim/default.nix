@@ -11,7 +11,7 @@ in
   config = lib.mkIf cfg.enable {
 
     # Configurações do módulo
-    home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink /home/senku/.dotfiles/common/link/nvim;
+    home.file.".config/nvim".source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/.dotfiles/common/link/nvim";
 
     home.sessionVariables = {
       EDITOR = "nvim";

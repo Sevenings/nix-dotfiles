@@ -9,6 +9,9 @@ in
 
   userSettings = {
     username = "senku";
+    uid = 1000;
+    fullname = "Lucas Vinícius";
+    email = "lvlassis.2@gmail.com";
 
     actions.enable = true;
     aseprite.enable = false;

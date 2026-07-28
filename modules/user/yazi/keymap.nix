@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 
 {
   programs.yazi.keymap = {
@@ -167,7 +167,7 @@
         { on = [ "g" "v" ];        run = "cd ~/Videos";                            desc = "Go to Videos"; }
         { on = [ "g" "d" "c" ];    run = "cd ~/Documentos";                        desc = "Go to Documentos"; }
         { on = [ "g" "d" "w" ];    run = "cd ~/Downloads";                         desc = "Go to Downloads"; }
-        { on = [ "g" "d" "d" ];    run = "cd /run/media/zenitsu";                  desc = "Go to Pendrives"; }
+        { on = [ "g" "d" "d" ];    run = "cd /run/media/${config.userSettings.username}";  desc = "Go to Pendrives"; }
         { on = [ "g" "e" ];        run = "cd ~/Documentos/'Estudos Espiritismo'";  desc = "Go to Estudos Espiritismo"; }
         { on = [ "g" "n" ];        run = "cd /etc/nixos/";                         desc = "Go to Nixos"; }
         { on = [ "g" "j" ];        run = "cd ~/Jogos";                             desc = "Go to Jogos"; }

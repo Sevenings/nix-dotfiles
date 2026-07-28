@@ -20,6 +20,12 @@
         description = "User email";
         type = lib.types.str;
       };
+
+      uid = lib.mkOption {
+        default = 1000;
+        description = "User UID";
+        type = lib.types.int;
+      };
     };
   };
 }

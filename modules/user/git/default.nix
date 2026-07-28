@@ -14,8 +14,8 @@ in
       enable = true;
       settings = {
         user = {
-          name = "Lucas Vinícius";
-          email = "lvlassis.2@gmail.com";
+          name = config.userSettings.fullname;
+          email = config.userSettings.email;
         };
       };
     };
