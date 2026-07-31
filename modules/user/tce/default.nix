@@ -20,5 +20,7 @@ in
       "vpntce" = "sudo openfortivpn vpn.tce.go.gov.br:443 -u lvinicius";
       "padrao-devops" = "copier copy https://gitsource.tce.go.gov.br/GER-TI/tce.kubernetes/templates/devops-copier.git .";
     };
+
+    userSettings.vault.enable = true;
   };
 }
