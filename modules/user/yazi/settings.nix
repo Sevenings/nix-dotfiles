@@ -94,6 +94,8 @@
     plugin = {
       preloaders = [
         # { name = "*"; cond = "!mime"; run = "mime"; multi = true; prio = "high"; }
+        # Minecraft Skin
+        { url = "**/[Ss]kins/*.png"; run = "minecraft-skin"; multi = true; }
         # Image
         { mime = "image/*"; run = "image"; }
         # Video
@@ -103,6 +105,10 @@
       ];
       prepend_previewers = [
         { url = "*/"; run = "folder"; sync = true; }
+
+        # Minecraft Skin
+        { url = "**/[Ss]kins/*.png"; run = "minecraft-skin"; }
+
         # Code
         { mime = "text/*"; run = "code"; }
         { mime = "*/{xml,javascript,x-wine-extension-ini}"; run = "code"; }

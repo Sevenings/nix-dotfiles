@@ -31,6 +31,7 @@ in
         lazygit = pkgs.yaziPlugins.lazygit;
         load-template = ./plugins/load-template.yazi;
         local-shell = ./plugins/local-shell.yazi;
+        minecraft-skin = inputs.minecraft-skin-yazi.packages.${system}.default;
         mount = ./plugins/mount.yazi;
         restore = ./plugins/restore.yazi;
         smart-enter = pkgs.yaziPlugins.smart-enter;
