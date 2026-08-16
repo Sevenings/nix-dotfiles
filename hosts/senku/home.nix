@@ -28,7 +28,7 @@ in
     elixir.enable = false;
     fastfetch.enable = true;
     foliate.enable = false;
-    freecad.enable = false;
+    freecad.enable = true;
     general.enable = true;
     gimp.enable = true;
     git.enable = true;
