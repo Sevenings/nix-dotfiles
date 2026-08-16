@@ -41,6 +41,9 @@
       inputs.hyprland.follows = "hyprland";
     };
 
+    # Minecraft Skin Yazi
+    minecraft-skin-yazi.url = "github:lvlassis/minecraft-skin.yazi";
+
     # Yazi
 		yazi.url = "github:sxyazi/yazi"; 
 
