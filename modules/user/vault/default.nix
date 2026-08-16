@@ -11,7 +11,7 @@ in
   config = lib.mkIf cfg.enable {
     # Configurações específicas do módulo
     home.packages = with pkgs; [
-      vault
+      vault-bin
     ];
   };
 }
