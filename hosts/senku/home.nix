@@ -21,7 +21,7 @@ in
     caelestia.enable = true;
     calcurse.enable = true;
     claude.enable = true;
-    clipcat.enable = true;
+    clipcat.enable = false;
     colors.enable = true;
     colorpicker.enable = true;
     cruise.enable = false;
