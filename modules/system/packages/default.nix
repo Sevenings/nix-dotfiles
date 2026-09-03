@@ -67,6 +67,7 @@ in
       gnumake
       kanshi
       ranger # Just because of rifle
+      gparted
 
       # Latex
       texliveFull
