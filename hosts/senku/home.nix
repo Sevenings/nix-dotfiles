@@ -21,14 +21,14 @@ in
     caelestia.enable = true;
     calcurse.enable = true;
     claude.enable = true;
-    clipcat.enable = true;
+    clipcat.enable = false;
     colors.enable = true;
     colorpicker.enable = true;
     cruise.enable = false;
     elixir.enable = false;
     fastfetch.enable = true;
     foliate.enable = false;
-    freecad.enable = false;
+    freecad.enable = true;
     general.enable = true;
     gimp.enable = true;
     git.enable = true;
